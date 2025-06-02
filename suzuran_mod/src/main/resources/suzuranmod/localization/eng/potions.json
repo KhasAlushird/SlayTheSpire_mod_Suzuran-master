@@ -1,0 +1,22 @@
+{
+    "ShamareKhas:ViciousPotion": {
+        "NAME": "Vicious Potion",
+        "DESCRIPTIONS": [
+            "Apply 4 points of #yNamesis to yourself, apply ",
+            " points of #yNamesis to the enemy."
+        ]
+    },
+    "ShamareKhas:WitchBlessing": {
+        "NAME": "Witch King's Blessing",
+        "DESCRIPTIONS": [
+            "Randomly add ",
+            " #yShamare power cards to your hand, they cost 0 energy this turn."
+        ]
+    },
+    "ShamareKhas:LivingEssence": {
+        "NAME": "Living Essence",
+        "DESCRIPTIONS": [
+            "For each point of #yNamesis you have, heal 1 HP."
+        ]
+    }
+}

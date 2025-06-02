@@ -1,0 +1,22 @@
+{
+    "ShamareKhas:ViciousPotion": {
+      "NAME": "恶毒药水",
+      "DESCRIPTIONS": [
+        "对自己施加4点 #y报应 ,对敌人施加 ",
+        " 点 #y报应 。"
+      ]
+    },
+    "ShamareKhas:WitchBlessing": {
+      "NAME": "巫王赐福",
+      "DESCRIPTIONS": [
+        "随机将 ",
+        " 张巫恋的能力牌置入你的手牌，它们本回合耗能为0"
+      ]
+    },
+    "ShamareKhas:LivingEssence": {
+      "NAME": "生命精华",
+      "DESCRIPTIONS": [
+        "你每有1点 #y报应 ,恢复1点生命值"
+      ]
+    }
+  }

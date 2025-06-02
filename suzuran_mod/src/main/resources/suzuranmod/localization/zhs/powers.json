@@ -1,0 +1,112 @@
+{
+    "ShamareKhas:SorceryPoison": {
+      "NAME": "巫术中毒",
+      "DESCRIPTIONS": [ 
+        "当拥有者遭受攻击时，若有X段 #y未被格挡的伤害 ，造成X次 #b%d 的伤害，并在攻击结束时减少X层。" 
+      ]
+    },
+    "ShamareKhas:SorceryVulnerable": {
+      "NAME": "巫术易伤",
+      "DESCRIPTIONS": [ 
+        "从攻击受到的伤害增加 #y75% 。如果当回合受到过 #y未被格挡的伤害 ，回合结束时减少一层。" 
+      ]
+    },
+
+    "ShamareKhas:SorceryWeak": {
+        "NAME": "巫术虚弱",
+        "DESCRIPTIONS": [ 
+          "攻击造成的伤害减少 #y50% 。如果当回合进行过攻击 ，回合结束时减少一层。"
+        ]
+      },
+
+      "ShamareKhas:Namesis": {
+        "NAME": "报应",
+        "DESCRIPTIONS": [ 
+          "每当拥有者受到 #y未被格挡的伤害 时，失去 #b%d 点生命值，然后移除该能力"
+        ]
+      },
+      "ShamareKhas:NamesisToEnemy": {
+        "NAME": "报应",
+        "DESCRIPTIONS": [ 
+          "每当拥有者受到 #y未被格挡的伤害 时，失去 #b%d 点生命值，然后移除该能力"
+        ]
+      },
+
+      
+      "ShamareKhas:Pardon": {
+        "NAME": "宽恕",
+        "DESCRIPTIONS": [ 
+          "回合结束时失去1层。拥有该能力时，不会触发 #y报应 。"
+        ]
+      },
+
+      "ShamareKhas:PeacefulPsyche": {
+        "NAME": "宁静灵魂",
+        "DESCRIPTIONS": [ 
+          "触发 #y报应 时，抽 #b%d 张牌，获得 %s "
+        ]
+      },
+      "ShamareKhas:CalamityMessenger": {
+        "NAME": "灾难使者",
+        "DESCRIPTIONS": [ 
+          "每当你抽到一张 #y灾祸 牌时，抽 #b%d 张牌。"
+        ]
+      },
+      "ShamareKhas:HirudoPower": {
+        "NAME": "水蛭",
+        "DESCRIPTIONS": [ 
+          "每当有一张牌被 #y消耗 ，回复 #b%d 点生命，获得 #b%d 点 #y报应 。"
+        ]
+      },
+      "ShamareKhas:Plague": {
+        "NAME": "瘟疫",
+        "DESCRIPTIONS": [ 
+          "每回合结束时，将 #b%d 张 #y猛毒灾祸 置入你的弃牌堆"
+        ]
+      },
+      "ShamareKhas:EdgePower": {
+        "NAME": "边缘之力",
+        "DESCRIPTIONS": [ 
+          "回合结束时，将 #b%d 张 #y堕落之血 置入你的弃牌堆"
+        ]
+      },
+      "ShamareKhas:PoisonBarrierPower": {
+        "NAME": "淬毒",
+        "DESCRIPTIONS": [ 
+          "你在这个回合每受到一次攻击，都对攻击者施加 #b%d 层 #y中毒 。"
+        ]
+      },
+      "ShamareKhas:DimBudPower": {
+        "NAME": "花蕊",
+        "DESCRIPTIONS": [ 
+          "每当拥有者受到 #y未被格挡的伤害 时，将 #b%d 张 #y邪影灾祸 置入你的抽牌堆"
+        ]
+      },
+      "ShamareKhas:DefilePower": {
+        "NAME": "亵渎之力",
+        "DESCRIPTIONS": [ 
+          "回合开始时，随机对一名敌人施加 #b%d 层 #y巫术易伤 或 #b%d 层 #y巫术虚弱 ，或 #b%d 层 #y巫术中毒 。"
+        ]
+      },
+      "ShamareKhas:AruspicyPower": {
+        "NAME": "卜问",
+        "DESCRIPTIONS": [ 
+          "回合开始时，抽 #b%d 张牌， #y预见 #b%d "
+        ]
+      },
+      "ShamareKhas:TheFoolPower": {
+        "NAME": "愚者之力",
+        "DESCRIPTIONS": [ 
+          "回合开始时，最多弃 #b%d 张牌，每弃掉1张 #y灾祸 牌，获得 [E] ,抽2张牌。"
+        ]
+      },
+      "ShamareKhas:NamesisExplosionPower": {
+        "NAME": "报应爆发",
+        "DESCRIPTIONS": [ 
+          " #b%d 回合后，获得 #b%d 点 #y报应 "
+        ]
+      }
+
+    
+  }
+  

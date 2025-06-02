@@ -1,0 +1,51 @@
+{
+    "ShamareKhas:ShabbyDoll": {
+        "NAME": "Shabby Doll",
+        "FLAVOR": "A shabby doll entwined with curses, exuding a dark aura.",
+        "DESCRIPTIONS": [
+            "At the start of each combat, apply 1 #yWeak and 1 #yVulnerable to a random enemy."
+        ]
+    },
+    "ShamareKhas:DelicateDoll": {
+        "NAME": "Delicate Doll",
+        "FLAVOR": "A luxurious and delicate doll, though its appearance is glamorous, it hides a deeper curse.",
+        "DESCRIPTIONS": [
+            "At the start of each combat, apply 2 stacks of #yshamarekhas:Sorcery Weak and 1 stack of #yshamarekhas:Sorcery Vulnerable to all enemies."
+        ]
+    },
+    "ShamareKhas:ExonerationCertificate": {
+        "NAME": "Exoneration Certificate",
+        "FLAVOR": "It seems to bring a bit of relief to the holder, but an unknown cost is hidden behind it.",
+        "DESCRIPTIONS": [
+            "Whenever you draw a #yDisaster card, reduce 3 points of #yshamarekhas:Namesis."
+        ]
+    },
+    "ShamareKhas:FabricApple": {
+        "NAME": "Fabric Apple",
+        "FLAVOR": "\"The curse will strike everyone who owns the apple.\"",
+        "DESCRIPTIONS": [
+            "At the start of your first turn, draw 1 card and add 1 #ySuspicious Apple to your hand."
+        ]
+    },
+    "ShamareKhas:SpiralHorn": {
+        "NAME": "Spiral Horn",
+        "FLAVOR": "The power of the Witch King never fades.",
+        "DESCRIPTIONS": [
+            "At the start of each turn, gain [E]. At the start of your first turn, gain an additional 6 points of #yshamarekhas:Namesis."
+        ]
+    },
+    "ShamareKhas:GreedCoin": {
+        "NAME": "Greed Coin",
+        "FLAVOR": "A coin that shines with a tempting luster, seemingly whispering to you to pursue more wealth and power.",
+        "DESCRIPTIONS": [
+            "Whenever you #yExhaust a card, gain 1.5 additional gold at the end of combat(floor)."
+        ]
+    },
+    "ShamareKhas:SirenKiss": {
+        "NAME": "Siren's Kiss",
+        "FLAVOR": "A mysterious kiss, said to lure people to their doom.",
+        "DESCRIPTIONS": [
+            "The first time you draw a #yStatus or #yCurse card in each combat, draw #b3 cards."
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{   
+    "翻译规则1":"#y后面的关键词不要断开，例如，要写成 #ySorceryWeak 而不是 #ySorcery Weak",
+    "易伤": "Vulnerable",
+    "虚弱": "Weak",
+    "力量": "Strength",
+    "敏捷": "Dexterity",
+    "格挡": "Block",
+    "伤害": "Damage",
+    "消耗": "Exhaust",
+    "无实体":"Intangible",
+    "固有":"Innate",
+    "保留":"Retain",
+    "[E]":"[E]",
+    "虚无":"Ethereal",
+    "巫恋":"Shamare",
+    "伴生恶兆":"Harbinger of Misforture",
+    "病入膏肓":"Malediction",
+    "堕落之血":"Corrupted Blood",
+    "巫术效果":"Sorcery Buff",
+    "报应":"Namesis",
+    "绝望之触":"Despair Touch",
+    "邪影灾祸":"Shadow Disaster",
+    "猛毒灾祸":"Venomous Disaster",
+    "火焰灾祸":"Flame Disaster",
+    "神圣灾祸":"Holy Disaster",
+    "中毒":"Poison",
+    "巫术易伤":"Sorcery Vulnerable",
+    "巫术虚弱":"Sorcery Weak",
+    "巫术中毒":"Sorcery Poison",
+    "可疑的苹果":"Suspicious Apple",
+    "灾祸":"Disaster",
+    "能力":"Power"
+
+
+
+
+}

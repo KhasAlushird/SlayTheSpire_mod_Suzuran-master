@@ -1,0 +1,100 @@
+[
+    {
+        "NAMES": [
+            "sorcerypoison"
+        ],
+        "DESCRIPTION": "When the owner is attacked, if there is X amount of #yunblockeddamage, deal X times the number of stacks times 2 damage, and reduce X stacks at the end of the attack."
+    },
+    {
+        "NAMES": [
+            "sorceryvulnerable"
+        ],
+        "DESCRIPTION": "Damage taken from attacks is increased by #y75%. If #yunblockeddamage is taken during the turn, reduce one stack at the end of the turn."
+    },
+    {
+        "NAMES": [
+            "sorceryweak"
+        ],
+        "DESCRIPTION": "Damage dealt by attacks is reduced by #y50%. If an attack is made during the turn, reduce one stack at the end of the turn."
+    },
+    {
+        "NAMES": [
+            "venomousdisaster"
+        ],
+        "DESCRIPTION": "#yvenomousdisaster is a #ybeneficial status card that #ycontinually strengthens."
+    },
+    {
+        "NAMES": [
+            "flamedisaster"
+        ],
+        "DESCRIPTION": "#yflamedisaster is a #ybeneficial status card that #ycontinually strengthens."
+    },
+    {
+        "NAMES": [
+            "shadowdisaster"
+        ],
+        "DESCRIPTION": "#yshadowdisaster is a #ybeneficial status card that #ycontinually strengthens."
+    },
+    {
+        "NAMES": [
+            "holydisaster"
+        ],
+        "DESCRIPTION": "#yholydisaster is a #ybeneficial status card that #ycontinually strengthens."
+    },
+    {
+        "NAMES": [
+            "namesis(x)",
+            "namesis"
+        ],
+        "DESCRIPTION": "Whenever the owner takes #yunblockeddamage, lose #yX HP, then remove this power."
+    },
+    {
+        "NAMES": [
+            "pardon"
+        ],
+        "DESCRIPTION": "Lose 1 stack at the end of the turn. While having this power, #ynamesis will not trigger."
+    },
+    {
+        "NAMES": [
+            "blackbile"
+        ],
+        "DESCRIPTION": "#yblackbile is a #ycurse card that applies #ynamesis to yourself."
+    },
+    {
+        "NAMES": [
+            "corruptedblood"
+        ],
+        "DESCRIPTION": "#ycorruptedblood is a #ycurse card that applies #ynamesis to yourself and enemies."
+    },
+    {
+        "NAMES": [
+            "suspiciousapple"
+        ],
+        "DESCRIPTION": "#ysuspiciousapple is a #yskill card related to healing HP."
+    },
+    {
+        "NAMES": [
+            "sorceryeffect"
+        ],
+        "DESCRIPTION": "1 stack of #ysorceryvulnerable or 1 stack of #ysorceryweak or 3 stacks of #ysorcerypoison."
+    },
+    {
+        "NAMES": [
+            "optimaleffect"
+        ],
+        "DESCRIPTION": "Depending on the situation, execute the following effects: gain #yBlock, deal #yDamage, apply #ysorceryweak, #ysorceryvulnerable, gain #yStrength and #yDexterity, gain #yArtifact."
+    },
+    {
+        "NAMES": [
+            "buffer"
+        ],
+        "DESCRIPTION": "Prevent the next time you would lose HP."
+    },
+    {
+        "NAMES": [
+            "despairtouch(x)",
+            "despairtouch"
+        ],
+        "DESCRIPTION": "Trigger additional effects when current HP is not higher than #yX% of max HP."
+    }
+]

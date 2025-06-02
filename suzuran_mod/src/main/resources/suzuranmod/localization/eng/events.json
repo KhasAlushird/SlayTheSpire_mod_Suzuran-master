@@ -1,0 +1,49 @@
+{
+    "ShamareKhas:GhostlyEvent": {
+      "NAME": "Evil Coffin",
+      "DESCRIPTIONS": [
+        "You find a dimly lit room, #rno windows inside, #rno lights at all. In the center of the room is a heavy coffin, #gdecorated with many jewels. Just as you try to investigate the coffin, a voice comes from within, #ysounding like a cry for help, #yasking you to open the coffin.",
+        "You take the artifact beside the coffin and leave the room. #rYou always have a bad feeling...",
+        "The coffin is nailed shut, you can only pry it open. A young Liberi boy with a delicate face crawls out. Good deeds are rewarded, you receive a #gthank you gift.",
+        "Many stories have plots where kind people are harmed. You are very cautious and ignore the suspicious cry for help."
+      ],
+      "OPTIONS": [
+        "[Someone is crying for help, can't ignore]: #gRemove two cards from your deck, #rlose 10 HP.",
+        "[Steal the strange artifact beside the coffin]: #gAdd 3 Ethereal+, #r1 Mediocre #gto your deck.",
+        "[Looks very suspicious]: Leave.",
+        "Leave.",
+        "[Choose 2 cards to remove]",
+        "[Someone is crying for help, can't ignore]: #gRemove two cards from your deck, #rlose 16 HP.",
+        "[Steal the strange artifact beside the coffin]: #gAdd 4 Ethereal+, #r2 Mediocre #gto your deck."
+      ]
+    },
+    "ShamareKhas:KindDoll": {
+      "NAME": "Kind Doll",
+      "DESCRIPTIONS": [
+        "A shabby doll sits against the wall, its limbs nearly falling apart. #yYou feel its blurred features are familiar, but it is too shabby to recognize. You approach the doll, #gand find something hidden in its chest.",
+        "You open the doll's chest and find a #rfiery red heart. You get a beautiful gem, you get the doll's heart.",
+        "You feel sorry for the doll and decide to take it with you. #rThe material of the doll makes you feel very uncomfortable.",
+        "You find the doll increasingly creepy and decide to leave quickly."
+      ],
+      "OPTIONS": [
+        "[Open your heart]: #gGain 40 gold.",
+        "[Take the doll]: #gGet the Shabby Doll, #rand add 1 Decay to your deck.",
+        "[Leave]: Do nothing.",
+        "Continue."
+      ]
+    },
+    "ShamareKhas:BlankDoor": {
+      "NAME": "Hidden Door",
+      "DESCRIPTIONS": [
+        "By accident, you break through a hidden wall. Behind the wall is a cleverly hidden large space, the room's furnishings show the user's unique artistic taste. The walls are covered with various ancient artifacts you have never seen before, #yand a historical stone tablet in the center of the room catches your attention.",
+        "After avoiding many traps, you take down the tablet and find a line of words written behind it: #y'I was once depressed by the malicious words of ignorant people, but how can art lose its meaning because of a rough and ugly appearance?'",
+        "The hidden wall design of this room is exquisite, seemingly a perfect combination of Originium technology and mechanical structure, amazing."
+      ],
+      "OPTIONS": [
+        "[Take down the tablet]: #gReplace all Strikes and Defends with their Sorcery versions, #rlose 55% max HP.",
+        "[Forget it]: Do nothing, leave.",
+        "Continue.",
+        "[Take down the tablet]: #gReplace all Strikes and Defends with their Sorcery versions, #rlose 65% max HP."
+      ]
+    }
+  }

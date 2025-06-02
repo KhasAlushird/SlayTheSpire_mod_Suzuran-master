@@ -1,0 +1,104 @@
+{
+    "ShamareKhas:SorceryPoison": {
+        "NAME": "Sorcery Poison",
+        "DESCRIPTIONS": [
+            "When the owner is attacked, if there is X amount of #yUnblockedDamage, deal X times #b%d damage, and reduce X stacks at the end of the attack."
+        ]
+    },
+    "ShamareKhas:SorceryVulnerable": {
+        "NAME": "Sorcery Vulnerable",
+        "DESCRIPTIONS": [
+            "Damage taken from attacks is increased by #y75%. If #yUnblockedDamage is taken during the turn, reduce one stack at the end of the turn."
+        ]
+    },
+    "ShamareKhas:SorceryWeak": {
+        "NAME": "Sorcery Weak",
+        "DESCRIPTIONS": [
+            "Damage dealt by attacks is reduced by #y50%. If an attack is made during the turn, reduce one stack at the end of the turn."
+        ]
+    },
+    "ShamareKhas:Namesis": {
+        "NAME": "Namesis",
+        "DESCRIPTIONS": [
+            "Whenever the owner takes #yUnblockedDamage, lose #b%d HP, then remove this power."
+        ]
+    },
+    "ShamareKhas:NamesisToEnemy": {
+        "NAME": "Namesis",
+        "DESCRIPTIONS": [
+            "Whenever the owner takes #yUnblockedDamage, lose #b%d HP, then remove this power."
+        ]
+    },
+    "ShamareKhas:Pardon": {
+        "NAME": "Pardon",
+        "DESCRIPTIONS": [
+            "Lose 1 stack at the end of the turn. While having this power, #yNamesis will not trigger."
+        ]
+    },
+    "ShamareKhas:PeacefulPsyche": {
+        "NAME": "Peaceful Psyche",
+        "DESCRIPTIONS": [
+            "When #yNamesis is triggered, draw #b%d cards, gain %s."
+        ]
+    },
+    "ShamareKhas:CalamityMessenger": {
+        "NAME": "Calamity Messenger",
+        "DESCRIPTIONS": [
+            "Whenever you draw a #yDisaster card, draw #b%d cards."
+        ]
+    },
+    "ShamareKhas:HirudoPower": {
+        "NAME": "Hirudo",
+        "DESCRIPTIONS": [
+            "Whenever a card is #yExhausted, heal #b%d HP, gain #b%d #yNamesis."
+        ]
+    },
+    "ShamareKhas:Plague": {
+        "NAME": "Plague",
+        "DESCRIPTIONS": [
+            "At the end of each turn, place #b%d #yVenomousDisaster cards into your discard pile."
+        ]
+    },
+    "ShamareKhas:EdgePower": {
+        "NAME": "Edge Power",
+        "DESCRIPTIONS": [
+            "At the end of each turn, place #b%d #yCorruptedBlood cards into your discard pile."
+        ]
+    },
+    "ShamareKhas:PoisonBarrierPower": {
+        "NAME": "Poison Barrier",
+        "DESCRIPTIONS": [
+            "Whenever you are attacked this turn, apply #b%d stacks of #yPoison to the attacker."
+        ]
+    },
+    "ShamareKhas:DimBudPower": {
+        "NAME": "Dim Bud",
+        "DESCRIPTIONS": [
+            "Whenever the owner takes #yUnblockedDamage, place #b%d #yShadowDisaster cards into your draw pile."
+        ]
+    },
+    "ShamareKhas:DefilePower": {
+        "NAME": "Defile Power",
+        "DESCRIPTIONS": [
+            "At the start of each turn, randomly apply #b%d stacks of #ySorceryVulnerable, #b%d stacks of #ySorceryWeak, or #b%d stacks of #ySorceryPoison to a random enemy."
+        ]
+    },
+    "ShamareKhas:AruspicyPower": {
+        "NAME": "Aruspicy",
+        "DESCRIPTIONS": [
+            "At the start of each turn, draw #b%d cards, #yForesee #b%d."
+        ]
+    },
+    "ShamareKhas:TheFoolPower": {
+        "NAME": "The Fool's Power",
+        "DESCRIPTIONS": [
+            "At the start of each turn, discard up to #b%d cards. For each #yDisaster card discarded, gain [E], draw 2 cards."
+        ]
+    },
+    "ShamareKhas:NamesisExplosionPower": {
+        "NAME": "Namesis Explosion",
+        "DESCRIPTIONS": [
+            "After #b%d turns, gain #b%d #yNamesis."
+        ]
+    }
+}
