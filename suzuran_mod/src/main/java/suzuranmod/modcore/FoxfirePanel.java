@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
 import suzuranmod.character.Foxfire;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.powers.BurnoutPower;
 
 public class FoxfirePanel extends AbstractPanel {
     private static final UIStrings uiStrings;
@@ -31,8 +32,8 @@ public class FoxfirePanel extends AbstractPanel {
     private static final Color ENERGY_TEXT_COLOR;
     public static int totalCount;
     public Foxfire Foxfire;
-    public static final float FOXFIRE_X = 218.0F  * Settings.xScale;
-    public static final float FOXFIRE_Y = 390.0F * Settings.yScale; // 可调整
+    public static final float FOXFIRE_X = 200.0F  * Settings.xScale;
+    public static final float FOXFIRE_Y = 360.0F * Settings.yScale; // 可调整
 
     // 资源路径和速度
     public static final String[] FOXFIRE_TEXTURES = {
@@ -43,7 +44,8 @@ public class FoxfirePanel extends AbstractPanel {
         ImageHelper.getImgPathWithSubType("ui","orb2","l4"),
     };
     public static final String FOXFIRE_VFX = ImageHelper.getImgPathWithSubType("ui","orb2","vfx");
-    public static final float[] FOXFIRE_LAYER_SPEEDS = { -40f, 32f, -20f, 15f, 15f };
+    public static final float[] FOXFIRE_LAYER_SPEEDS = { -80, 72f, -80f, 60f, 0 };
+    // public static final float[] FOXFIRE_LAYER_SPEEDS = { 0, 0f, 0f, 0f, 0f };
 
     public FoxfirePanel() {
         super(FOXFIRE_X, FOXFIRE_Y,  FOXFIRE_X, FOXFIRE_Y,FOXFIRE_X, FOXFIRE_Y,null, true);
@@ -54,36 +56,64 @@ public class FoxfirePanel extends AbstractPanel {
         this.energyVfxColor = Color.WHITE.cpy();
         this.gainEnergyImg = AbstractDungeon.player != null ? AbstractDungeon.player.getEnergyImage() : null;
         this.Foxfire = new Foxfire(FOXFIRE_TEXTURES, FOXFIRE_VFX, FOXFIRE_LAYER_SPEEDS);
-        totalCount = 7;
+        totalCount = 6;
         System.out.println("[FoxfirePanel] 构造完成，totalCount=" + totalCount);
     }
 
     public static void setEnergy(int energy) {
-        totalCount = energy;
-        fontScale = 2.0F;
-        energyVfxTimer = 2.0F;
+        if(totalCount != energy){
+            totalCount = energy;
+            fontScale = 2.0F;
+            energyVfxTimer = 2.0F;
+        }
+
         System.out.println("[FoxfirePanel] setEnergy: " + energy);
     }
 
     public static void addEnergy(int e) {
-        totalCount += e;
-        if (totalCount > 999)
-            totalCount = 999;
-        fontScale = 2.0F;
-        energyVfxTimer = 2.0F;
-        System.out.println("[FoxfirePanel] addEnergy: " + e + ", totalCount=" + totalCount);
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
+        return;
+    }
+        setEnergy(totalCount+e);
     }
 
     public static void useEnergy(int e) {
-        totalCount -= e;
-        if (totalCount < 0) {
-            totalCount = 0;
-        }
-        System.out.println("[FoxfirePanel] useEnergy: " + e + ", totalCount=" + totalCount);
+        int before = totalCount;
+       setEnergy(Math.max(0,totalCount-e));
+       if (before > 0 && totalCount == 0 && AbstractDungeon.player != null && !AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
+        // 获得一层BurnoutPower
+        AbstractDungeon.actionManager.addToBottom(
+            new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                AbstractDungeon.player,
+                AbstractDungeon.player,
+                new BurnoutPower(AbstractDungeon.player, 1),
+                1
+            )
+        );
+         // 施加-99层敏捷
+        AbstractDungeon.actionManager.addToBottom(
+            new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                AbstractDungeon.player,
+                AbstractDungeon.player,
+                new com.megacrit.cardcrawl.powers.DexterityPower(AbstractDungeon.player, -99),
+                -99
+            )
+        );
+        // 将生命值降至1
+        AbstractDungeon.actionManager.addToBottom(
+            new com.megacrit.cardcrawl.actions.common.LoseHPAction(
+                AbstractDungeon.player,
+                AbstractDungeon.player,
+                AbstractDungeon.player.currentHealth - 1
+            )
+        );
+ 
+    }
     }
 
     public void update() {
         System.out.println("[FoxfirePanel] update() called, totalCount=" + totalCount);
+        System.out.println("[FoxfirePanel] update() called, fontScale=" + fontScale);
         this.Foxfire.updateOrb(totalCount);
         updateVfx();
         if (fontScale != 1.0F)
@@ -116,10 +146,11 @@ public class FoxfirePanel extends AbstractPanel {
         renderOrb(sb);
         renderVfx(sb);
         String energyMsg = String.valueOf(totalCount);
-        if (AbstractDungeon.player != null)
-            AbstractDungeon.player.getEnergyNumFont().getData().setScale(fontScale);
+        // if (AbstractDungeon.player != null)
+        //     AbstractDungeon.player.getEnergyNumFont().getData().setScale(fontScale);
         // 判空，防止NPE
         if (FontHelper.energyNumFontRed != null && ENERGY_TEXT_COLOR != null && energyMsg != null) {
+            FontHelper.energyNumFontRed.getData().setScale(fontScale);
             FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, energyMsg, this.current_x, this.current_y, ENERGY_TEXT_COLOR);
         } else {
             System.out.println("[FoxfirePanel] FontHelper.energyNumFontRed or ENERGY_TEXT_COLOR is null!");
@@ -155,7 +186,7 @@ public class FoxfirePanel extends AbstractPanel {
         uiStrings = CardCrawlGame.languagePack.getUIString("Suzuran:FoxfireEnergy"); // 你需要在本地化文件中添加对应key
         ENERGY_TEXT_COLOR = Color.GOLD.cpy();
         fontScale = 1.0F;
-        totalCount = 7;
+        totalCount = 6;
         energyVfxTimer = 0.0F;
         System.out.println("[FoxfirePanel] static block loaded");
     }

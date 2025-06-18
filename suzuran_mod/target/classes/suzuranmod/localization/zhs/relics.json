@@ -1,52 +1,18 @@
 {
-    "ShamareKhas:ShabbyDoll": {
-      "NAME": "破旧的玩偶", 
-      "FLAVOR": "一只被诅咒所缠绕的破旧玩偶，散发着阴暗的气息。", 
+    "SuzuranKhas:Grow": {
+      "NAME": "“生长”", 
+      "FLAVOR": "蜷缩着，却坚强地生长着，就像它的主人", 
       "DESCRIPTIONS": [
-        "每场战斗开始时,随机对敌人施加一层 #y虚弱 和 #y易伤 " 
+        " #y狐火 首次小于或等于 #b1 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
       ]
     },
-    "ShamareKhas:DelicateDoll": {
-      "NAME": "精致的玩偶", 
-      "FLAVOR": "一只华丽而精致的玩偶，虽然外表光鲜亮丽，却隐藏着更深的诅咒。", 
+    "SuzuranKhas:Bloom": {
+      "NAME": "“绽放”", 
+      "FLAVOR": "曾经缩成一团的倔强，终于变成了盛开的模样。", 
       "DESCRIPTIONS": [
-        "每场战斗开始时,对所有敌人施加2层 #yshamarekhas:巫术虚弱 和1层 #yshamarekhas:巫术易伤 " 
+        " #y狐火 首次小于等于 #b1 和小于等于 #b3 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
       ]
-    },
-    "ShamareKhas:ExonerationCertificate": {
-        "NAME": "脱罪力证", 
-        "FLAVOR": "似乎能为持有者带来一丝解脱，然而其背后隐藏着未知的代价。", 
-        "DESCRIPTIONS": [
-          "每当你抽到 #y灾祸牌 时，减少3点 #yshamarekhas:报应 " 
-        ]
-      },
-      "ShamareKhas:FabricApple": {
-        "NAME": "布艺苹果", 
-        "FLAVOR": " “诅咒会袭击每个拥有苹果的人。”", 
-        "DESCRIPTIONS": [
-          "在你的第一回合开始时，抽1张牌，将1张 #y可疑的苹果 加入你的手牌。" 
-        ]
-      },
-      "ShamareKhas:SpiralHorn": {
-        "NAME": "巫王旋角", 
-        "FLAVOR": "巫王的力量永不消失", 
-        "DESCRIPTIONS": [
-          "在每回合开始时获得 [E] ,在你的第一回合额外获得6点 #yshamarekhas:报应 。" 
-        ]
-      },
-      "ShamareKhas:GreedCoin": {
-        "NAME": "贪婪硬币", 
-        "FLAVOR": "一枚闪耀着诱人光泽的硬币，似乎在低声诱惑着你追求更多的财富与权力。", 
-        "DESCRIPTIONS": [
-          "每当你 #y消耗 一张牌，战斗结束后额外获得1.5金币(向下取整)。" 
-        ]
-      },
-      "ShamareKhas:SirenKiss": {
-        "NAME": "女妖之吻", 
-        "FLAVOR": "一个神秘的吻，传说中能引诱人们走向毁灭", 
-        "DESCRIPTIONS": [
-          "你在每场战斗中第一次抽到 #y状态 或 #y诅咒 牌时，抽 #b3 张牌。" 
-        ]
-      }
+    }
+   
   }
   

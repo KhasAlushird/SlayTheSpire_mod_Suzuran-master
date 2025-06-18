@@ -94,10 +94,10 @@ public class Suzuran extends CustomPlayer {
     // 初始卡组的ID，可直接写或引用变量
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<10; x++) {
+        for(int x = 0; x<5; x++) {
             retVal.add(Strike.ID);
         }
-        for(int x = 0; x<10; x++) {
+        for(int x = 0; x<5; x++) {
             retVal.add(Defend.ID);
         }
         return retVal;
@@ -126,7 +126,7 @@ public class Suzuran extends CustomPlayer {
     // 初始遗物的ID，可以先写个原版遗物凑数
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("Vajra");
+        retVal.add("SuzuranKhas:Grow");
         return retVal;
     }
 
@@ -173,7 +173,7 @@ public class Suzuran extends CustomPlayer {
     // 高进阶带来的生命值损失
     @Override
     public int getAscensionMaxHPLoss() {
-        return 7;
+        return 12;
     }
 
     // 卡牌的能量字体，没必要修改

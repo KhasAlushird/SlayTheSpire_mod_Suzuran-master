@@ -34,6 +34,8 @@ import suzuranmod.character.Suzuran;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.relics.Bloom;
+import suzuranmod.relics.Grow;
 
 
 
@@ -61,7 +63,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
     private static final String BIG_ORB = ImageHelper.getOtherImgPath("character","big_orb");
     // 小尺寸的能量图标（战斗中，牌堆预览）
     private static final String ENEYGY_ORB = ImageHelper.getOtherImgPath("character","energy_orb");
-    public static final Color MY_COLOR = new Color(102.0F / 255.0F, 0.0F / 255.0F, 102.0F / 255.0F, 1.0F);
+    public static final Color MY_COLOR = new Color(242.0F / 255.0F, 242.0F / 255.0F, 191.0F / 255.0F, 1.0F);
 
     public TheCore() {
         BaseMod.subscribe(this); // 告诉basemod你要订阅事件
@@ -221,6 +223,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         //register relics here
         // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
         //BaseMod.addRelicToCustomPool(new EcoSpecimen(),MuelSyse.PlayerColorEnum.MUEL_COLOR);
+        BaseMod.addRelicToCustomPool(new Grow(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new Bloom(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 
         //register potions here

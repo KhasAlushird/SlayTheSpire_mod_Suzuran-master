@@ -1,5 +1,4 @@
 package suzuranmod.modcore;
-
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -19,7 +18,7 @@ public class FoxfirePatch {
 
     public static void onEndOfTurn() {
         if (FoxfirePanel.totalCount > 0) {
-            FoxfirePanel.totalCount--;
+            FoxfirePanel.useEnergy(1);
             System.out.println("[FoxfirePatch] onEndOfTurn called, totalCount now " + FoxfirePanel.totalCount);
         }
     }

@@ -10,7 +10,7 @@ import suzuranmod.helpers.ImageHelper;
 public class Foxfire extends CustomEnergyOrb {
     private Texture border;
 
-    private static final float ORB_IMG_SCALE = 1.03F * Settings.scale;
+    private static final float ORB_IMG_SCALE = 1.30F * Settings.scale;
 
     public Foxfire(String[] orbTexturePaths, String orbVfxPath, float[] layerSpeeds) {
         super(orbTexturePaths, orbVfxPath, layerSpeeds);
@@ -35,17 +35,27 @@ public class Foxfire extends CustomEnergyOrb {
                 System.out.println("[Foxfire] Drawing energyLayer " + i);
                 sb.draw(this.energyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
             }
-        } else {
-            for (int i = 0; i < this.noEnergyLayers.length; i++) {
-                System.out.println("[Foxfire] Drawing noEnergyLayer " + i);
-                sb.draw(this.noEnergyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
-            }
-        }
-        sb.draw(this.baseLayer, current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
+        } 
+        // else {
+        //     for (int i = 0; i < this.noEnergyLayers.length; i++) {
+        //         System.out.println("[Foxfire] Drawing noEnergyLayer " + i);
+        //         sb.draw(this.noEnergyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
+        //     }
+        // }
+        // sb.draw(this.baseLayer, current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
         // 渲染边框
         if (border != null) {
             System.out.println("[Foxfire] Drawing border");
-            sb.draw(border, current_x - 64.0F, current_y - 64.0F, 128.0F, 128.0F);
+            sb.draw(
+                border,
+                current_x - 64.0F, current_y - 64.0F,
+                64.0F, 64.0F, // originX, originY
+                128.0F, 128.0F, // width, height
+                ORB_IMG_SCALE, ORB_IMG_SCALE, // scaleX, scaleY
+                0.0F, // rotation
+                0, 0, 128, 128, // srcX, srcY, srcWidth, srcHeight
+                false, false // flipX, flipY
+            );
         } else {
             System.out.println("[Foxfire] border is null, not drawing border");
         }
