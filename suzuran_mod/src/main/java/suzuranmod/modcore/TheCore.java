@@ -113,10 +113,21 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         //(shortcut : shift alt down)
         //attack
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Strike());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxfireStrike());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Pullout());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Leapup());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.LightBurn());
        
 
         //skill
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.Defend());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Light());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxSurge());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Quenching());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.EmerCare());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FFHaze());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxProtect());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Twinkling());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -250,7 +261,7 @@ public void receiveEditKeywords() {
     if (keywords != null) {
         for (Keyword keyword : keywords) {
             // 这个id要全小写
-            BaseMod.addKeyword("Suzurankhas", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
+            BaseMod.addKeyword("suzurankhas", keyword.NAMES[0], keyword.NAMES, keyword.DESCRIPTION);
            logger.info("Loaded keyword: " + keyword.NAMES[0]);
         }
     } else {

@@ -47,7 +47,7 @@ public class FoxfirePanel extends AbstractPanel {
     public static final float[] FOXFIRE_LAYER_SPEEDS = { -80, 72f, -80f, 60f, 0 };
     // public static final float[] FOXFIRE_LAYER_SPEEDS = { 0, 0f, 0f, 0f, 0f };
 
-    public FoxfirePanel() {
+    public FoxfirePanel(int init_count) {
         super(FOXFIRE_X, FOXFIRE_Y,  FOXFIRE_X, FOXFIRE_Y,FOXFIRE_X, FOXFIRE_Y,null, true);
         System.out.println("[FoxfirePanel] 构造函数被调用");
         this.tipHitbox = new Hitbox(0.0F, 0.0F, 108.0F * Settings.scale, 108.0F * Settings.scale);
@@ -56,7 +56,7 @@ public class FoxfirePanel extends AbstractPanel {
         this.energyVfxColor = Color.WHITE.cpy();
         this.gainEnergyImg = AbstractDungeon.player != null ? AbstractDungeon.player.getEnergyImage() : null;
         this.Foxfire = new Foxfire(FOXFIRE_TEXTURES, FOXFIRE_VFX, FOXFIRE_LAYER_SPEEDS);
-        totalCount = 6;
+        totalCount = init_count;
         System.out.println("[FoxfirePanel] 构造完成，totalCount=" + totalCount);
     }
 
@@ -186,7 +186,7 @@ public class FoxfirePanel extends AbstractPanel {
         uiStrings = CardCrawlGame.languagePack.getUIString("Suzuran:FoxfireEnergy"); // 你需要在本地化文件中添加对应key
         ENERGY_TEXT_COLOR = Color.GOLD.cpy();
         fontScale = 1.0F;
-        totalCount = 6;
+        // totalCount = 7;
         energyVfxTimer = 0.0F;
         System.out.println("[FoxfirePanel] static block loaded");
     }

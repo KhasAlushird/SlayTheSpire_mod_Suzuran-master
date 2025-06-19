@@ -9,6 +9,61 @@
       "NAME": "防御", 
       "DESCRIPTION": "获得 !B! 点格挡。", 
       "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。" 
+    },
+    "SuzuranKhas:FoxfireStrike": { 
+      "NAME": "狐火打击", 
+      "DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。" 
+    },
+    "SuzuranKhas:Light": { 
+      "NAME": "点燃", 
+      "DESCRIPTION": "下个回合开始时,获得1点 suzurankhas:狐火 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "下个回合开始时,获得1点 suzurankhas:狐火 NL 消耗 " 
+    },
+    "SuzuranKhas:FoxSurge": { 
+      "NAME": "灵狐涌动", 
+      "DESCRIPTION": " suzurankhas:炽焰 (2):抽 !M! 张牌", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):抽 !M! 张牌" 
+    },
+    "SuzuranKhas:Quenching": { 
+      "NAME": "淬炼", 
+      "DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] [E] NL 消耗 " 
+    },
+     "SuzuranKhas:Pullout": { 
+      "NAME": "全力以赴", 
+      "DESCRIPTION": "对所有敌人造成 !D! 点伤害,对自身施加 !M! 层 易伤 ", 
+      "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害,对自身施加 !M! 层 易伤 " 
+    },
+    "SuzuranKhas:Leapup": { 
+      "NAME": "升腾", 
+      "DESCRIPTION": "造成 !D! 点伤害,获得1点 suzurankhas:狐火 ,你在接下来 !M! 回合内无法再从卡牌中获得格挡。", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,获得1点 suzurankhas:狐火 ,你在接下来 !M! 回合内无法再从卡牌中获得格挡。" 
+    },
+     "SuzuranKhas:EmerCare": { 
+      "NAME": "紧急医疗", 
+      "DESCRIPTION": "将两张 *包扎 置入你的手牌 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "将两张 *包扎+ 置入你的手牌 NL 消耗 " 
+    },
+    "SuzuranKhas:FFHaze": { 
+      "NAME": "狐火渺然", 
+      "DESCRIPTION": "选择并消耗至多X张手牌,每消耗1张牌,获得1点 suzurankhas:狐火 和2点 力量 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "选择并消耗至多X+1张手牌,每消耗1张牌,获得1点 suzurankhas:狐火 和2点 力量 NL 消耗 " 
+    },
+    "SuzuranKhas:FoxProtect": { 
+      "NAME": "灵狐庇佑", 
+      "DESCRIPTION": " suzurankhas:炽焰 (3):获得 !M! 层 无实体 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (3):获得 !M! 层 无实体 NL 消耗 " 
+    },
+    "SuzuranKhas:LightBurn": { 
+      "NAME": "炽燃圣光", 
+      "DESCRIPTION": "造成 !D! 点伤害3次，将一张 *灼伤 置入你的手牌", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次，将一张 *灼伤 置入你的手牌" 
+    },
+    "SuzuranKhas:Twinkling": { 
+      "NAME": "瞬", 
+      "DESCRIPTION": "获得 !B! 点格挡，获得 !M! 点 敏捷 ", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，获得 !M! 点 敏捷 " 
     }
   
       

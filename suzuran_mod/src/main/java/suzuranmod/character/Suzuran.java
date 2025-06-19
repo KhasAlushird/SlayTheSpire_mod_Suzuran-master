@@ -22,8 +22,10 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import basemod.abstracts.CustomPlayer;
+import suzuranmod.cards.attack.FoxfireStrike;
 import suzuranmod.cards.attack.Strike;
 import suzuranmod.cards.skill.Defend;
+import suzuranmod.cards.skill.Light;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
 import suzuranmod.helpers.ImageHelper;
@@ -100,6 +102,8 @@ public class Suzuran extends CustomPlayer {
         for(int x = 0; x<5; x++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(FoxfireStrike.ID);
+        retVal.add(Light.ID);
         return retVal;
     }
 
@@ -110,10 +114,11 @@ public class Suzuran extends CustomPlayer {
         this.state.addAnimation(0, "Idle", true, 0.0F);
         this.state.getCurrent(0).setTimeScale(1.3F); // 加快动画速度
 }   
+    
 
     @Override
     public void useSlowAttackAnimation() {
-        this.state.setAnimation(0, "Attack", false);
+        this.state.setAnimation(0, "Skill2", false);
         this.state.addAnimation(0, "Idle", true, 0.0F);
         this.state.getCurrent(0).setTimeScale(1.3F); // 加快动画速度
 }

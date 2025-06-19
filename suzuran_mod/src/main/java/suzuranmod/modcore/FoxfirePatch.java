@@ -7,13 +7,32 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class FoxfirePatch {
     public static FoxfirePanel foxfirePanel = null;
 
+    // public static void initFoxfire() {
+    //     FoxfirePanel.totalCount = 7;
+    //     System.out.println("[FoxfirePatch] initFoxfire called, totalCount set to 7");
+    // }
+
     public static void initFoxfire() {
-        FoxfirePanel.totalCount = 7;
-        System.out.println("[FoxfirePatch] initFoxfire called, totalCount set to 7");
+        if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getMonsters() == null) {
+        // System.out.println("[FoxfirePatch] initFoxfire: 当前房间或怪物列表为null，跳过初始化");
+        return;
+    }
+        int initialFoxfire = 7;
+        boolean isEliteOrBoss = (AbstractDungeon.getCurrRoom()).eliteTrigger;
+        for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
+            if (m.type == AbstractMonster.EnemyType.BOSS)
+                isEliteOrBoss = true;
+        }
+        if (isEliteOrBoss) {
+            initialFoxfire += 3;
+        }
+        foxfirePanel = new FoxfirePanel(initialFoxfire);
+        System.out.println("[FoxfirePatch] 新建 FoxfirePanel, 初始狐火: " + initialFoxfire);
     }
 
     public static void onEndOfTurn() {
@@ -51,10 +70,13 @@ public class FoxfirePatch {
             }
             if (FoxfirePatch.foxfirePanel == null) {
                 System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel is null, creating new");
-                FoxfirePatch.foxfirePanel = new FoxfirePanel();
+                initFoxfire();
             }
-            FoxfirePatch.foxfirePanel.update();
-            FoxfirePatch.foxfirePanel.render(sb);
+            if(FoxfirePatch.foxfirePanel != null){
+                FoxfirePatch.foxfirePanel.update();
+                FoxfirePatch.foxfirePanel.render(sb);
+            }
+
             System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel.render called");
         }
     }

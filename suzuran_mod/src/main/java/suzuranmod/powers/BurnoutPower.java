@@ -22,7 +22,7 @@ public class BurnoutPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         updateDescription();
-        this.type = PowerType.BUFF;
+        this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
 
         String path128 = ImageHelper.getOtherImgPath("powers", "BurnoutPower_96");

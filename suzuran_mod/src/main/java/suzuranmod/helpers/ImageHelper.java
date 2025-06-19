@@ -7,7 +7,7 @@ public abstract class ImageHelper {
     private static final String BASE_PATH = "suzuranmod\\images\\";
 
     // 获取卡牌图片路径
-    public static String getCardImgPath(CardType t, String name) {
+    public static String getCardImgPath(CardType t, String name,boolean completed) {
         String type;
         switch (t) {
             case ATTACK:
@@ -28,6 +28,7 @@ public abstract class ImageHelper {
             default:
                 throw new IllegalStateException("Unexpected value: " + t);
         }
+        if(!completed) return BASE_PATH + "cards\\" + "temp" + "\\" +"locked_"+ type + ".png";
         return BASE_PATH + "cards\\" + type + "\\" + name + ".png";
     }
 

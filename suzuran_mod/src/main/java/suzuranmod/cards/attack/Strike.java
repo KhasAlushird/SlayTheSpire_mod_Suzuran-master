@@ -18,7 +18,7 @@ public class Strike extends CustomCard {
     public static final String ID = IdHelper.makePath("Strike");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Strike");
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Strike",false);
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;

@@ -4,6 +4,12 @@
       "DESCRIPTIONS": [ 
         " #y狐火 无法以任何形式增长" 
       ]
+    },
+     "SuzuranKhas:FFafterPower": {
+      "NAME": "狐火增长",
+      "DESCRIPTIONS": [ 
+        "下个回合开始时，获得 #b%d 点 #y狐火 ,然后移除该能力" 
+      ]
     }
   }
   
