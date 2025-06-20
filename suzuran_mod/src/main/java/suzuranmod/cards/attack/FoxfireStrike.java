@@ -30,6 +30,7 @@ public class FoxfireStrike extends SuzuranCard {
         this.baseFoxfireConsume = FOXFIRE_CONSUME;
         this.foxfireConsume = FOXFIRE_CONSUME;
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        this.exhaust = true;
     }
 
     @Override

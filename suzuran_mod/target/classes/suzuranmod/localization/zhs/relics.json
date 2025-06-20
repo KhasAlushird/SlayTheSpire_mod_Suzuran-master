@@ -3,14 +3,28 @@
       "NAME": "“生长”", 
       "FLAVOR": "蜷缩着，却坚强地生长着，就像它的主人", 
       "DESCRIPTIONS": [
-        " #y狐火 首次小于或等于 #b1 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
+        " #ysuzurankhas:狐火 首次小于或等于 #b1 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
       ]
     },
     "SuzuranKhas:Bloom": {
       "NAME": "“绽放”", 
       "FLAVOR": "曾经缩成一团的倔强，终于变成了盛开的模样。", 
       "DESCRIPTIONS": [
-        " #y狐火 首次小于等于 #b1 和小于等于 #b3 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
+        " #ysuzurankhas:狐火 首次小于等于 #b1 和小于等于 #b3 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
+      ]
+    },
+    "SuzuranKhas:RottingStick": {
+      "NAME": "食腐者手杖", 
+      "FLAVOR": "食腐者吞吃生命，也利用生命。", 
+      "DESCRIPTIONS": [
+        "每当你受到治疗时，对随机一名敌人造成相同的伤害" 
+      ]
+    },
+    "SuzuranKhas:AmuletInArm": {
+      "NAME": "怀中御守", 
+      "FLAVOR": "“等到御守里不再有嘀嗒声，我们就回来了。”", 
+      "DESCRIPTIONS": [
+        "当你首次获得 #ysuzurankhas:燃尽 时，获得1点 #y无实体 和 #b5 点 #y格挡 " 
       ]
     }
    

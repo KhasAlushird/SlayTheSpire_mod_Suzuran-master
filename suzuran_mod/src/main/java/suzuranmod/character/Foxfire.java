@@ -16,23 +16,23 @@ public class Foxfire extends CustomEnergyOrb {
         super(orbTexturePaths, orbVfxPath, layerSpeeds);
         // 加载边框图片
         String borderPath = ImageHelper.getImgPathWithSubType("ui","orb2","border");
-        System.out.println("[Foxfire] borderPath=" + borderPath);
+        // System.out.println("[Foxfire] borderPath=" + borderPath);
         try {
             border = new Texture(borderPath);
-            System.out.println("[Foxfire] border loaded successfully");
+            // System.out.println("[Foxfire] border loaded successfully");
         } catch (Exception e) {
-            System.out.println("[Foxfire] border load failed: " + e.getMessage());
+            // System.out.println("[Foxfire] border load failed: " + e.getMessage());
             border = null;
         }
     }
 
     @Override
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
-        System.out.println("[Foxfire] renderOrb called, enabled=" + enabled + ", x=" + current_x + ", y=" + current_y);
+        // System.out.println("[Foxfire] renderOrb called, enabled=" + enabled + ", x=" + current_x + ", y=" + current_y);
         sb.setColor(com.badlogic.gdx.graphics.Color.WHITE);
         if (enabled) {
             for (int i = 0; i < this.energyLayers.length; i++) {
-                System.out.println("[Foxfire] Drawing energyLayer " + i);
+                // System.out.println("[Foxfire] Drawing energyLayer " + i);
                 sb.draw(this.energyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, this.angles[i], 0, 0, 128, 128, false, false);
             }
         } 
@@ -45,7 +45,7 @@ public class Foxfire extends CustomEnergyOrb {
         // sb.draw(this.baseLayer, current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
         // 渲染边框
         if (border != null) {
-            System.out.println("[Foxfire] Drawing border");
+            // System.out.println("[Foxfire] Drawing border");
             sb.draw(
                 border,
                 current_x - 64.0F, current_y - 64.0F,
@@ -57,7 +57,7 @@ public class Foxfire extends CustomEnergyOrb {
                 false, false // flipX, flipY
             );
         } else {
-            System.out.println("[Foxfire] border is null, not drawing border");
+            // System.out.println("[Foxfire] border is null, not drawing border");
         }
     }
 }

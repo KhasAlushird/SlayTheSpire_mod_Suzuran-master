@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 import suzuranmod.character.Foxfire;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.powers.BurnoutPower;
+import suzuranmod.relics.AmuletInArm;
 
 public class FoxfirePanel extends AbstractPanel {
     private static final UIStrings uiStrings;
@@ -49,7 +50,7 @@ public class FoxfirePanel extends AbstractPanel {
 
     public FoxfirePanel(int init_count) {
         super(FOXFIRE_X, FOXFIRE_Y,  FOXFIRE_X, FOXFIRE_Y,FOXFIRE_X, FOXFIRE_Y,null, true);
-        System.out.println("[FoxfirePanel] 构造函数被调用");
+        // System.out.println("[FoxfirePanel] 构造函数被调用");
         this.tipHitbox = new Hitbox(0.0F, 0.0F, 108.0F * Settings.scale, 108.0F * Settings.scale);
         this.energyVfxAngle = 0.0F;
         this.energyVfxScale = Settings.scale;
@@ -57,7 +58,7 @@ public class FoxfirePanel extends AbstractPanel {
         this.gainEnergyImg = AbstractDungeon.player != null ? AbstractDungeon.player.getEnergyImage() : null;
         this.Foxfire = new Foxfire(FOXFIRE_TEXTURES, FOXFIRE_VFX, FOXFIRE_LAYER_SPEEDS);
         totalCount = init_count;
-        System.out.println("[FoxfirePanel] 构造完成，totalCount=" + totalCount);
+        // System.out.println("[FoxfirePanel] 构造完成，totalCount=" + totalCount);
     }
 
     public static void setEnergy(int energy) {
@@ -67,7 +68,7 @@ public class FoxfirePanel extends AbstractPanel {
             energyVfxTimer = 2.0F;
         }
 
-        System.out.println("[FoxfirePanel] setEnergy: " + energy);
+        // System.out.println("[FoxfirePanel] setEnergy: " + energy);
     }
 
     public static void addEnergy(int e) {
@@ -90,6 +91,13 @@ public class FoxfirePanel extends AbstractPanel {
                 1
             )
         );
+        if(AbstractDungeon.player != null && !AbstractDungeon.player.hasPower("Artifact")){
+            for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
+                if (relic instanceof AmuletInArm) {
+                    ((AmuletInArm) relic).onBurnoutApplied();
+        }
+        }
+    }
          // 施加-99层敏捷
         AbstractDungeon.actionManager.addToBottom(
             new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
@@ -109,11 +117,19 @@ public class FoxfirePanel extends AbstractPanel {
         );
  
     }
+    //     // if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)){
+    //         System.out.println("[AmuletInArm]:trigger detected");
+    //     for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
+    //             if (relic instanceof AmuletInArm) {
+    //                 ((AmuletInArm) relic).onBurnoutApplied();
+    //     }
+    // }
+    // // }
     }
 
     public void update() {
-        System.out.println("[FoxfirePanel] update() called, totalCount=" + totalCount);
-        System.out.println("[FoxfirePanel] update() called, fontScale=" + fontScale);
+        // System.out.println("[FoxfirePanel] update() called, totalCount=" + totalCount);
+        // System.out.println("[FoxfirePanel] update() called, fontScale=" + fontScale);
         this.Foxfire.updateOrb(totalCount);
         updateVfx();
         if (fontScale != 1.0F)
@@ -141,7 +157,7 @@ public class FoxfirePanel extends AbstractPanel {
         if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
             return;
         }
-        System.out.println("[FoxfirePanel] render() called, totalCount=" + totalCount);
+        // System.out.println("[FoxfirePanel] render() called, totalCount=" + totalCount);
         this.tipHitbox.move(this.current_x, this.current_y);
         renderOrb(sb);
         renderVfx(sb);
@@ -153,14 +169,14 @@ public class FoxfirePanel extends AbstractPanel {
             FontHelper.energyNumFontRed.getData().setScale(fontScale);
             FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, energyMsg, this.current_x, this.current_y, ENERGY_TEXT_COLOR);
         } else {
-            System.out.println("[FoxfirePanel] FontHelper.energyNumFontRed or ENERGY_TEXT_COLOR is null!");
+            // System.out.println("[FoxfirePanel] FontHelper.energyNumFontRed or ENERGY_TEXT_COLOR is null!");
         }
         this.tipHitbox.render(sb);
         if (this.tipHitbox.hovered && (AbstractDungeon.getCurrRoom() != null) && (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp)
             TipHelper.renderGenericTip(70.0F * Settings.scale, 580.0F * Settings.scale, uiStrings.TEXT[0], uiStrings.TEXT[1]);
 }
     private void renderOrb(SpriteBatch sb) {
-        System.out.println("[FoxfirePanel] renderOrb() called, totalCount=" + totalCount);
+        // System.out.println("[FoxfirePanel] renderOrb() called, totalCount=" + totalCount);
         if (totalCount == 0) {
             this.Foxfire.renderOrb(sb, false, this.current_x, this.current_y);
         } else {
@@ -188,6 +204,6 @@ public class FoxfirePanel extends AbstractPanel {
         fontScale = 1.0F;
         // totalCount = 7;
         energyVfxTimer = 0.0F;
-        System.out.println("[FoxfirePanel] static block loaded");
+        // System.out.println("[FoxfirePanel] static block loaded");
     }
 }

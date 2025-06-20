@@ -139,8 +139,8 @@ public class Suzuran extends CustomPlayer {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字
                 characterStrings.TEXT[0], // 人物介绍
-                90, // 当前血量
-                90, // 最大血量
+                60, // 当前血量
+                60, // 最大血量
                 0, // 初始充能球栏位
                 65, // 初始携带金币
                 5, // 每回合抽牌数量

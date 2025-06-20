@@ -10,6 +10,26 @@
       "DESCRIPTIONS": [ 
         "下个回合开始时，获得 #b%d 点 #y狐火 ,然后移除该能力" 
       ]
-    }
+    },
+    "SuzuranKhas:HealThornPower": {
+      "NAME": "愈芒乍现",
+      "DESCRIPTIONS": [ 
+        "每当你受到治疗,获得 #b%d 点 #y荆棘 " 
+      ]
+    },
+    "SuzuranKhas:FoxCursePower": {
+      "NAME": "狐咒",
+      "DESCRIPTIONS": [ 
+        "在你的回合开始时，受到 #b%d 点伤害然后将 #y狐咒 层数增加 #b10 。" 
+      ]
+    },
+    
+  "SuzuranKhas:DrawAddPower": {
+    "NAME": "抽牌增加",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，额外抽 #b%d 张牌。"
+    ]
+  }
+
   }
   

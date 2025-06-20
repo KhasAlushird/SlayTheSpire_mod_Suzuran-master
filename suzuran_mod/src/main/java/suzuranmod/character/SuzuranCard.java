@@ -1,6 +1,5 @@
 package suzuranmod.character;
 
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,7 +10,6 @@ import suzuranmod.modcore.FoxfirePanel;
 import suzuranmod.powers.BurnoutPower;
 
 public abstract class SuzuranCard extends CustomCard {
-    public boolean upgradedHeal = false;
 
     public int baseFoxfireConsume = 0;
     public int foxfireConsume = 0;
@@ -22,18 +20,10 @@ public abstract class SuzuranCard extends CustomCard {
 
     public SuzuranCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
-        this.baseHeal = 0;
-        this.heal = this.baseHeal;
         this.baseFoxfireConsume = 0;
         this.foxfireConsume = this.baseFoxfireConsume;
     }
 
-    // 升级治疗量
-    public void upgradeHeal(int amount) {
-        this.baseHeal += amount;
-        this.heal = this.baseHeal;
-        this.upgradedHeal = true;
-    }
 
     // 升级狐火消耗
     public void upgradeFoxfireConsume(int new_consume) {
@@ -71,10 +61,6 @@ public abstract class SuzuranCard extends CustomCard {
     }
 
     protected void doSuzuranBaseUse(AbstractPlayer p, AbstractMonster m) {
-        // 治疗（直接用父类的heal/baseHeal字段）
-        if (this.heal > 0) {
-            addToBot(new HealAction(p, p, this.heal));
-        }
         // 狐火消耗
         if (this.foxfireConsume > 0) {
             int current = FoxfirePanel.getCurrentEnergy();
@@ -87,6 +73,10 @@ public abstract class SuzuranCard extends CustomCard {
             FoxfirePanel.addEnergy(this.foxfireGain);
         }
     }
+
+    public void onPlayerHeal(int healAmount) {
+    // 子类重写
+}
 
     // 复制方法
     @Override

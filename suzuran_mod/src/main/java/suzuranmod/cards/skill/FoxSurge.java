@@ -25,7 +25,7 @@ public class FoxSurge extends SuzuranCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseFoxfireConsume = FOXFIRE_CONSUME;
         this.foxfireConsume = FOXFIRE_CONSUME;
-        this.magicNumber =this.baseMagicNumber= 3;
+        this.magicNumber =this.baseMagicNumber= 4;
     }
 
     @Override

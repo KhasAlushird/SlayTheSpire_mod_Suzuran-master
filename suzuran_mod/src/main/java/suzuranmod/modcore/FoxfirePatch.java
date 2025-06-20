@@ -32,13 +32,13 @@ public class FoxfirePatch {
             initialFoxfire += 3;
         }
         foxfirePanel = new FoxfirePanel(initialFoxfire);
-        System.out.println("[FoxfirePatch] 新建 FoxfirePanel, 初始狐火: " + initialFoxfire);
+        // System.out.println("[FoxfirePatch] 新建 FoxfirePanel, 初始狐火: " + initialFoxfire);
     }
 
     public static void onEndOfTurn() {
         if (FoxfirePanel.totalCount > 0) {
             FoxfirePanel.useEnergy(1);
-            System.out.println("[FoxfirePatch] onEndOfTurn called, totalCount now " + FoxfirePanel.totalCount);
+            // System.out.println("[FoxfirePatch] onEndOfTurn called, totalCount now " + FoxfirePanel.totalCount);
         }
     }
 
@@ -46,7 +46,7 @@ public class FoxfirePatch {
     public static class StartCombatPatch {
         @SpirePostfixPatch
         public static void Postfix(AbstractPlayer __instance) {
-            System.out.println("[FoxfirePatch] StartCombatPatch triggered");
+            // System.out.println("[FoxfirePatch] StartCombatPatch triggered");
             FoxfirePatch.initFoxfire();
         }
     }
@@ -55,7 +55,7 @@ public class FoxfirePatch {
     public static class EndTurnPatch {
         @SpireInsertPatch(rloc = 8)
         public static void Insert(GameActionManager __instance) {
-            System.out.println("[FoxfirePatch] EndTurnPatch triggered");
+            // System.out.println("[FoxfirePatch] EndTurnPatch triggered");
             FoxfirePatch.onEndOfTurn();
         }
     }
@@ -65,11 +65,11 @@ public class FoxfirePatch {
         @SpireInsertPatch(rloc = 6)
         public static void Insert(OverlayMenu __instance, SpriteBatch sb) {
             if (AbstractDungeon.player == null) {
-                System.out.println("[FoxfirePatch] OverlayRenderPatch: player is null, skip render");
+                // System.out.println("[FoxfirePatch] OverlayRenderPatch: player is null, skip render");
                 return;
             }
             if (FoxfirePatch.foxfirePanel == null) {
-                System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel is null, creating new");
+                // System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel is null, creating new");
                 initFoxfire();
             }
             if(FoxfirePatch.foxfirePanel != null){
@@ -77,7 +77,7 @@ public class FoxfirePatch {
                 FoxfirePatch.foxfirePanel.render(sb);
             }
 
-            System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel.render called");
+            // System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel.render called");
         }
     }
 }

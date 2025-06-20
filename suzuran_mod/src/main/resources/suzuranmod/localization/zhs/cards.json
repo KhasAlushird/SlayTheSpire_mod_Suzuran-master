@@ -12,8 +12,8 @@
     },
     "SuzuranKhas:FoxfireStrike": { 
       "NAME": "狐火打击", 
-      "DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。", 
-      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。" 
+      "DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):造成 !D! 点伤害。 NL 消耗 " 
     },
     "SuzuranKhas:Light": { 
       "NAME": "点燃", 
@@ -27,8 +27,8 @@
     },
     "SuzuranKhas:Quenching": { 
       "NAME": "淬炼", 
-      "DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] [E] NL 消耗 " 
+      "DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] [E] NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (2):获得 [E] [E] [E] [E] [E] NL 消耗 " 
     },
      "SuzuranKhas:Pullout": { 
       "NAME": "全力以赴", 
@@ -64,7 +64,49 @@
       "NAME": "瞬", 
       "DESCRIPTION": "获得 !B! 点格挡，获得 !M! 点 敏捷 ", 
       "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，获得 !M! 点 敏捷 " 
+    },
+    "SuzuranKhas:HealThorn": { 
+      "NAME": "愈芒乍现", 
+      "DESCRIPTION": "每当你受到治疗，获得 !M! 层 荆棘 ", 
+      "UPGRADE_DESCRIPTION": "每当你受到治疗，获得 !M! 层 荆棘 " 
+    },
+    "SuzuranKhas:Will_o_t_s": { 
+      "NAME": "鬼火", 
+      "DESCRIPTION": " 固有 NL suzurankhas:炽焰 (1):施加 !M! 点 suzurankhas:狐咒 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " 固有 NL suzurankhas:炽焰 (1):施加 !M! 点 suzurankhas:狐咒 NL 消耗 " 
+    },
+    "SuzuranKhas:CircleHealing": { 
+      "NAME": "治疗之环", 
+      "DESCRIPTION": "获得 !M! 层 再生 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "获得 !M! 层 再生 NL 消耗 " 
+    },
+    "SuzuranKhas:Glimmer": { 
+      "NAME": "微光", 
+      "DESCRIPTION": "对所有敌人造成 !D! 点伤害,恢复 !M! 点生命值", 
+      "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害,恢复 !M! 点生命值" 
+    },
+    "SuzuranKhas:BraceUp": { 
+      "NAME": "振奋", 
+      "DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌。 你每次受到治疗，这张牌的耗能减少1。", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌。 你每次受到治疗，这张牌的耗能减少1。" 
+    },
+    "SuzuranKhas:MiracleGrowth": { 
+      "NAME": "奇迹生长", 
+      "DESCRIPTION": "流失 !M! 点生命值(不会使生命值低于10),抽1张牌,在你的回合开始时,额外抽1张牌, 固有 ", 
+      "UPGRADE_DESCRIPTION": "流失 !M! 点生命值(不会使生命值低于10),抽2张牌,在你的回合开始时,额外抽1张牌, 固有 " 
+    },
+    "SuzuranKhas:ThornWrapped": { 
+      "NAME": "荆棘护体", 
+      "DESCRIPTION": "获得 !B! 点格挡和 !M! 层 荆棘 ", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡和 !M! 层 荆棘 " 
+    },
+    "SuzuranKhas:FFCombo": { 
+      "NAME": "狐火连击", 
+      "DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害" 
     }
+  
+  
   
       
 

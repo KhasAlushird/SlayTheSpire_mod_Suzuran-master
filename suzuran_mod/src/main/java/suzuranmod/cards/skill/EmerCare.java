@@ -18,7 +18,7 @@ public class EmerCare extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "EmerCare",false);
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;

@@ -34,8 +34,10 @@ import suzuranmod.character.Suzuran;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.relics.AmuletInArm;
 import suzuranmod.relics.Bloom;
 import suzuranmod.relics.Grow;
+import suzuranmod.relics.RottingStick;
 
 
 
@@ -117,6 +119,9 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Pullout());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Leapup());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.LightBurn());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Glimmer());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.BraceUp());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FFCombo());
        
 
         //skill
@@ -128,13 +133,17 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.FFHaze());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxProtect());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.Twinkling());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Will_o_t_s());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.CircleHealing());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.ThornWrapped());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
         //status
        
         //powers
-       
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.HealThorn());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.MiracleGrowth());
 
         //Curses
        
@@ -236,6 +245,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         //BaseMod.addRelicToCustomPool(new EcoSpecimen(),MuelSyse.PlayerColorEnum.MUEL_COLOR);
         BaseMod.addRelicToCustomPool(new Grow(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new Bloom(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new RottingStick(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new AmuletInArm(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 
         //register potions here
