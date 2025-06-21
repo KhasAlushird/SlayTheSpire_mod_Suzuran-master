@@ -104,7 +104,18 @@
       "NAME": "狐火连击", 
       "DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害", 
       "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害" 
+    },
+    "SuzuranKhas:SeekingOfuda": { 
+      "NAME": "求符", 
+      "DESCRIPTION": "获得 !M! 个 suzurankhas:灵符 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "获得 !M! 个 suzurankhas:灵符 NL 消耗 " 
+    },
+    "SuzuranKhas:OfudaKill": { 
+      "NAME": "符决", 
+      "DESCRIPTION": "造成 !D! 点伤害。若 斩杀 ,获得 !M! 个 suzurankhas:灵符 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。若 斩杀 ,获得 !M! 个 suzurankhas:灵符 NL 消耗 " 
     }
+  
   
   
   

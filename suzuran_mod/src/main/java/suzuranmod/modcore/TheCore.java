@@ -17,10 +17,12 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.BaseMod;
 import static basemod.BaseMod.logger;
+import basemod.abstracts.CustomReward;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -34,10 +36,14 @@ import suzuranmod.character.Suzuran;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.patches.OfudaRewardTypePatch;
 import suzuranmod.relics.AmuletInArm;
 import suzuranmod.relics.Bloom;
 import suzuranmod.relics.Grow;
+import suzuranmod.relics.NineTails;
 import suzuranmod.relics.RottingStick;
+import suzuranmod.relics.TheFire;
+import suzuranmod.rewards.OfudaRewardItem;
 
 
 
@@ -81,6 +87,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
            SMALL_ORB);
     }
 
+
+
     public static void initialize() {
         new TheCore();
     }
@@ -122,6 +130,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Glimmer());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.BraceUp());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FFCombo());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaKill());
        
 
         //skill
@@ -136,6 +145,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.Will_o_t_s());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.CircleHealing());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.ThornWrapped());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.SeekingOfuda());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -231,11 +241,18 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
     }
 
     @Override
-    public void receivePostInitialize() {
-        // 注册自定义事件
-   
-    }
-
+public void receivePostInitialize() {
+    BaseMod.registerCustomReward(
+        OfudaRewardTypePatch.SUZURAN_OFUDA,
+        (RewardSave save) -> new OfudaRewardItem(save.amount),
+        (CustomReward reward) -> new RewardSave(
+            reward.type.toString(),
+            null,
+            ((OfudaRewardItem)reward).ofudaCount,
+            0
+        )
+    );
+}
    
     @Override
     public void receiveEditRelics() {
@@ -247,6 +264,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         BaseMod.addRelicToCustomPool(new Bloom(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new RottingStick(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new AmuletInArm(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new TheFire(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new NineTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 
         //register potions here
@@ -255,6 +274,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
 
 
 }
+
 
 
 @Override

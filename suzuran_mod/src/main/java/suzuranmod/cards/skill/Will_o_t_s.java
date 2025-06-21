@@ -28,14 +28,14 @@ public class Will_o_t_s extends SuzuranCard {
         this.baseFoxfireConsume = FOXFIRE_CONSUME;
         this.foxfireConsume = FOXFIRE_CONSUME;
         this.exhaust = true;
-        this.magicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 1;
         this.isInnate = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         doSuzuranBaseUse(p, m); 
-addToBot(new ApplyPowerAction(m, p, new FoxCursePower(m, this.magicNumber), this.magicNumber));    }
+    addToBot(new ApplyPowerAction(m, p, new FoxCursePower(m, this.magicNumber), this.magicNumber));    }
 
     @Override
     public void upgrade() {

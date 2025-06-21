@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import suzuranmod.modcore.FoxfirePanel;
+import suzuranmod.modcore.OfudaManager;
 import suzuranmod.powers.BurnoutPower;
 
 public abstract class SuzuranCard extends CustomCard {
@@ -74,8 +75,12 @@ public abstract class SuzuranCard extends CustomCard {
         }
     }
 
+    public void gainOfuda(int amount) {
+        OfudaManager.addOfuda(amount);
+    }
+
     public void onPlayerHeal(int healAmount) {
-    // 子类重写
+    // 子类重写，请勿删除
 }
 
     // 复制方法

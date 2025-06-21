@@ -26,6 +26,20 @@
       "DESCRIPTIONS": [
         "当你首次获得 #ysuzurankhas:燃尽 时，获得1点 #y无实体 和 #b5 点 #y格挡 " 
       ]
+    },
+    "SuzuranKhas:TheFire": {
+      "NAME": "薪火", 
+      "FLAVOR": "这样的火光总是令人安心", 
+      "DESCRIPTIONS": [
+        "在你的第三回合开始时，获得1点 #ysuzurankhas:狐火 " 
+      ]
+    },
+    "SuzuranKhas:NineTails": {
+      "NAME": "九尾", 
+      "FLAVOR": "毛茸茸，毛茸茸......", 
+      "DESCRIPTIONS": [
+        "每回合开始时，获得 [E] , 抽1张牌" 
+      ]
     }
    
   }
