@@ -34,7 +34,6 @@ public class FFHazeAction extends AbstractGameAction {
         if (this.energyOnUse != -1) {
             effect = this.energyOnUse;
         }
-        if(this.upgraded) effect+=1;
         if (this.p.hasRelic("Chemical X")) {
             effect += 2;
             this.p.getRelic("Chemical X").flash();
@@ -57,6 +56,9 @@ public class FFHazeAction extends AbstractGameAction {
             for (AbstractCard card : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(card);
                 exhaustCount++;
+            }
+            if(this.upgraded){
+                exhaustCount ++;
             }
             if (exhaustCount > 0) {
                 FoxfirePanel.addEnergy(exhaustCount);

@@ -26,10 +26,10 @@ public class Glimmer extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int BASE_DAMAGE = 11;
+    private static final int BASE_DAMAGE = 14;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int BASE_HEAL = 9;
-    private static final int UPGRADE_HEAL = 2;
+    private static final int UPGRADE_HEAL = 3;
 
     public Glimmer() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

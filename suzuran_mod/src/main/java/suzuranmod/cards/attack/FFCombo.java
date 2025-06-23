@@ -1,5 +1,6 @@
 package suzuranmod.cards.attack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -27,7 +28,7 @@ public class FFCombo extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int BASE_DAMAGE = 20;
+    private static final int BASE_DAMAGE = 25;
 
     public FFCombo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -41,12 +42,12 @@ public class FFCombo extends CustomCard {
         this.addToBot(
             new DamageAction(
                 m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn))
+                new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_HORIZONTAL)
         );
         this.addToBot(
             new DamageAction(
                 m,
-                new DamageInfo(p, foxfire*2, this.damageTypeForTurn))
+                new DamageInfo(p, foxfire*2, this.damageTypeForTurn),AbstractGameAction.AttackEffect.BLUNT_HEAVY)
         );
     }
 
@@ -54,7 +55,7 @@ public class FFCombo extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(8);
+            this.upgradeDamage(10);
             this.initializeDescription();
         }
     }

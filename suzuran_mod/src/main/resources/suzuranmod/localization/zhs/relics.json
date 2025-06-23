@@ -10,7 +10,7 @@
       "NAME": "“绽放”", 
       "FLAVOR": "曾经缩成一团的倔强，终于变成了盛开的模样。", 
       "DESCRIPTIONS": [
-        " #ysuzurankhas:狐火 首次小于等于 #b1 和小于等于 #b3 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
+        "替换 #y“生长” , #ysuzurankhas:狐火 首次小于等于 #b1 和小于等于 #b3 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
       ]
     },
     "SuzuranKhas:RottingStick": {
@@ -38,7 +38,14 @@
       "NAME": "九尾", 
       "FLAVOR": "毛茸茸，毛茸茸......", 
       "DESCRIPTIONS": [
-        "每回合开始时，获得 [E] , 抽1张牌" 
+        "战斗开始时获得 [E] 和1点 #ysuzurankhas:狐火 ，每回合开始时，额外抽1张牌" 
+      ]
+    },
+    "SuzuranKhas:WakanCrystal": {
+      "NAME": "灵力结晶", 
+      "FLAVOR": "待完成", 
+      "DESCRIPTIONS": [
+        "拾起时，获得2个 #ysuzurankhas:灵符 , 你在休息处获得的 #y灵符 数量翻倍" 
       ]
     }
    

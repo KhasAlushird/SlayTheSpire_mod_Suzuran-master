@@ -27,7 +27,7 @@ public class CircleHealing extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int BASE_MAGIC = 6;
-    private static final int UPGRADE_MAGIC = 9;
+    private static final int UPGRADE_MAGIC = 3;
 
     public CircleHealing() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import basemod.abstracts.CustomRelic;
 import suzuranmod.helpers.IdHelper;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.modcore.FoxfirePanel;
 
 public class NineTails extends CustomRelic {
     public static final String ID = IdHelper.makePath("NineTails");
@@ -24,10 +25,17 @@ public class NineTails extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
+
+    @Override
+    public void atBattleStart() {
+        this.flash();
+        AbstractDungeon.player.gainEnergy(1);
+        FoxfirePanel.addEnergy(1);
+    }
+
     @Override
     public void atTurnStart() {
         this.flash();
-        AbstractDungeon.player.gainEnergy(1);
         this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
     }
 

@@ -1,5 +1,6 @@
 package suzuranmod.cards.attack;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -36,7 +37,7 @@ public class FoxfireStrike extends SuzuranCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         doSuzuranBaseUse(p, m); 
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     @Override

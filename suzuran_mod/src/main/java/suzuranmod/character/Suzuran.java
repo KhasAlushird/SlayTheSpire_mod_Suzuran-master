@@ -139,10 +139,10 @@ public class Suzuran extends CustomPlayer {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字
                 characterStrings.TEXT[0], // 人物介绍
-                60, // 当前血量
-                60, // 最大血量
+                65, // 当前血量
+                65, // 最大血量
                 0, // 初始充能球栏位
-                65, // 初始携带金币
+                99, // 初始携带金币
                 5, // 每回合抽牌数量
                 this, // 别动
                 this.getStartingRelics(), // 初始遗物
@@ -178,7 +178,7 @@ public class Suzuran extends CustomPlayer {
     // 高进阶带来的生命值损失
     @Override
     public int getAscensionMaxHPLoss() {
-        return 12;
+        return 8;
     }
 
     // 卡牌的能量字体，没必要修改
@@ -190,6 +190,11 @@ public class Suzuran extends CustomPlayer {
     // 人物选择界面点击你的人物按钮时触发的方法，这里为屏幕轻微震动
     @Override
     public void doCharSelectScreenSelectEffect() {
+        if (MathUtils.randomBoolean()) {
+        CardCrawlGame.sound.playA("SUZURAN_SELECT1", 0.0F);
+        } else {
+        CardCrawlGame.sound.playA("SUZURAN_SELECT2", 0.0F);
+        }   
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
 
@@ -209,6 +214,8 @@ public class Suzuran extends CustomPlayer {
     public String getCustomModeCharacterButtonSoundKey() {
         return "ATTACK_HEAVY";
     }
+
+    
 
     // 游戏中左上角显示在你的名字之后的人物名称
     @Override

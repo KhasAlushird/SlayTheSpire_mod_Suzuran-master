@@ -29,7 +29,7 @@ public class BraceUp extends SuzuranCard {
     public BraceUp() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 16;
+        this.baseDamage = 25;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

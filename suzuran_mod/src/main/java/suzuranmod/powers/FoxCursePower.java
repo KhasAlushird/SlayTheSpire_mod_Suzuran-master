@@ -39,10 +39,9 @@ public class FoxCursePower extends AbstractPower {
         this.description = String.format(DESCRIPTIONS[0], this.amount);
     }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            flash();
+
+    public void trigger(){
+        flash();
             // 对所有者造成等同于层数的伤害
              // 用THORNS类型造成伤害（可被格挡，不受易伤加成）
             AbstractDungeon.actionManager.addToBottom(
@@ -53,8 +52,23 @@ public class FoxCursePower extends AbstractPower {
                 )
             );
             // 增加10层
-            this.amount += 10;
+            this.amount += 8;
             updateDescription();
-        }
     }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+            trigger();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        if (this.amount>0){
+            this.trigger();
+        }
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        updateDescription();
+        // 叠加时额外触发一次
+}
 }

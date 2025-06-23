@@ -58,7 +58,9 @@ public class OfudaPatch {
         boolean hovered = InputHelper.mX >= ofudaX && InputHelper.mX <= ofudaX + ofudaW
                 && InputHelper.mY >= ofudaY && InputHelper.mY <= ofudaY + ofudaH;
 
-        float scale = hovered ? 1.2f : 1.0f;
+        OfudaManager.updateScale();
+        
+        float scale = hovered ? 1.2f : OfudaManager.ofudaScale;
         float drawSize = ICON_SIZE * scale;
         float drawX = x - (drawSize - ICON_SIZE) / 2f;
         float drawY = y - (drawSize - ICON_SIZE) / 2f;

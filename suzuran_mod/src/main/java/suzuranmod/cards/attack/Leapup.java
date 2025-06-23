@@ -26,7 +26,7 @@ public class Leapup extends SuzuranCard {
     public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "Leapup",false);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 2;
-    public static final int DAMAGE = 25;
+    public static final int DAMAGE = 30;
     public static final int FOXFIRE_GAIN = 1;
 
     public Leapup() {
@@ -48,7 +48,7 @@ public class Leapup extends SuzuranCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(7);
+            this.upgradeDamage(10);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

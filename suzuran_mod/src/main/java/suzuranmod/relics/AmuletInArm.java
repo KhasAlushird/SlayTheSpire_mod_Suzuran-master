@@ -15,7 +15,7 @@ import suzuranmod.helpers.ImageHelper;
 public class AmuletInArm extends CustomRelic {
     public static final String ID = IdHelper.makePath("AmuletInArm");
     private static final String IMG_PATH = ImageHelper.getOtherImgPath("relics", "AmuletInArm");
-    private static final RelicTier RELIC_TIER = RelicTier.UNCOMMON;
+    private static final RelicTier RELIC_TIER = RelicTier.RARE;
     private static final LandingSound LANDING_SOUND = LandingSound.CLINK;
 
     private boolean triggeredThisCombat = false;

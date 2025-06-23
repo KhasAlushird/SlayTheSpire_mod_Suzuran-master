@@ -28,7 +28,7 @@ public class OfudaKill extends CustomCard {
 
     public OfudaKill() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 6;
+        this.baseDamage = 9;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
     }
@@ -37,7 +37,7 @@ public class OfudaKill extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(4);
+            this.upgradeDamage(5);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

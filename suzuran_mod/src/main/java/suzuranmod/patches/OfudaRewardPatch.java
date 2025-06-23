@@ -14,7 +14,13 @@ public class OfudaRewardPatch {
         @SpirePostfixPatch
         public static void addOfudaReward(AbstractRoom __instance) {
             if (OfudaManager.getOfuda() > 0 && AbstractDungeon.getCurrRoom().rewards != null) {
-                AbstractDungeon.getCurrRoom().rewards.add(new OfudaRewardItem(OfudaManager.getOfuda()));
+
+
+                    AbstractDungeon.getCurrRoom().rewards.add(
+                    AbstractDungeon.getCurrRoom().rewards.size(),
+                    new OfudaRewardItem(OfudaManager.getOfuda())
+                );
+
             }
         }
     }

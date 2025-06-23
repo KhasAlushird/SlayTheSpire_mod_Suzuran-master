@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
@@ -81,6 +82,35 @@ public class FoxfirePanel extends AbstractPanel {
     public static void useEnergy(int e) {
         int before = totalCount;
        setEnergy(Math.max(0,totalCount-e));
+
+        if(totalCount<=3){
+            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")){
+                  AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
+                    if (bloom instanceof suzuranmod.relics.Bloom) {
+                        ((suzuranmod.relics.Bloom) bloom).trigger3();
+                    }
+
+            }
+       }
+    
+    
+       if(totalCount<=1){
+            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Grow")){
+                  AbstractRelic grow = AbstractDungeon.player.getRelic("SuzuranKhas:Grow");
+                    if (grow instanceof suzuranmod.relics.Grow) {
+                        ((suzuranmod.relics.Grow) grow).trigger();
+                    }
+
+            }
+
+            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")){
+                  AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
+                    if (bloom instanceof suzuranmod.relics.Bloom) {
+                        ((suzuranmod.relics.Bloom) bloom).trigger1();
+                    }
+
+            }
+       }
        if (before > 0 && totalCount == 0 && AbstractDungeon.player != null && !AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
         // 获得一层BurnoutPower
         AbstractDungeon.actionManager.addToBottom(

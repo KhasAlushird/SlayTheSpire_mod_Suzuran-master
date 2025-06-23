@@ -27,9 +27,10 @@ public class MiracleGrowth extends CustomCard {
     public static final CardRarity RARITY = CardRarity.RARE;
     public static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_MAGIC = 20;
+    private static final int BASE_MAGIC = 15;
     // private static final int DRAW_CARD = 1;
     // private static final int UPGRADE_MAGIC = ;
+    private static final int MIN_HP = 25;
 
     public MiracleGrowth() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -41,7 +42,7 @@ public class MiracleGrowth extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int draw_card = 1;
-        int hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - 10));
+        int hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - MIN_HP));
         if (hpLoss > 0) {
             this.addToBot(new LoseHPAction(p, p, hpLoss));
         }

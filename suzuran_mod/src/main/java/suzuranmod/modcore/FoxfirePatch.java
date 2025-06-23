@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import suzuranmod.character.Suzuran;
+
 public class FoxfirePatch {
     public static FoxfirePanel foxfirePanel = null;
 
@@ -18,6 +20,10 @@ public class FoxfirePatch {
     // }
 
     public static void initFoxfire() {
+        if (!(AbstractDungeon.player instanceof Suzuran)) {
+            foxfirePanel = null;
+            return;
+    }
         if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getMonsters() == null) {
         // System.out.println("[FoxfirePatch] initFoxfire: 当前房间或怪物列表为null，跳过初始化");
         return;

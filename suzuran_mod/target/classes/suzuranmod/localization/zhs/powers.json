@@ -20,7 +20,7 @@
     "SuzuranKhas:FoxCursePower": {
       "NAME": "狐咒",
       "DESCRIPTIONS": [ 
-        "在你的回合开始时，受到 #b%d 点伤害然后将 #y狐咒 层数增加 #b10 。" 
+        "在你的回合开始时，受到 #b%d 点伤害然后将 #y狐咒 层数增加 #b8 。在卡牌施加狐咒前，会先额外触发一次回合开始时的效果。" 
       ]
     },
     
@@ -28,6 +28,12 @@
     "NAME": "抽牌增加",
     "DESCRIPTIONS": [
       "在你的回合开始时，额外抽 #b%d 张牌。"
+    ]
+  },
+  "SuzuranKhas:OfudaAddPower": {
+    "NAME": "灵符增加",
+    "DESCRIPTIONS": [
+      "在战斗结束时，如果你的 #y灵符 数量为奇数，获得 #b%d 个 #y灵符 "
     ]
   }
 

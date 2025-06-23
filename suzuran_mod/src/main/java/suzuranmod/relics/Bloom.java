@@ -1,5 +1,7 @@
 package suzuranmod.relics;
 
+import java.util.ArrayList;
+
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -9,11 +11,12 @@ import static com.megacrit.cardcrawl.events.AbstractEvent.logMetricRelicSwap;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 
 import basemod.abstracts.CustomRelic;
 import suzuranmod.helpers.IdHelper;
 import suzuranmod.helpers.ImageHelper;
-import suzuranmod.modcore.FoxfirePanel;
+import suzuranmod.options.OfudaCampfireOption;
 
 public class Bloom extends CustomRelic {
     public static final String ID = IdHelper.makePath("Bloom");
@@ -41,34 +44,28 @@ public class Bloom extends CustomRelic {
         beginPulse();
     }
 
-    @Override
-    public void atTurnStart() {
-        if (usedThisCombat1&&usedThisCombat2) {
-            return;
-        }
-        if (!usedThisCombat1&&AbstractDungeon.player != null && FoxfirePanel.getCurrentEnergy() <= 1) {
-            this.flash();
-            this.pulse = false;
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(3));
-            addToTop(new DrawCardAction(AbstractDungeon.player, 3));
-            usedThisCombat1 = true;
-            if(usedThisCombat2){
-                this.grayscale = true;
-            }
 
+    public void trigger1() {
+        this.flash();
+        this.pulse = false;
+        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToTop(new GainEnergyAction(3));
+        addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        usedThisCombat1 = true;
+        if (usedThisCombat2) {
+            this.grayscale = true;
         }
-        if (!usedThisCombat2&&AbstractDungeon.player != null && FoxfirePanel.getCurrentEnergy() <= 3) {
-            this.flash();
-            this.pulse = false;
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(3));
-            addToTop(new DrawCardAction(AbstractDungeon.player, 3));
-            usedThisCombat2 = true;
-            if(usedThisCombat1){
-                this.grayscale = true;
-            }
+    }
 
+    public void trigger3() {
+        this.flash();
+        this.pulse = false;
+        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToTop(new GainEnergyAction(3));
+        addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        usedThisCombat2 = true;
+        if (usedThisCombat1) {
+            this.grayscale = true;
         }
     }
 
@@ -95,14 +92,14 @@ public class Bloom extends CustomRelic {
         int relicAtIndex = -1;
         int relicsize = AbstractDungeon.player.relics.size();
         for (int i = 0; i < relicsize; i++) {
-            if (AbstractDungeon.player.relics.get(i).relicId.equals("Suzuran:Grow")) {
+            if (AbstractDungeon.player.relics.get(i).relicId.equals("SuzuranKhas:Grow")) {
                 relicAtIndex = i;
                 break;
             }
         }
         if (relicAtIndex != -1) {
             AbstractDungeon.player.relics.get(relicAtIndex).onUnequip();
-            AbstractRelic bloom = RelicLibrary.getRelic("Suzuran:Bloom").makeCopy();
+            AbstractRelic bloom = RelicLibrary.getRelic("SuzuranKhas:Bloom").makeCopy();
             bloom.instantObtain(AbstractDungeon.player, relicAtIndex, false);
             logMetricRelicSwap("Bloom", "Swapped Relic", bloom, AbstractDungeon.player.relics.get(relicAtIndex));
         }
@@ -110,7 +107,7 @@ public class Bloom extends CustomRelic {
         int bloomCount = 0;
         int lastBloomIndex = -1;
         for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
-            if (AbstractDungeon.player.relics.get(i).relicId.equals("Suzuran:Bloom")) {
+            if (AbstractDungeon.player.relics.get(i).relicId.equals("SuzuranKhas:Bloom")) {
                 bloomCount++;
                 lastBloomIndex = i;
             }
@@ -126,8 +123,20 @@ public class Bloom extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("Suzuran:Grow");
+        return AbstractDungeon.player.hasRelic("SuzuranKhas:Grow");
     }
+
+    @Override
+    public void addCampfireOption(ArrayList<AbstractCampfireOption> options) {
+        if(AbstractDungeon.player.hasRelic("SuzuranKhas:WakanCrystal")){
+            options.add(new OfudaCampfireOption(true));
+        }
+        else{
+            options.add(new OfudaCampfireOption(false));
+        }
+        
+  }
+
 
     @Override
     public AbstractRelic makeCopy() {

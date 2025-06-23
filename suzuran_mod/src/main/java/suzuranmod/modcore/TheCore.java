@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import basemod.BaseMod;
 import static basemod.BaseMod.logger;
 import basemod.abstracts.CustomReward;
+import basemod.interfaces.AddAudioSubscriber;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -35,6 +36,7 @@ import basemod.interfaces.PostInitializeSubscriber;
 import suzuranmod.character.Suzuran;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
+import suzuranmod.helpers.AudioHelper;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.patches.OfudaRewardTypePatch;
 import suzuranmod.relics.AmuletInArm;
@@ -43,12 +45,13 @@ import suzuranmod.relics.Grow;
 import suzuranmod.relics.NineTails;
 import suzuranmod.relics.RottingStick;
 import suzuranmod.relics.TheFire;
+import suzuranmod.relics.WakanCrystal;
 import suzuranmod.rewards.OfudaRewardItem;
 
 
 
 @SpireInitializer
-public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber,EditKeywordsSubscriber,PostBattleSubscriber,OnStartBattleSubscriber,PostDungeonInitializeSubscriber,PostInitializeSubscriber{  
+public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCharactersSubscriber,EditRelicsSubscriber,EditKeywordsSubscriber,PostBattleSubscriber,OnStartBattleSubscriber,PostDungeonInitializeSubscriber,PostInitializeSubscriber,AddAudioSubscriber{  
     // 实现接口
     // 人物选择界面按钮的图片
     private static final String MY_CHARACTER_BUTTON =   ImageHelper.getOtherImgPath("character","Character_Button" );
@@ -96,25 +99,20 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
 
     @Override
     public void receivePostBattle(AbstractRoom room) {
-        resetMagicNumberBonuses();
     }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
-        resetMagicNumberBonuses();
     }
 
     @Override
     public void receivePostDungeonInitialize() {
-        resetMagicNumberBonuses();
+        suzuranmod.modcore.OfudaManager.resetOfuda();
     }
 
     
 
      
-    private void resetMagicNumberBonuses() {
-
-    }
 
     // 当basemod开始注册mod卡牌时，便会调用这个函数
     @Override
@@ -131,6 +129,11 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.BraceUp());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FFCombo());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaKill());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaDance());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxFeast());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaPierce());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.WakanStrike());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Denotation());
        
 
         //skill
@@ -146,6 +149,9 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.CircleHealing());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.ThornWrapped());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.SeekingOfuda());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.RemoveDisaster());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FFHomology());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.LonelyVigil());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -154,6 +160,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         //powers
        basemod.BaseMod.addCard(new suzuranmod.cards.power.HealThorn());
        basemod.BaseMod.addCard(new suzuranmod.cards.power.MiracleGrowth());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.Pruning());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.FoxDeal());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.FoxFete());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.FullMoon());
 
         //Curses
        
@@ -241,18 +251,28 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
     }
 
     @Override
-public void receivePostInitialize() {
-    BaseMod.registerCustomReward(
-        OfudaRewardTypePatch.SUZURAN_OFUDA,
-        (RewardSave save) -> new OfudaRewardItem(save.amount),
-        (CustomReward reward) -> new RewardSave(
-            reward.type.toString(),
-            null,
-            ((OfudaRewardItem)reward).ofudaCount,
-            0
-        )
-    );
-}
+    public void receivePostInitialize() {
+        BaseMod.registerCustomReward(
+            OfudaRewardTypePatch.SUZURAN_OFUDA,
+            (RewardSave save) -> new OfudaRewardItem(save.amount),
+            (CustomReward reward) -> new RewardSave(
+                reward.type.toString(),
+                null,
+                ((OfudaRewardItem)reward).ofudaCount,
+                0
+            )
+            
+        );
+        BaseMod.addSaveField("SuzuranOfuda", new OfudaManager());
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        String path1 = AudioHelper.getAudioPath("select1");
+        String path2 = AudioHelper.getAudioPath("select2");
+        BaseMod.addAudio("SUZURAN_SELECT1",path1);
+        BaseMod.addAudio("SUZURAN_SELECT2", path2);
+  }
    
     @Override
     public void receiveEditRelics() {
@@ -266,6 +286,7 @@ public void receivePostInitialize() {
         BaseMod.addRelicToCustomPool(new AmuletInArm(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new TheFire(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new NineTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new WakanCrystal(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 
         //register potions here

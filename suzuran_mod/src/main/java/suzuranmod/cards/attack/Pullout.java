@@ -31,7 +31,7 @@ public class Pullout extends CustomCard {
     public Pullout() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 14;
+        this.baseDamage = 15;
         this.magicNumber=this.baseMagicNumber = 1;
     }
 

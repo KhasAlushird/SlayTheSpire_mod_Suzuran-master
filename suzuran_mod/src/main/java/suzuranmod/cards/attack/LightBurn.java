@@ -1,5 +1,6 @@
 package suzuranmod.cards.attack;
 
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,8 +29,9 @@ public class LightBurn extends CustomCard {
     public LightBurn() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 5;
+        this.baseDamage = 4;
         this.cardsToPreview = new Burn();
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     @Override
@@ -37,6 +39,7 @@ public class LightBurn extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(1);
+            this.upgradeMagicNumber(1);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -55,6 +58,7 @@ public class LightBurn extends CustomCard {
         addToBot(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(
             new com.megacrit.cardcrawl.cards.status.Burn(), 1
         ));
+        addToBot(new HealAction(p, p, this.magicNumber));
     }
 
      public AbstractCard makeCopy() {
