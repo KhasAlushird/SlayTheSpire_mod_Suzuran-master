@@ -40,6 +40,7 @@ public class RemoveDisaster extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+         p.useFastAttackAnimation();
         this.addToBot(new GainBlockAction(p, p, this.block));
         if (OfudaManager.getOfuda() > 0) {
             OfudaManager.loseOfuda(1);

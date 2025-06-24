@@ -43,7 +43,7 @@ public class FFafterPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && this.amount > 0) {
             // 先获得foxfire
-            FoxfirePanel.addEnergy(this.amount);
+            FoxfirePanel.addEnergy(this.amount,true);
             // 然后移除自身
             AbstractDungeon.actionManager.addToBottom(
                 new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(

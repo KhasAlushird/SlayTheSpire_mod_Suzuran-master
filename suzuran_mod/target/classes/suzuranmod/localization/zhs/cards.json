@@ -155,7 +155,7 @@
       "DESCRIPTION": "造成 !D! 点伤害。若你的当前生命值不高于最大生命值的 !M! %,获得1个 suzurankhas:灵符 NL 消耗 ", 
       "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。若你的当前生命值不高于最大生命值的 !M! %,获得1个 suzurankhas:灵符 NL 消耗 " 
     },
-     "SuzuranKhas:Denotaion": { 
+     "SuzuranKhas:Denotation": { 
       "NAME": "爆燃", 
       "DESCRIPTION": " suzurankhas:炽焰 (3):造成 !D! 点伤害,抽 !M! 张牌", 
       "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (3):造成 !D! 点伤害,抽 !M! 张牌" 
@@ -174,7 +174,61 @@
       "NAME": "满月", 
       "DESCRIPTION": "恢复 !M! 点生命值,在战斗结束时，如果你的 suzurankhas:灵符 数量为奇数，获得1个 *灵符 ", 
       "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值，如果你的 suzurankhas:灵符 数量为奇数，获得1个 *灵符 " 
+    },
+    "SuzuranKhas:FoxTooth": { 
+      "NAME": "狐牙", 
+      "DESCRIPTION": "抽 !M! 张牌,造成 !D! 点伤害，未被 格挡 的伤害将回复你的生命", 
+      "UPGRADE_DESCRIPTION": "抽 !M! 张牌,造成 !D! 点伤害，未被 格挡 的伤害将回复你的生命" 
+    },
+     "SuzuranKhas:BindingCircle": { 
+      "NAME": "画地为牢", 
+      "DESCRIPTION": "使所有敌人获得5层 虚弱 并失去 !M! 点 力量 一回合 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "使所有敌人获得5层 虚弱 并失去 !M! 点 力量 一回合 NL 消耗 " 
+    },
+    "SuzuranKhas:GoAway": { 
+      "NAME": "生人勿近", 
+      "DESCRIPTION": " suzurankhas:炽焰 (1):获得 !M! 层 荆棘 ", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):获得 !M! 层 荆棘 " 
+    },
+    "SuzuranKhas:DefendHeal": { 
+      "NAME": "御生", 
+      "DESCRIPTION": "获得 !B! 点格挡,恢复等量的生命值", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡,恢复等量的生命值" 
+    },
+    "SuzuranKhas:PrairieFire": { 
+      "NAME": "燎原", 
+      "DESCRIPTION": " suzurankhas:炽焰 (1):对所有角色施加1层 易伤 ,你的下 !M! 张攻击牌耗能为0", 
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (1):对所有角色施加1层 易伤 ,你的下 !M! 张攻击牌耗能为0"
+    },
+    "SuzuranKhas:AshHeal": { 
+      "NAME": "烬疗", 
+      "DESCRIPTION": "每当你 消耗 一张牌，恢复 !M! 点生命值", 
+      "UPGRADE_DESCRIPTION": "每当你 消耗 一张牌，恢复 !M! 点生命值"
+    },
+     "SuzuranKhas:Interweave": { 
+      "NAME": "交织", 
+      "DESCRIPTION": "每当你受到治疗，获得 !M! 层 suzurankhas:多重护甲 ", 
+      "UPGRADE_DESCRIPTION": "每当你受到治疗，获得 !M! 层 suzurankhas:多重护甲 "
+    },
+    "SuzuranKhas:FireBreath": { 
+      "NAME": "盈火残息", 
+      "DESCRIPTION": "每当你的 suzurankhas:狐火 发生改变，获得 [E] ", 
+      "UPGRADE_DESCRIPTION": "每当你的 suzurankhas:狐火 发生改变，获得 [E] "
+    },
+    "SuzuranKhas:Poised": { 
+      "NAME": "蓄势", 
+      "DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌。 这张牌每被打出一次，额外抽1张牌", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌。 这张牌每被打出一次，额外抽1张牌"
+    },
+    "SuzuranKhas:Spiritualism": { 
+      "NAME": "降灵", 
+      "DESCRIPTION": "获得 !B! 点格挡和 !M! 个 suzurankhas:灵符 。在下个回合开始前，若失去生命值，则失去 !M! 个 *灵符 , 消耗 ", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡和 !M! 个 suzurankhas:灵符 。在下个回合开始前，若失去生命值，则失去 !M! 个 *灵符 , 消耗 "
     }
+  
+
+
+
   
   
   

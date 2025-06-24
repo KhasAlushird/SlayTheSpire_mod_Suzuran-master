@@ -103,6 +103,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
 
     @Override
     public void receiveOnBattleStart(AbstractRoom room) {
+    //    if (suzuranmod.modcore.FoxfirePatch.foxfirePanel != null) {
+    //     suzuranmod.modcore.FoxfirePatch.foxfirePanel.animX = suzuranmod.modcore.FoxfirePanel.ANIM_START_X;
+    //     suzuranmod.modcore.FoxfirePatch.foxfirePanel.animTargetX = suzuranmod.modcore.FoxfirePanel.FOXFIRE_X;
+    // }
     }
 
     @Override
@@ -134,6 +138,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaPierce());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.WakanStrike());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Denotation());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxTooth());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Poised());
        
 
         //skill
@@ -152,6 +158,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.RemoveDisaster());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.FFHomology());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.LonelyVigil());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.BindingCircle());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.DefendHeal());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.PrairieFire());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Spiritualism());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -164,6 +174,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
        basemod.BaseMod.addCard(new suzuranmod.cards.power.FoxDeal());
        basemod.BaseMod.addCard(new suzuranmod.cards.power.FoxFete());
        basemod.BaseMod.addCard(new suzuranmod.cards.power.FullMoon());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.GoAway());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.AshHeal());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.Interweave());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.FireBreath());
 
         //Curses
        

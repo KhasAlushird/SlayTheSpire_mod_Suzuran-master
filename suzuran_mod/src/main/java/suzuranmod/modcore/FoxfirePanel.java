@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 import suzuranmod.character.Foxfire;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.powers.BurnoutPower;
+import suzuranmod.powers.FireBreathPower;
 import suzuranmod.relics.AmuletInArm;
 
 public class FoxfirePanel extends AbstractPanel {
@@ -34,24 +35,34 @@ public class FoxfirePanel extends AbstractPanel {
     private static final Color ENERGY_TEXT_COLOR;
     public static int totalCount;
     public Foxfire Foxfire;
-    public static final float FOXFIRE_X = 200.0F  * Settings.xScale;
+    public static final float FOXFIRE_X = 200.0F * Settings.xScale;
     public static final float FOXFIRE_Y = 360.0F * Settings.yScale; // 可调整
+    private static final float ANIM_START_X = -200.0F * Settings.xScale;
+
+    // 动画插值变量
+    private float animX;
+    private float animTargetX;
+    private boolean lastSettings = false;
+    private boolean isSlidingOut = false;
 
     // 资源路径和速度
     public static final String[] FOXFIRE_TEXTURES = {
-        ImageHelper.getImgPathWithSubType("ui","orb2","l1"),
-        ImageHelper.getImgPathWithSubType("ui","orb2","l2"),
-        ImageHelper.getImgPathWithSubType("ui","orb2","l3"),
-        ImageHelper.getImgPathWithSubType("ui","orb2","l4"),
-        ImageHelper.getImgPathWithSubType("ui","orb2","l4"),
+        ImageHelper.getImgPathWithSubType("ui", "orb2", "l1"),
+        ImageHelper.getImgPathWithSubType("ui", "orb2", "l2"),
+        ImageHelper.getImgPathWithSubType("ui", "orb2", "l3"),
+        ImageHelper.getImgPathWithSubType("ui", "orb2", "l4"),
+        ImageHelper.getImgPathWithSubType("ui", "orb2", "l4"),
     };
-    public static final String FOXFIRE_VFX = ImageHelper.getImgPathWithSubType("ui","orb2","vfx");
+    public static final String FOXFIRE_VFX = ImageHelper.getImgPathWithSubType("ui", "orb2", "vfx");
     public static final float[] FOXFIRE_LAYER_SPEEDS = { -80, 72f, -80f, 60f, 0 };
-    // public static final float[] FOXFIRE_LAYER_SPEEDS = { 0, 0f, 0f, 0f, 0f };
 
     public FoxfirePanel(int init_count) {
-        super(FOXFIRE_X, FOXFIRE_Y,  FOXFIRE_X, FOXFIRE_Y,FOXFIRE_X, FOXFIRE_Y,null, true);
-        // System.out.println("[FoxfirePanel] 构造函数被调用");
+        super(
+            FOXFIRE_X, FOXFIRE_Y,
+            ANIM_START_X, FOXFIRE_Y,
+            12.0F * Settings.scale, -12.0F * Settings.scale,
+            null, true
+        );
         this.tipHitbox = new Hitbox(0.0F, 0.0F, 108.0F * Settings.scale, 108.0F * Settings.scale);
         this.energyVfxAngle = 0.0F;
         this.energyVfxScale = Settings.scale;
@@ -59,107 +70,136 @@ public class FoxfirePanel extends AbstractPanel {
         this.gainEnergyImg = AbstractDungeon.player != null ? AbstractDungeon.player.getEnergyImage() : null;
         this.Foxfire = new Foxfire(FOXFIRE_TEXTURES, FOXFIRE_VFX, FOXFIRE_LAYER_SPEEDS);
         totalCount = init_count;
-        // System.out.println("[FoxfirePanel] 构造完成，totalCount=" + totalCount);
+
+        // 动画变量初始化
+        this.animX = ANIM_START_X;
+        this.animTargetX = FOXFIRE_X;
+        this.lastSettings = false;
+        this.isSlidingOut = false;
     }
 
     public static void setEnergy(int energy) {
-        if(totalCount != energy){
+        setEnergy(energy, false);
+    }
+
+    public static void setEnergy(int energy, boolean natural_down) {
+        if (totalCount != energy) {
             totalCount = energy;
             fontScale = 2.0F;
             energyVfxTimer = 2.0F;
+            if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(FireBreathPower.POWER_ID)) {
+                FireBreathPower power = (FireBreathPower) AbstractDungeon.player.getPower(FireBreathPower.POWER_ID);
+                power.onTrigger(natural_down);
+            }
         }
-
-        // System.out.println("[FoxfirePanel] setEnergy: " + energy);
     }
 
     public static void addEnergy(int e) {
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
-        return;
+        addEnergy(e, false);
     }
-        setEnergy(totalCount+e);
+
+    public static void addEnergy(int e, boolean natural_down) {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
+            return;
+        }
+        setEnergy(totalCount + e, natural_down);
     }
 
     public static void useEnergy(int e) {
+        useEnergy(e, false);
+    }
+
+    public static void useEnergy(int e, boolean natural_down) {
         int before = totalCount;
-       setEnergy(Math.max(0,totalCount-e));
+        setEnergy(Math.max(0, totalCount - e), natural_down);
 
-        if(totalCount<=3){
-            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")){
-                  AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
-                    if (bloom instanceof suzuranmod.relics.Bloom) {
-                        ((suzuranmod.relics.Bloom) bloom).trigger3();
-                    }
-
+        if (totalCount <= 3) {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")) {
+                AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
+                if (bloom instanceof suzuranmod.relics.Bloom) {
+                    ((suzuranmod.relics.Bloom) bloom).trigger3();
+                }
             }
-       }
-    
-    
-       if(totalCount<=1){
-            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Grow")){
-                  AbstractRelic grow = AbstractDungeon.player.getRelic("SuzuranKhas:Grow");
-                    if (grow instanceof suzuranmod.relics.Grow) {
-                        ((suzuranmod.relics.Grow) grow).trigger();
-                    }
-
-            }
-
-            if(AbstractDungeon.player != null &&AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")){
-                  AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
-                    if (bloom instanceof suzuranmod.relics.Bloom) {
-                        ((suzuranmod.relics.Bloom) bloom).trigger1();
-                    }
-
-            }
-       }
-       if (before > 0 && totalCount == 0 && AbstractDungeon.player != null && !AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
-        // 获得一层BurnoutPower
-        AbstractDungeon.actionManager.addToBottom(
-            new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                new BurnoutPower(AbstractDungeon.player, 1),
-                1
-            )
-        );
-        if(AbstractDungeon.player != null && !AbstractDungeon.player.hasPower("Artifact")){
-            for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
-                if (relic instanceof AmuletInArm) {
-                    ((AmuletInArm) relic).onBurnoutApplied();
         }
+
+        if (totalCount <= 1) {
+            if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Grow")) {
+                AbstractRelic grow = AbstractDungeon.player.getRelic("SuzuranKhas:Grow");
+                if (grow instanceof suzuranmod.relics.Grow) {
+                    ((suzuranmod.relics.Grow) grow).trigger();
+                }
+            }
+
+            if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")) {
+                AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
+                if (bloom instanceof suzuranmod.relics.Bloom) {
+                    ((suzuranmod.relics.Bloom) bloom).trigger1();
+                }
+            }
         }
-    }
-         // 施加-99层敏捷
-        AbstractDungeon.actionManager.addToBottom(
-            new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                new com.megacrit.cardcrawl.powers.DexterityPower(AbstractDungeon.player, -99),
-                -99
-            )
-        );
-        // 将生命值降至1
-        AbstractDungeon.actionManager.addToBottom(
-            new com.megacrit.cardcrawl.actions.common.LoseHPAction(
-                AbstractDungeon.player,
-                AbstractDungeon.player,
-                AbstractDungeon.player.currentHealth - 1
-            )
-        );
- 
-    }
-    //     // if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)){
-    //         System.out.println("[AmuletInArm]:trigger detected");
-    //     for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
-    //             if (relic instanceof AmuletInArm) {
-    //                 ((AmuletInArm) relic).onBurnoutApplied();
-    //     }
-    // }
-    // // }
+        if (before > 0 && totalCount == 0 && AbstractDungeon.player != null && !AbstractDungeon.player.hasPower(BurnoutPower.POWER_ID)) {
+            // 获得一层BurnoutPower
+            AbstractDungeon.actionManager.addToBottom(
+                new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player,
+                    AbstractDungeon.player,
+                    new BurnoutPower(AbstractDungeon.player, 1),
+                    1
+                )
+            );
+            if (AbstractDungeon.player != null && !AbstractDungeon.player.hasPower("Artifact")) {
+                for (com.megacrit.cardcrawl.relics.AbstractRelic relic : AbstractDungeon.player.relics) {
+                    if (relic instanceof AmuletInArm) {
+                        ((AmuletInArm) relic).onBurnoutApplied();
+                    }
+                }
+            }
+            // 施加-99层敏捷
+            AbstractDungeon.actionManager.addToBottom(
+                new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player,
+                    AbstractDungeon.player,
+                    new com.megacrit.cardcrawl.powers.DexterityPower(AbstractDungeon.player, -99),
+                    -99
+                )
+            );
+            // 将生命值降至1
+            AbstractDungeon.actionManager.addToBottom(
+                new com.megacrit.cardcrawl.actions.common.LoseHPAction(
+                    AbstractDungeon.player,
+                    AbstractDungeon.player,
+                    AbstractDungeon.player.currentHealth - 1
+                )
+            );
+        }
     }
 
     public void update() {
-        // System.out.println("[FoxfirePanel] update() called, totalCount=" + totalCount);
-        // System.out.println("[FoxfirePanel] update() called, fontScale=" + fontScale);
+    
+        // 监听设置界面开关，决定动画目标位置
+        boolean nowSettings = AbstractDungeon.isScreenUp && AbstractDungeon.screen == AbstractDungeon.CurrentScreen.SETTINGS;
+        if (nowSettings != lastSettings) {
+            if (nowSettings) {
+                this.animTargetX = ANIM_START_X; // 滑到左边
+            } else {
+                this.animTargetX = FOXFIRE_X; // 滑回来
+            }
+            lastSettings = nowSettings;
+        }
+
+        if (isSlidingOut) {
+             this.animTargetX = ANIM_START_X;
+        // 动画滑出完成后，自动关闭滑出状态
+        if (Math.abs(this.animX - ANIM_START_X) < 1.0f) {
+            isSlidingOut = false;
+        }
+    }
+
+  
+
+        // 插值动画（速度和原版能量接近）
+        this.animX = MathHelper.uiLerpSnap(this.animX, this.animTargetX);
+
         this.Foxfire.updateOrb(totalCount);
         updateVfx();
         if (fontScale != 1.0F)
@@ -182,35 +222,31 @@ public class FoxfirePanel extends AbstractPanel {
         }
     }
 
+    @Override
     public void render(SpriteBatch sb) {
-            // 只在战斗房间渲染
-        if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+        boolean inCombat = AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT;
+    // 非战斗阶段但正在滑出动画时，依然渲染
+        if (!inCombat && !isSlidingOut) {
             return;
-        }
-        // System.out.println("[FoxfirePanel] render() called, totalCount=" + totalCount);
-        this.tipHitbox.move(this.current_x, this.current_y);
+     }
+        this.tipHitbox.move(this.animX, this.current_y);
         renderOrb(sb);
         renderVfx(sb);
         String energyMsg = String.valueOf(totalCount);
-        // if (AbstractDungeon.player != null)
-        //     AbstractDungeon.player.getEnergyNumFont().getData().setScale(fontScale);
-        // 判空，防止NPE
         if (FontHelper.energyNumFontRed != null && ENERGY_TEXT_COLOR != null && energyMsg != null) {
             FontHelper.energyNumFontRed.getData().setScale(fontScale);
-            FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, energyMsg, this.current_x, this.current_y, ENERGY_TEXT_COLOR);
-        } else {
-            // System.out.println("[FoxfirePanel] FontHelper.energyNumFontRed or ENERGY_TEXT_COLOR is null!");
+            FontHelper.renderFontCentered(sb, FontHelper.energyNumFontRed, energyMsg, this.animX, this.current_y, ENERGY_TEXT_COLOR);
         }
         this.tipHitbox.render(sb);
         if (this.tipHitbox.hovered && (AbstractDungeon.getCurrRoom() != null) && (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp)
             TipHelper.renderGenericTip(70.0F * Settings.scale, 580.0F * Settings.scale, uiStrings.TEXT[0], uiStrings.TEXT[1]);
-}
+    }
+
     private void renderOrb(SpriteBatch sb) {
-        // System.out.println("[FoxfirePanel] renderOrb() called, totalCount=" + totalCount);
         if (totalCount == 0) {
-            this.Foxfire.renderOrb(sb, false, this.current_x, this.current_y);
+            this.Foxfire.renderOrb(sb, false, this.animX, this.current_y);
         } else {
-            this.Foxfire.renderOrb(sb, true, this.current_x, this.current_y);
+            this.Foxfire.renderOrb(sb, true, this.animX, this.current_y);
         }
     }
 
@@ -218,22 +254,26 @@ public class FoxfirePanel extends AbstractPanel {
         if (energyVfxTimer != 0.0F && gainEnergyImg != null) {
             sb.setBlendFunction(770, 1);
             sb.setColor(this.energyVfxColor);
-            sb.draw(this.gainEnergyImg, this.current_x - 128.0F, this.current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, this.energyVfxScale, this.energyVfxScale, -this.energyVfxAngle + 50.0F, 0, 0, 256, 256, true, false);
-            sb.draw(this.gainEnergyImg, this.current_x - 128.0F, this.current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, this.energyVfxScale, this.energyVfxScale, this.energyVfxAngle, 0, 0, 256, 256, false, false);
+            sb.draw(this.gainEnergyImg, this.animX - 128.0F, this.current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, this.energyVfxScale, this.energyVfxScale, -this.energyVfxAngle + 50.0F, 0, 0, 256, 256, true, false);
+            sb.draw(this.gainEnergyImg, this.animX - 128.0F, this.current_y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, this.energyVfxScale, this.energyVfxScale, this.energyVfxAngle, 0, 0, 256, 256, false, false);
             sb.setBlendFunction(770, 771);
         }
     }
+
 
     public static int getCurrentEnergy() {
         return (AbstractDungeon.player == null) ? 0 : totalCount;
     }
 
+    public void slideOut() {
+        this.animTargetX = ANIM_START_X;
+        this.isSlidingOut = true;
+    }
+
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("Suzuran:FoxfireEnergy"); // 你需要在本地化文件中添加对应key
+        uiStrings = CardCrawlGame.languagePack.getUIString("Suzuran:FoxfireEnergy");
         ENERGY_TEXT_COLOR = Color.GOLD.cpy();
         fontScale = 1.0F;
-        // totalCount = 7;
         energyVfxTimer = 0.0F;
-        // System.out.println("[FoxfirePanel] static block loaded");
     }
 }

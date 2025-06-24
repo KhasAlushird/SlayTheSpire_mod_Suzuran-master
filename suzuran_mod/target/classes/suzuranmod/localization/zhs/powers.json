@@ -35,6 +35,30 @@
     "DESCRIPTIONS": [
       "在战斗结束时，如果你的 #y灵符 数量为奇数，获得 #b%d 个 #y灵符 "
     ]
+  },
+  "SuzuranKhas:AshHealPower": {
+    "NAME": "烬疗",
+    "DESCRIPTIONS": [
+      "每当你消耗1张牌，恢复 #b%d 点生命值"
+    ]
+  },
+  "SuzuranKhas:InterweavePower": {
+    "NAME": "交织",
+    "DESCRIPTIONS": [
+      "每当你受到治疗, 获得 #b%d 层 #y多层护甲 "
+    ]
+  },
+  "SuzuranKhas:FireBreathPower": {
+    "NAME": "盈火残息",
+    "DESCRIPTIONS": [
+      "每当 #y狐火 发生变化，获得 #b%d 点能量"
+    ]
+  },
+  "SuzuranKhas:OfudaReducePower": {
+    "NAME": "灵符扣除",
+    "DESCRIPTIONS": [
+      "回合结束时，移除该能力。若受到伤害，移除该能力并失去 #b%d 个 #y灵符 "
+    ]
   }
 
   }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.screens.VictoryScreen;
 
 import suzuranmod.character.Suzuran;
 
@@ -25,9 +26,8 @@ public class FoxfirePatch {
             return;
     }
         if (AbstractDungeon.getCurrRoom() == null || AbstractDungeon.getMonsters() == null) {
-        // System.out.println("[FoxfirePatch] initFoxfire: 当前房间或怪物列表为null，跳过初始化");
-        return;
-    }
+            return;
+        }
         int initialFoxfire = 7;
         boolean isEliteOrBoss = (AbstractDungeon.getCurrRoom()).eliteTrigger;
         for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
@@ -37,13 +37,13 @@ public class FoxfirePatch {
         if (isEliteOrBoss) {
             initialFoxfire += 3;
         }
+        // 每次都new，保证每场战斗动画都重置
         foxfirePanel = new FoxfirePanel(initialFoxfire);
-        // System.out.println("[FoxfirePatch] 新建 FoxfirePanel, 初始狐火: " + initialFoxfire);
-    }
+}
 
     public static void onEndOfTurn() {
         if (FoxfirePanel.totalCount > 0) {
-            FoxfirePanel.useEnergy(1);
+            FoxfirePanel.useEnergy(1,true);
             // System.out.println("[FoxfirePatch] onEndOfTurn called, totalCount now " + FoxfirePanel.totalCount);
         }
     }
@@ -71,19 +71,25 @@ public class FoxfirePatch {
         @SpireInsertPatch(rloc = 6)
         public static void Insert(OverlayMenu __instance, SpriteBatch sb) {
             if (AbstractDungeon.player == null) {
-                // System.out.println("[FoxfirePatch] OverlayRenderPatch: player is null, skip render");
                 return;
             }
             if (FoxfirePatch.foxfirePanel == null) {
-                // System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel is null, creating new");
-                initFoxfire();
+                // 这里可以不再调用 initFoxfire()，只在战斗开始时 new
+                return;
             }
-            if(FoxfirePatch.foxfirePanel != null){
-                FoxfirePatch.foxfirePanel.update();
-                FoxfirePatch.foxfirePanel.render(sb);
-            }
-
-            // System.out.println("[FoxfirePatch] OverlayRenderPatch: foxfirePanel.render called");
-        }
+            FoxfirePatch.foxfirePanel.update();
+            FoxfirePatch.foxfirePanel.render(sb);
+         }
     }
+
+   @SpirePatch(clz = VictoryScreen.class, method = SpirePatch.CONSTRUCTOR)
+    public static class FoxfireVictoryPatch {
+        public FoxfireVictoryPatch() {
+            if (FoxfirePatch.foxfirePanel != null) {
+                FoxfirePatch.foxfirePanel.slideOut();
+            }
+    }
+}
+
+   
 }
