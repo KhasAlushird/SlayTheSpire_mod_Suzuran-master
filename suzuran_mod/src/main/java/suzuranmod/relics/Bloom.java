@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import static com.megacrit.cardcrawl.events.AbstractEvent.logMetricRelicSwap;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 
@@ -45,24 +47,50 @@ public class Bloom extends CustomRelic {
     }
 
 
-    public void trigger1() {
+    public void trigger1(boolean natural_down) {
+        if (usedThisCombat1) return;
         this.flash();
         this.pulse = false;
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new GainEnergyAction(3));
-        addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        if(natural_down){
+            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player,3), 3
+                ));
+
+            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player,3), 3
+            ));
+        }
+        else{
+            addToTop(new GainEnergyAction(3));
+            addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        }
+
         usedThisCombat1 = true;
         if (usedThisCombat2) {
             this.grayscale = true;
         }
     }
 
-    public void trigger3() {
+    public void trigger3(boolean natural_down) {
+        if (usedThisCombat2) return ; 
         this.flash();
         this.pulse = false;
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToTop(new GainEnergyAction(3));
-        addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        if(natural_down){
+            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player,3), 3
+                ));
+
+            addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player,3), 3
+            ));
+        }
+        else{
+            addToTop(new GainEnergyAction(3));
+            addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+        }
+
         usedThisCombat2 = true;
         if (usedThisCombat1) {
             this.grayscale = true;

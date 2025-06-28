@@ -24,7 +24,7 @@ public class OfudaPierceAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (this.duration == DURATION && this.target != null && hitCount < 3) {
+        if (this.duration == DURATION && this.target != null && hitCount < 4) {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_DIAGONAL));
             this.target.damage(this.info);
 
@@ -36,7 +36,7 @@ public class OfudaPierceAction extends AbstractGameAction {
             }
 
             hitCount++;
-            if (hitCount < 3 && !killed) {
+            if (hitCount < 4 && !killed) {
                 this.duration = DURATION;
                 return;
             }

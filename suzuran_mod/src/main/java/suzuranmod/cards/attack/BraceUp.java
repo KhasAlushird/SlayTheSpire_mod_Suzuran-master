@@ -18,7 +18,7 @@ public class BraceUp extends SuzuranCard {
     public static final String ID = IdHelper.makePath("BraceUp");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "BraceUp",false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "BraceUp",true);
     private static final int COST = 4;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
@@ -28,7 +28,7 @@ public class BraceUp extends SuzuranCard {
 
     public BraceUp() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,0);
         this.baseDamage = 25;
         this.magicNumber = this.baseMagicNumber = 1;
     }

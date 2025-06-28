@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import suzuranmod.modcore.FoxfirePanel;
 import suzuranmod.modcore.OfudaManager;
+import suzuranmod.patches.SuzuranCardTagsPatch;
 import suzuranmod.powers.BurnoutPower;
 
 public abstract class SuzuranCard extends CustomCard {
@@ -19,10 +20,13 @@ public abstract class SuzuranCard extends CustomCard {
     public int foxfireGain = 0;
     public boolean upgradedFoxfireGain = false;
 
-    public SuzuranCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
+    public SuzuranCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target,int FFConsume) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
-        this.baseFoxfireConsume = 0;
+        this.baseFoxfireConsume = FFConsume;
         this.foxfireConsume = this.baseFoxfireConsume;
+        if(this.baseFoxfireConsume>0){
+            this.tags.add(SuzuranCardTagsPatch.FOXFIRE);
+        }
     }
 
 

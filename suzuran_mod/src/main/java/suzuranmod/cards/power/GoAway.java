@@ -18,7 +18,7 @@ public class GoAway extends SuzuranCard {
     public static final String ID = IdHelper.makePath("GoAway");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "GoAway", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "GoAway", true);
     private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.POWER;
@@ -26,12 +26,12 @@ public class GoAway extends SuzuranCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int THORNS = 6;
+    private static final int THORNS = 5;
     private static final int UPGRADE_PLUS_THORNS = 3;
     private static final int FOXFIRE_CONSUME = 1;
 
     public GoAway() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,FOXFIRE_CONSUME);
         this.baseMagicNumber = THORNS;
         this.magicNumber = THORNS;
         this.baseFoxfireConsume = FOXFIRE_CONSUME;

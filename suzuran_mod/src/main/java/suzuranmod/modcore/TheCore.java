@@ -44,7 +44,9 @@ import suzuranmod.relics.Bloom;
 import suzuranmod.relics.Grow;
 import suzuranmod.relics.NineTails;
 import suzuranmod.relics.RottingStick;
+import suzuranmod.relics.SixTails;
 import suzuranmod.relics.TheFire;
+import suzuranmod.relics.ThreeTails;
 import suzuranmod.relics.WakanCrystal;
 import suzuranmod.rewards.OfudaRewardItem;
 
@@ -112,6 +114,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
     @Override
     public void receivePostDungeonInitialize() {
         suzuranmod.modcore.OfudaManager.resetOfuda();
+        suzuranmod.modcore.OfudaManager.resetTailRewardCount();
     }
 
     
@@ -140,6 +143,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Denotation());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxTooth());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Poised());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaBladeWard());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxRage());
        
 
         //skill
@@ -162,6 +167,15 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.DefendHeal());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.PrairieFire());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.Spiritualism());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Remodeling());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Proliferation());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FertileSoil());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.ConcentrateGrowth());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Incineration());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.GrowInShadow());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.CircleOfLife());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.PerceiveFlame());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.OfudaSwallow());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -178,6 +192,9 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
        basemod.BaseMod.addCard(new suzuranmod.cards.power.AshHeal());
        basemod.BaseMod.addCard(new suzuranmod.cards.power.Interweave());
        basemod.BaseMod.addCard(new suzuranmod.cards.power.FireBreath());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.Diffusion());
+       basemod.BaseMod.addCard(new suzuranmod.cards.power.Awakening());
+
 
         //Curses
        
@@ -300,6 +317,8 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         BaseMod.addRelicToCustomPool(new AmuletInArm(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new TheFire(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new NineTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new ThreeTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new SixTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new WakanCrystal(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 

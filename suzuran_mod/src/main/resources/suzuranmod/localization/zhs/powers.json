@@ -59,6 +59,25 @@
     "DESCRIPTIONS": [
       "回合结束时，移除该能力。若受到伤害，移除该能力并失去 #b%d 个 #y灵符 "
     ]
+  },
+   "SuzuranKhas:DiffusionPower": {
+    "NAME": "扩散",
+    "DESCRIPTIONS": [
+      "回合开始时，获得 #b%d 点 #y再生 和 #y荆棘 ,将 #b%d 张 #y晕眩 置入你的抽牌堆"
+    ]
+  },
+  "SuzuranKhas:CircleOfLifePower": {
+    "NAME": "生命轮回",
+    "DESCRIPTIONS": [
+      "你的下 #b%d 张能力牌耗能为0且会返回你的抽牌堆"
+    ]
+  },
+  "SuzuranKhas:AwakeningPower": {
+    "NAME": "觉醒",
+    "DESCRIPTIONS": [
+      "在你的下 #b%d 个回合开始后，恢复所有生命值",
+      "在你的下个回合开始后，恢复所有生命值"
+    ]
   }
 
   }

@@ -24,7 +24,7 @@ public class FoxFete extends SuzuranCard {
     public static final int RITUAL_AMOUNT = 1;
 
     public FoxFete() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.POWER, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.POWER, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.SELF,FOXFIRE_CONSUME);
         this.baseFoxfireConsume = FOXFIRE_CONSUME;
         this.foxfireConsume = FOXFIRE_CONSUME;
         this.magicNumber = this.baseMagicNumber = RITUAL_AMOUNT;
@@ -40,7 +40,7 @@ public class FoxFete extends SuzuranCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.isInnate = true;
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

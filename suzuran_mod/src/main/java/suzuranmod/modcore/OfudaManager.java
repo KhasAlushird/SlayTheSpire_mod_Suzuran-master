@@ -5,6 +5,7 @@ import basemod.abstracts.CustomSavable;
 public class OfudaManager implements CustomSavable<Integer>{
     private static int ofuda = 0;
     public static final int OFUDA_MAX = 12; 
+    private static int tailRewardCount = 0;
 
     // 新增：动画缩放变量
     public static float ofudaScale = 1.0f;
@@ -17,6 +18,16 @@ public class OfudaManager implements CustomSavable<Integer>{
 
     public static void resetOfuda() {
         setOfuda(0);
+    }
+    public static void incrementTailRewardCount() {
+        tailRewardCount++;
+}
+    public static int getTailRewardCount() {
+        return tailRewardCount;
+}
+
+    public static void resetTailRewardCount() {
+        tailRewardCount = 0;
     }
 
     public static void setOfuda(int amount) {
@@ -45,15 +56,18 @@ public class OfudaManager implements CustomSavable<Integer>{
 
     @Override
     public Integer onSave() {
-        return ofuda;
+         return (tailRewardCount << 16) | (ofuda & 0xFFFF);
     }
 
     @Override
     public void onLoad(Integer loaded) {
         if (loaded != null) {
-            ofuda = loaded;
+            
+            ofuda = loaded & 0xFFFF;  // 取低16位
+            tailRewardCount = (loaded >> 16) & 0xFFFF;  // 取高16位
         } else {
             ofuda = 0;
+            tailRewardCount = 0;
         }
     }
 }

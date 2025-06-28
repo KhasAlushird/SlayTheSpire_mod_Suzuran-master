@@ -21,7 +21,7 @@ public class Poised extends CustomCard {
     public static final String ID = IdHelper.makePath("Poised");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Poised", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Poised", true);
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
@@ -29,10 +29,9 @@ public class Poised extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int BASE_DAMAGE = 8;
+    private static final int BASE_DAMAGE = 9;
     private static final int BASE_MAGIC = 1;
-    private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     public Poised() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -53,7 +52,6 @@ public class Poised extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

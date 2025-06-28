@@ -17,7 +17,7 @@ public class FullMoon extends CustomCard {
     public static final String ID = IdHelper.makePath("FullMoon");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "FullMoon",false);
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "FullMoon",true);
     public static final int COST = 1;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;
@@ -25,7 +25,7 @@ public class FullMoon extends CustomCard {
     public static final CardRarity RARITY = CardRarity.UNCOMMON;
     public static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_AMOUNT = 4;
+    private static final int BASE_AMOUNT = 5;
 
     public FullMoon() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

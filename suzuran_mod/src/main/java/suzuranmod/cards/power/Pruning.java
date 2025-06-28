@@ -18,7 +18,7 @@ public class Pruning extends CustomCard {
     public static final String ID = IdHelper.makePath("Pruning");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "Pruning", false);
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "Pruning", true);
     public static final int COST = 0;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;

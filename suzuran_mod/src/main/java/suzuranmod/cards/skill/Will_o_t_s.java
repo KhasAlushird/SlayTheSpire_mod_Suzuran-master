@@ -18,15 +18,13 @@ public class Will_o_t_s extends SuzuranCard {
     
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); 
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "Will_o_t_s",false);
+    public static final String IMG =ImageHelper.getCardImgPath(CardType.SKILL, "Will_o_t_s",true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 1;
     public static final int FOXFIRE_CONSUME = 1;
 
     public Will_o_t_s() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseFoxfireConsume = FOXFIRE_CONSUME;
-        this.foxfireConsume = FOXFIRE_CONSUME;
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.ENEMY,FOXFIRE_CONSUME);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isInnate = true;

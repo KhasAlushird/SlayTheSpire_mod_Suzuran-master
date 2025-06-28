@@ -18,15 +18,15 @@ public class CircleHealing extends CustomCard {
     public static final String ID = IdHelper.makePath("CircleHealing");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "CircleHealing",false);
-    private static final int COST = 2;
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "CircleHealing",true);
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_MAGIC = 6;
+    private static final int BASE_MAGIC = 5;
     private static final int UPGRADE_MAGIC = 3;
 
     public CircleHealing() {

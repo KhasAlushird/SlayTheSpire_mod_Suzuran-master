@@ -23,14 +23,14 @@ public class Leapup extends SuzuranCard {
     
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); 
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "Leapup",false);
+    public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "Leapup",true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 2;
     public static final int DAMAGE = 30;
     public static final int FOXFIRE_GAIN = 1;
 
     public Leapup() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY,0);
         this.baseDamage = DAMAGE;
         this.baseFoxfireGain = FOXFIRE_GAIN;
         this.foxfireGain = FOXFIRE_GAIN;
@@ -41,7 +41,7 @@ public class Leapup extends SuzuranCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         doSuzuranBaseUse(p, m); 
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new NoBlockPower((AbstractCreature)p, this.magicNumber, false), this.magicNumber));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new NoBlockPower((AbstractCreature)p, this.magicNumber, false), this.magicNumber));
     }
 
     @Override

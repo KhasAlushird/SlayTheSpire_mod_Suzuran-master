@@ -17,16 +17,15 @@ public class HealThorn extends CustomCard {
     public static final String ID = IdHelper.makePath("HealThorn");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "HealThorn",false);
-    public static final int COST = 1;
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "HealThorn",true);
+    public static final int COST = 2;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    public static final CardRarity RARITY = CardRarity.UNCOMMON;
+    public static final CardRarity RARITY = CardRarity.RARE;
     public static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_AMOUNT = 8;
-    private static final int UPGRADE_PLUS_AMOUNT = 4;
+    private static final int BASE_AMOUNT = 5;
 
     public HealThorn() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -43,7 +42,7 @@ public class HealThorn extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_AMOUNT); // 8+4=12
+            this.upgradeBaseCost(1);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

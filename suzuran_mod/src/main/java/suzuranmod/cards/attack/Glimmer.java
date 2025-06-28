@@ -18,7 +18,7 @@ public class Glimmer extends CustomCard {
     public static final String ID = IdHelper.makePath("Glimmer");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Glimmer", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "Glimmer", true);
     private static final int COST = 2;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
@@ -26,9 +26,9 @@ public class Glimmer extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int BASE_DAMAGE = 14;
-    private static final int UPGRADE_DAMAGE = 3;
-    private static final int BASE_HEAL = 9;
+    private static final int BASE_DAMAGE = 15;
+    private static final int UPGRADE_DAMAGE = 4;
+    private static final int BASE_HEAL = 5;
     private static final int UPGRADE_HEAL = 3;
 
     public Glimmer() {

@@ -18,13 +18,11 @@ public class FoxProtect extends SuzuranCard {
     public static final String NAME = CARD_STRINGS.NAME;
     public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "FoxProtect",false);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    public static final int COST = 1;
+    public static final int COST = 2;
     public static final int FOXFIRE_CONSUME = 3;
 
     public FoxProtect() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseFoxfireConsume = FOXFIRE_CONSUME;
-        this.foxfireConsume = FOXFIRE_CONSUME;
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.SELF,FOXFIRE_CONSUME);
         this.magicNumber =this.baseMagicNumber= 2;
         this.exhaust = true;
     }

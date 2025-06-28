@@ -25,8 +25,7 @@ public class AshHeal extends CustomCard {
     public static final CardRarity RARITY = CardRarity.UNCOMMON;
     public static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_AMOUNT = 2;
-    private static final int UPGRADE_PLUS_AMOUNT = 1;
+    private static final int BASE_AMOUNT = 3;
 
     public AshHeal() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -43,7 +42,7 @@ public class AshHeal extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
+            this.upgradeBaseCost(0);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

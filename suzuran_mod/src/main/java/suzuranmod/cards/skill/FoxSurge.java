@@ -22,9 +22,7 @@ public class FoxSurge extends SuzuranCard {
     public static final int FOXFIRE_CONSUME = 2;
 
     public FoxSurge() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseFoxfireConsume = FOXFIRE_CONSUME;
-        this.foxfireConsume = FOXFIRE_CONSUME;
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.SELF,FOXFIRE_CONSUME);
         this.magicNumber =this.baseMagicNumber= 4;
     }
 

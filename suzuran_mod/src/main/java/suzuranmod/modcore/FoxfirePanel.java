@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
 import suzuranmod.character.Foxfire;
+import suzuranmod.character.Suzuran;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.powers.BurnoutPower;
 import suzuranmod.powers.FireBreathPower;
@@ -110,6 +111,9 @@ public class FoxfirePanel extends AbstractPanel {
     }
 
     public static void useEnergy(int e, boolean natural_down) {
+        if(!(AbstractDungeon.player instanceof Suzuran)){
+            return;
+        }
         int before = totalCount;
         setEnergy(Math.max(0, totalCount - e), natural_down);
 
@@ -117,7 +121,7 @@ public class FoxfirePanel extends AbstractPanel {
             if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")) {
                 AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
                 if (bloom instanceof suzuranmod.relics.Bloom) {
-                    ((suzuranmod.relics.Bloom) bloom).trigger3();
+                    ((suzuranmod.relics.Bloom) bloom).trigger3(natural_down);
                 }
             }
         }
@@ -126,14 +130,14 @@ public class FoxfirePanel extends AbstractPanel {
             if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Grow")) {
                 AbstractRelic grow = AbstractDungeon.player.getRelic("SuzuranKhas:Grow");
                 if (grow instanceof suzuranmod.relics.Grow) {
-                    ((suzuranmod.relics.Grow) grow).trigger();
+                    ((suzuranmod.relics.Grow) grow).trigger(natural_down);
                 }
             }
 
             if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SuzuranKhas:Bloom")) {
                 AbstractRelic bloom = AbstractDungeon.player.getRelic("SuzuranKhas:Bloom");
                 if (bloom instanceof suzuranmod.relics.Bloom) {
-                    ((suzuranmod.relics.Bloom) bloom).trigger1();
+                    ((suzuranmod.relics.Bloom) bloom).trigger1(natural_down);
                 }
             }
         }

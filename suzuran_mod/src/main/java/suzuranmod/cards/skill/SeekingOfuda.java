@@ -17,12 +17,12 @@ public class SeekingOfuda extends SuzuranCard {
     
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); 
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG =ImageHelper.getCardImgPath(CardType.SKILL, "SeekingOfuda",false);
+    public static final String IMG =ImageHelper.getCardImgPath(CardType.SKILL, "SeekingOfuda",true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 3;
 
     public SeekingOfuda() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.COMMON, CardTarget.SELF,0);
         this.magicNumber =this.baseMagicNumber= 1;
         this.exhaust = true;
         this.baseBlock = 10;

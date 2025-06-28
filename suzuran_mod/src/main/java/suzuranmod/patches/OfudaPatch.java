@@ -87,10 +87,22 @@ public class OfudaPatch {
             // HEADER
             tips.add(new PowerTip("#y" + ofudaTipStrings.TEXT[0], ofudaTipStrings.TEXT[1]));
             // BODY（奖励列表）
-            for (int i = 2; i < ofudaTipStrings.TEXT.length-1; i+=2) {
+            for (int i = 2; i < ofudaTipStrings.TEXT.length-6; i+=2) {
                 // 你可以根据需要决定是否加 #y 或其它格式
                 tips.add(new PowerTip(ofudaTipStrings.TEXT[i], ofudaTipStrings.TEXT[i+1]));
             }
+
+            int tailRewardCount = OfudaManager.getTailRewardCount();
+            String tail_String;
+            if (tailRewardCount == 0) {
+                tail_String =  ofudaTipStrings.TEXT[25]; // "获得遗物 三尾 (下一次将获得 六尾)"
+            } else if (tailRewardCount == 1) {
+                tail_String = ofudaTipStrings.TEXT[26]; // "获得遗物 六尾 (下一次将获得 九尾)"
+            } else {
+                tail_String = ofudaTipStrings.TEXT[27]; // "获得遗物 九尾"
+            }
+            tips.add(new PowerTip(ofudaTipStrings.TEXT[24],tail_String ));
+
             com.megacrit.cardcrawl.helpers.TipHelper.queuePowerTips(
                 x + ICON_SIZE * 1.2f, y + ICON_SIZE * 0.8f, tips
             );

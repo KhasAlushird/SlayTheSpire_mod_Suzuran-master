@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 
@@ -42,21 +44,38 @@ public class Grow extends CustomRelic {
     }
 
 
-    public void trigger(){
+    public void trigger(boolean natural_down){
           if(usedThisCombat){
             return;
         }
+         
         if (AbstractDungeon.player != null && FoxfirePanel.getCurrentEnergy() <= 1) {
             // 只在首次获得时触发
             this.flash();
             this.pulse = false;
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToTop(new GainEnergyAction(3));
-            addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+            if(natural_down){
+                addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player,3), 3
+                ));
+
+                addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player,3), 3
+                ));
+
+                
+            }
+            else{
+                addToTop(new GainEnergyAction(3));
+                addToTop(new DrawCardAction(AbstractDungeon.player, 3));    
+            }
+
             usedThisCombat = true;
             this.grayscale = true;
         }
     }
+
+    
     // @Override
     // public void atTurnStart(){
     //     if(usedThisCombat){

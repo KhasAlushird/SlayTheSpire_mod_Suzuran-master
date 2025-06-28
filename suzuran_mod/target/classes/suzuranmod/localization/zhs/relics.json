@@ -34,20 +34,37 @@
         "在你的第三回合开始时，获得1点 #ysuzurankhas:狐火 " 
       ]
     },
-    "SuzuranKhas:NineTails": {
-      "NAME": "九尾", 
-      "FLAVOR": "毛茸茸，毛茸茸......", 
-      "DESCRIPTIONS": [
-        "战斗开始时获得 [E] 和1点 #ysuzurankhas:狐火 ，每回合开始时，额外抽1张牌" 
-      ]
-    },
     "SuzuranKhas:WakanCrystal": {
       "NAME": "灵力结晶", 
       "FLAVOR": "待完成", 
       "DESCRIPTIONS": [
         "拾起时，获得2个 #ysuzurankhas:灵符 , 你在休息处获得的 #y灵符 数量翻倍" 
       ]
+    },
+    "SuzuranKhas:NineTails": {
+      "NAME": "九尾", 
+      "FLAVOR": "毛茸茸,毛茸茸,毛茸茸......", 
+      "DESCRIPTIONS": [
+        "拾取时，随机升级你牌组中的3张牌，并选择移除牌组中的1张牌。" ,
+         "选择要删除的牌。"
+        
+      ]
+    },
+    "SuzuranKhas:SixTails": {
+      "NAME": "六尾", 
+      "FLAVOR": "毛茸茸,毛茸茸......", 
+      "DESCRIPTIONS": [
+        "战斗开始时，获得1点 #ysuzurankhas:狐火 ,每回合开始时，额外抽1张牌" 
+      ]
+    },
+    "SuzuranKhas:ThreeTails": {
+      "NAME": "三尾", 
+      "FLAVOR": "毛茸茸......", 
+      "DESCRIPTIONS": [
+        "每回合开始时,获得 [E] " 
+      ]
     }
+    
    
   }
   

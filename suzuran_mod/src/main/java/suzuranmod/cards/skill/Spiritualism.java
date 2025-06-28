@@ -19,7 +19,7 @@ public class Spiritualism extends SuzuranCard {
     public static final String ID = IdHelper.makePath("Spiritualism");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "Spiritualism", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "Spiritualism", true);
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
@@ -32,7 +32,7 @@ public class Spiritualism extends SuzuranCard {
     private static final int UPGRADE_PLUS_MAGIC = 1;
 
     public Spiritualism() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,0);
         this.baseBlock = BLOCK;
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;

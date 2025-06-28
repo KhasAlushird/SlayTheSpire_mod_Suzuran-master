@@ -15,6 +15,8 @@ import suzuranmod.helpers.ImageHelper;
 import suzuranmod.modcore.OfudaManager;
 import suzuranmod.patches.OfudaRewardTypePatch;
 import suzuranmod.relics.NineTails;
+import suzuranmod.relics.SixTails;
+import suzuranmod.relics.ThreeTails;
 
 public class OfudaRewardItem extends CustomReward {
     public int ofudaCount;
@@ -99,14 +101,26 @@ public class OfudaRewardItem extends CustomReward {
             }
             // 12/12: 获得九尾
             if (count >= 12) {
-                AbstractRelic relic = new NineTails();
+                AbstractRelic relic = getTailReward();
                 relic.instantObtain();
+                OfudaManager.incrementTailRewardCount();
             }
 
             OfudaManager.setOfuda(0);
         }
         this.isDone = true;
         return true;
+    }
+     private AbstractRelic getTailReward() {
+        int tailRewardCount = OfudaManager.getTailRewardCount();
+        
+        if (tailRewardCount == 0) {
+            return new ThreeTails();  // 第一次：三尾
+        } else if (tailRewardCount == 1) {
+            return new SixTails();    // 第二次：六尾
+        } else {
+            return new NineTails();   // 第三次及以后：九尾
+        }
     }
 
     }

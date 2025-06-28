@@ -19,7 +19,7 @@ public class RemoveDisaster extends CustomCard {
     public static final String ID = IdHelper.makePath("RemoveDisaster");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "RemoveDisaster", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "RemoveDisaster", true);
     private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
@@ -28,14 +28,13 @@ public class RemoveDisaster extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int BASE_BLOCK = 8;
-    private static final int BONUS_BLOCK = 35;
 
     public RemoveDisaster() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BASE_BLOCK;
         this.exhaust = true;
         this.selfRetain = true;
-        this.magicNumber = this.baseMagicNumber = BONUS_BLOCK;
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     @Override
@@ -44,7 +43,10 @@ public class RemoveDisaster extends CustomCard {
         this.addToBot(new GainBlockAction(p, p, this.block));
         if (OfudaManager.getOfuda() > 0) {
             OfudaManager.loseOfuda(1);
-            this.addToBot(new GainBlockAction(p, p, this.magicNumber));
+            for (int i = 0; i < this.magicNumber; i++) {
+                this.addToBot(new GainBlockAction(p, p, this.block));
+            }
+            
         }
     }
 

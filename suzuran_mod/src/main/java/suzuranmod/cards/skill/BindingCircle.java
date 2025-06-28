@@ -25,8 +25,8 @@ public class BindingCircle extends CustomCard {
     public static final String ID = IdHelper.makePath("BindingCircle");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "BindingCircle", false);
-    private static final int COST = 3;
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "BindingCircle", true);
+    private static final int COST = 2;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
@@ -65,7 +65,7 @@ public class BindingCircle extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
         }
     }
 

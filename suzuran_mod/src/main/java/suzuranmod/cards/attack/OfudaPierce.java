@@ -37,6 +37,7 @@ public class OfudaPierce extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         // 普通伤害
         this.addToBot(new com.megacrit.cardcrawl.actions.common.DamageAction(
                 m, new DamageInfo(p, this.damage, this.damageTypeForTurn)

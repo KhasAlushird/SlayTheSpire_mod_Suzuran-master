@@ -19,7 +19,7 @@ public class MiracleGrowth extends CustomCard {
     public static final String ID = IdHelper.makePath("MiracleGrowth");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "MiracleGrowth", false);
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "MiracleGrowth",true);
     public static final int COST = 0;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;
@@ -30,7 +30,7 @@ public class MiracleGrowth extends CustomCard {
     private static final int BASE_MAGIC = 15;
     // private static final int DRAW_CARD = 1;
     // private static final int UPGRADE_MAGIC = ;
-    private static final int MIN_HP = 25;
+    // private static final int MIN_HP = 25;
 
     public MiracleGrowth() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -42,12 +42,16 @@ public class MiracleGrowth extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int draw_card = 1;
-        int hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - MIN_HP));
+        int hpLoss ;
+        if (this.upgraded){
+            hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - (int) 0.5*p.maxHealth));
+        }
+        else{
+            hpLoss = Math.min(this.magicNumber, p.currentHealth-1);
+        }
+        
         if (hpLoss > 0) {
             this.addToBot(new LoseHPAction(p, p, hpLoss));
-        }
-        if(this.upgraded){
-            draw_card+=1;
         }
         this.addToBot(new DrawCardAction(p, draw_card));
         this.addToBot(new ApplyPowerAction(p, p, new DrawAddPower(p, 1), 1));

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
 
 import suzuranmod.character.Suzuran;
+import suzuranmod.relics.SixTails;
 
 public class FoxfirePatch {
     public static FoxfirePanel foxfirePanel = null;
@@ -34,6 +35,11 @@ public class FoxfirePatch {
             if (m.type == AbstractMonster.EnemyType.BOSS)
                 isEliteOrBoss = true;
         }
+
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(SixTails.ID)) {
+            initialFoxfire += 1; // 六尾遗物额外提供1点狐火
+        }
+
         if (isEliteOrBoss) {
             initialFoxfire += 3;
         }

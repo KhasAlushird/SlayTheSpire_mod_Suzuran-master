@@ -19,7 +19,7 @@ public class PrairieFire extends SuzuranCard {
     public static final String ID = IdHelper.makePath("PrairieFire");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "PrairieFire", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "PrairieFire", true);
     private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
@@ -32,11 +32,9 @@ public class PrairieFire extends SuzuranCard {
     private static final int FOXFIRE_CONSUME = 1;
 
     public PrairieFire() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,FOXFIRE_CONSUME);
         this.baseMagicNumber = MAGIC;
         this.magicNumber = MAGIC;
-        this.baseFoxfireConsume = FOXFIRE_CONSUME; 
-        this.foxfireConsume = FOXFIRE_CONSUME;
     }
 
     @Override
