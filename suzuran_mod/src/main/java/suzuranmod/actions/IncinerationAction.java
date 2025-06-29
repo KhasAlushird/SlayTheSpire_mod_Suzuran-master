@@ -45,7 +45,7 @@ public class IncinerationAction extends AbstractGameAction {
                 this.p.hand.moveToExhaustPile(c);
                 
                 // 检查卡牌类型，如果是攻击牌或诅咒牌，获得1点狐火
-                if (c.type == AbstractCard.CardType.ATTACK || c.type == AbstractCard.CardType.CURSE) {
+                if (c.type == AbstractCard.CardType.ATTACK || c.type == AbstractCard.CardType.CURSE|| c.type == AbstractCard.CardType.STATUS) {
                     FoxfirePanel.addEnergy(1, true);
                 }
             }

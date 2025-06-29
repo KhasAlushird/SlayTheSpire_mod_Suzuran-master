@@ -145,6 +145,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Poised());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.OfudaBladeWard());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FoxRage());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.ThornScourge());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.VineRazor());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Sting());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FlameWave());
        
 
         //skill
@@ -176,10 +180,14 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.CircleOfLife());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.PerceiveFlame());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.OfudaSwallow());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.MaidenPrayer());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxResentment());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
         //status
+        basemod.BaseMod.addCard(new suzuranmod.cards.status.Disappear());
+
        
         //powers
        basemod.BaseMod.addCard(new suzuranmod.cards.power.HealThorn());

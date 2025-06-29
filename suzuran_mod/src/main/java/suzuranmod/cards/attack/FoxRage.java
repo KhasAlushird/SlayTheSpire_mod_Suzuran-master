@@ -17,10 +17,10 @@ import suzuranmod.helpers.ImageHelper;
 
 public class FoxRage extends CustomCard {
 
-    public static final String ID = IdHelper.makePath("BloodEtch");
+    public static final String ID = IdHelper.makePath("FoxRage");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "BloodEtch",false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "FoxRage",true);
     private static final int COST = 3;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;

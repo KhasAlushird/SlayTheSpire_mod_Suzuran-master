@@ -25,7 +25,7 @@ public class OfudaRewardItem extends CustomReward {
 
     public OfudaRewardItem(int ofudaCount) {
         super(
-             ImageMaster.loadImage(ImageHelper.getImgPathWithSubType("ui", "toppanel", "ofuda_reward")),
+             ImageMaster.loadImage(ImageHelper.getImgPathWithSubType("ui", "toppanel", "settle_ofuda_reward")),
         String.format(TITLE_TEMPLATE, ofudaCount, OfudaManager.OFUDA_MAX),
         OfudaRewardTypePatch.SUZURAN_OFUDA
         );
@@ -52,9 +52,9 @@ public class OfudaRewardItem extends CustomReward {
                     AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.GainPennyEffect(p, p.hb.cX, p.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
                 }
             }
-            // 3/12: 恢复15点生命值
+            // 3/12: 恢复12点生命值
             if (count >= 3) {
-                p.heal(15);
+                p.heal(12);
             }
             // 4/12: 获得35金币
             if (count >= 4) {

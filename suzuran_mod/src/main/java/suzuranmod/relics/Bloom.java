@@ -2,6 +2,7 @@ package suzuranmod.relics;
 
 import java.util.ArrayList;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -13,12 +14,14 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 
 import basemod.abstracts.CustomRelic;
 import suzuranmod.helpers.IdHelper;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.options.OfudaCampfireOption;
+import suzuranmod.powers.OfudaCompensationPower;
 
 public class Bloom extends CustomRelic {
     public static final String ID = IdHelper.makePath("Bloom");
@@ -105,6 +108,12 @@ public class Bloom extends CustomRelic {
         usedThisCombat1 = false;
         usedThisCombat2 = false;
         this.grayscale = false;
+         if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite) {
+            addToBot(new ApplyPowerAction(
+            AbstractDungeon.player, AbstractDungeon.player, 
+            new OfudaCompensationPower(AbstractDungeon.player, 1), 1
+        ));
+        }
     }
 
     @Override

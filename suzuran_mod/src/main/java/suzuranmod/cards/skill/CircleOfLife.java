@@ -17,7 +17,7 @@ public class CircleOfLife extends SuzuranCard {
     public static final String ID = IdHelper.makePath("CircleOfLife");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "CircleOfLife", false);
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "CircleOfLife", true);
     public static final int COST = 2;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.SKILL;

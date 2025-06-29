@@ -78,6 +78,12 @@
       "在你的下 #b%d 个回合开始后，恢复所有生命值",
       "在你的下个回合开始后，恢复所有生命值"
     ]
+  },
+  "SuzuranKhas:OfudaCompensationPower": {
+    "NAME": "灵符补偿",
+    "DESCRIPTIONS": [
+      "你在面对强大的敌人，战斗胜利后可以获得1个 #y灵符 !"    
+    ]
   }
 
   }

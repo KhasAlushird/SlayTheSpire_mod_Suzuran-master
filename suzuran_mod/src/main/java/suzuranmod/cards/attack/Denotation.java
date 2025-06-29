@@ -22,13 +22,13 @@ public class Denotation extends SuzuranCard {
     public static final String IMG = ImageHelper.getCardImgPath(CardType.ATTACK, "Denotation", true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 1;
-    public static final int DAMAGE = 15;
+    public static final int DAMAGE = 18;
     public static final int FOXFIRE_CONSUME = 2;
     public static final int DRAW = 1;
     public static final int UPGRADE_DRAW = 1;
 
     public Denotation() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY,FOXFIRE_CONSUME);
+        super(ID, NAME, IMG, COST, DESCRIPTION, CardType.ATTACK, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.COMMON, CardTarget.ENEMY,FOXFIRE_CONSUME);
         this.baseDamage = DAMAGE;
         this.baseFoxfireConsume = FOXFIRE_CONSUME;
         this.foxfireConsume = FOXFIRE_CONSUME;

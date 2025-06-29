@@ -16,7 +16,7 @@ public class FoxProtect extends SuzuranCard {
     
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); 
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG =ImageHelper.getCardImgPath(CardType.ATTACK, "FoxProtect",false);
+    public static final String IMG =ImageHelper.getCardImgPath(CardType.SKILL, "FoxProtect",true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 2;
     public static final int FOXFIRE_CONSUME = 3;
