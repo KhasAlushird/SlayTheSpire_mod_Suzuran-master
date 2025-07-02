@@ -1,51 +1,66 @@
 {
-    "ShamareKhas:ShabbyDoll": {
-        "NAME": "Shabby Doll",
-        "FLAVOR": "A shabby doll entwined with curses, exuding a dark aura.",
-        "DESCRIPTIONS": [
-            "At the start of each combat, apply 1 #yWeak and 1 #yVulnerable to a random enemy."
-        ]
+    "SuzuranKhas:Grow": {
+      "NAME": "\"Growth\"", 
+      "FLAVOR": "Curled up, yet growing strong, just like its owner.", 
+      "DESCRIPTIONS": [
+        "The first time #ysuzurankhas:foxfire drops to #b1 or below, gain [E] [E] [E] and draw #b3 cards."
+      ]
     },
-    "ShamareKhas:DelicateDoll": {
-        "NAME": "Delicate Doll",
-        "FLAVOR": "A luxurious and delicate doll, though its appearance is glamorous, it hides a deeper curse.",
-        "DESCRIPTIONS": [
-            "At the start of each combat, apply 2 stacks of #yshamarekhas:Sorcery Weak and 1 stack of #yshamarekhas:Sorcery Vulnerable to all enemies."
-        ]
+    "SuzuranKhas:Bloom": {
+      "NAME": "\"Bloom\"", 
+      "FLAVOR": "The stubbornness that once curled into a ball has finally blossomed.", 
+      "DESCRIPTIONS": [
+        "Replaces #y\"Growth\". The first time #ysuzurankhas:foxfire drops to #b1 or below and to #b3 or below, gain [E] [E] [E] and draw #b3 cards." 
+      ]
     },
-    "ShamareKhas:ExonerationCertificate": {
-        "NAME": "Exoneration Certificate",
-        "FLAVOR": "It seems to bring a bit of relief to the holder, but an unknown cost is hidden behind it.",
-        "DESCRIPTIONS": [
-            "Whenever you draw a #yDisaster card, reduce 3 points of #yshamarekhas:Namesis."
-        ]
+    "SuzuranKhas:RottingStick": {
+      "NAME": "Carrion Eater's Staff", 
+      "FLAVOR": "Carrion eaters devour life, but also utilize it.", 
+      "DESCRIPTIONS": [
+        "Whenever you are healed, deal the same amount of damage to a random enemy." 
+      ]
     },
-    "ShamareKhas:FabricApple": {
-        "NAME": "Fabric Apple",
-        "FLAVOR": "\"The curse will strike everyone who owns the apple.\"",
-        "DESCRIPTIONS": [
-            "At the start of your first turn, draw 1 card and add 1 #ySuspicious Apple to your hand."
-        ]
+    "SuzuranKhas:AmuletInArm": {
+      "NAME": "Cherished Amulet", 
+      "FLAVOR": "\"When the amulet stops ticking, we'll be back.\"", 
+      "DESCRIPTIONS": [
+        "The first time you gain #ysuzurankhas:burnout, gain #b1 #yIntangible and #b5 #yBlock." 
+      ]
     },
-    "ShamareKhas:SpiralHorn": {
-        "NAME": "Spiral Horn",
-        "FLAVOR": "The power of the Witch King never fades.",
-        "DESCRIPTIONS": [
-            "At the start of each turn, gain [E]. At the start of your first turn, gain an additional 6 points of #yshamarekhas:Namesis."
-        ]
+    "SuzuranKhas:TheFire": {
+      "NAME": "The Fire", 
+      "FLAVOR": "Such firelight is always reassuring.", 
+      "DESCRIPTIONS": [
+        "At the start of your 3rd turn, gain #b1 #ysuzurankhas:foxfire." 
+      ]
     },
-    "ShamareKhas:GreedCoin": {
-        "NAME": "Greed Coin",
-        "FLAVOR": "A coin that shines with a tempting luster, seemingly whispering to you to pursue more wealth and power.",
-        "DESCRIPTIONS": [
-            "Whenever you #yExhaust a card, gain 1.5 additional gold at the end of combat(floor)."
-        ]
+    "SuzuranKhas:WakanCrystal": {
+      "NAME": "Spirit Crystal", 
+      "FLAVOR": "Flowing spiritual energy crystallizes into these shimmering gems.", 
+      "DESCRIPTIONS": [
+        "Upon pickup, gain #b2 #ysuzurankhas:ofuda. #yOfuda gained at Rest Sites are doubled." 
+      ]
     },
-    "ShamareKhas:SirenKiss": {
-        "NAME": "Siren's Kiss",
-        "FLAVOR": "A mysterious kiss, said to lure people to their doom.",
-        "DESCRIPTIONS": [
-            "The first time you draw a #yStatus or #yCurse card in each combat, draw #b3 cards."
-        ]
+    "SuzuranKhas:NineTails": {
+      "NAME": "Nine Tails", 
+      "FLAVOR": "Fluffy, fluffy, fluffy...", 
+      "DESCRIPTIONS": [
+        "Upon pickup, randomly upgrade #b3 cards in your deck and choose #b1 card to remove from your deck.",
+        "Choose a card to remove."
+      ]
+    },
+    "SuzuranKhas:SixTails": {
+      "NAME": "Six Tails", 
+      "FLAVOR": "Fluffy, fluffy...", 
+      "DESCRIPTIONS": [
+        "At the start of combat, gain #b1 #ysuzurankhas:foxfire. At the start of each turn, draw #b1 additional card." 
+      ]
+    },
+    "SuzuranKhas:ThreeTails": {
+      "NAME": "Three Tails", 
+      "FLAVOR": "Fluffy...", 
+      "DESCRIPTIONS": [
+        "At the start of each turn, gain [E]." 
+      ]
     }
 }

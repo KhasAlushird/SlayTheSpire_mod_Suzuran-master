@@ -17,7 +17,7 @@ public class FoxFete extends SuzuranCard {
     public static final String ID = IdHelper.makePath("FoxFete");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG = ImageHelper.getCardImgPath(CardType.POWER, "FoxFete", false);
+    public static final String IMG = ImageHelper.getCardImgPath(CardType.POWER, "FoxFete", true);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final int COST = 1;
     public static final int FOXFIRE_CONSUME = 1;

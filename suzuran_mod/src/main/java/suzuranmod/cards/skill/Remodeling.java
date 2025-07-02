@@ -22,19 +22,20 @@ public class Remodeling extends CustomCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public Remodeling() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber  = 8;
+        this.magicNumber = this.baseMagicNumber  = 6;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeMagicNumber(3);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -43,7 +44,7 @@ public class Remodeling extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         p.useSlowAttackAnimation();
-        addToBot(new RemodelingAction(p, this.freeToPlayOnce, this.energyOnUse, this.upgraded,this.magicNumber));
+        addToBot(new RemodelingAction(p, this.freeToPlayOnce, this.energyOnUse, this.magicNumber));
     }
 
      public AbstractCard makeCopy() {

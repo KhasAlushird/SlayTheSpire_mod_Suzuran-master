@@ -40,7 +40,7 @@ public class FFafterPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if (isPlayer && this.amount > 0) {
             // 先获得foxfire
             FoxfirePanel.addEnergy(this.amount,true);

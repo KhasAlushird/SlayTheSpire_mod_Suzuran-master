@@ -23,13 +23,13 @@ public class BraceUp extends SuzuranCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     public BraceUp() {
         // 为了命名规范修改了变量名。这些参数具体的作用见下方
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,0);
-        this.baseDamage = 25;
+        this.baseDamage = 26;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -37,7 +37,14 @@ public class BraceUp extends SuzuranCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(3);
+            if (this.cost < 4) {
+                upgradeBaseCost(this.cost - 1);
+                if (this.cost < 0)
+                this.cost = 0; 
+            } else {
+                upgradeBaseCost(3);
+            } 
+            this.upgradeDamage(2);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

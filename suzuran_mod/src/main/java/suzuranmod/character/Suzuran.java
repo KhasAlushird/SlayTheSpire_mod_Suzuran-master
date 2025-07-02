@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -34,10 +35,7 @@ import suzuranmod.modcore.TheCore;
 //注意：人物选择界面的立绘在TheCore文件里面
 // 继承CustomPlayer类
 public class Suzuran extends CustomPlayer {
-    // 火堆的人物立绘（行动前）
-    private static final String MY_CHARACTER_SHOULDER_1 = ImageHelper.getOtherImgPath("character", "shoulder1");
-    // 火堆的人物立绘（行动后）
-    private static final String MY_CHARACTER_SHOULDER_2 = ImageHelper.getOtherImgPath("character", "shoulder2");
+
     // 人物死亡图像
     private static final String CORPSE_IMAGE = ImageHelper.getOtherImgPath("character", "corpse");
     // 战斗界面左下角能量图标的每个图层
@@ -59,10 +57,13 @@ public class Suzuran extends CustomPlayer {
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     // 人物的本地化文本，如卡牌的本地化文本一样，如何书写见下
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("TheCore:Suzuran");
+    private static final SkinSelectScreen.Skin SKIN = SkinSelectScreen.getSkin();
+
 
     public Suzuran(String name) {
         super(name,Suzuran_CHARACTER,ORB_TEXTURES,ImageHelper.getImgPathWithSubType("ui","orb","vfx"), LAYER_SPEED, null, null);
 
+        SkinSelectScreen.Skin currentSkin = SkinSelectScreen.getSkin();
 
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
@@ -72,7 +73,7 @@ public class Suzuran extends CustomPlayer {
         // 初始化你的人物，如果你的人物只有一张图，那么第一个参数填写你人物图片的路径。
         this.initializeClass(
                 null,//ImageHelper.getOtherImgPath("character", "character"), // 人物图片
-                MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1,
+                currentSkin.shoulder, currentSkin.shoulder,
                 CORPSE_IMAGE, // 人物死亡图像
                 this.getLoadout(),
                 20.0F, -20.0F,
@@ -80,12 +81,11 @@ public class Suzuran extends CustomPlayer {
                 new EnergyManager(3) // 初始每回合的能量
         );
         // 如果你的人物没有动画，那么这些不需要写
-
+        refreshSkin();
         
         // 修改对话气泡的位置
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
         this.dialogY = (this.drawY + 220.0F * Settings.scale);
-        this.loadAnimation("suzuranmod/char_model/char_358_lisa.atlas", "suzuranmod/char_model/char_358_lisa.json", 0.9F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
          e.setTime(e.getEndTime() * MathUtils.random());
          e.setTimeScale(1F);
@@ -105,6 +105,15 @@ public class Suzuran extends CustomPlayer {
         retVal.add(FoxfireStrike.ID);
         retVal.add(Light.ID);
         return retVal;
+    }
+
+
+    public void refreshSkin() {
+        SkinSelectScreen.Skin skin = SkinSelectScreen.getSkin();
+        this.loadAnimation(skin.charPath + ".atlas", skin.charPath + ".json", 0.9F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        e.setTimeScale(1.0F);
     }
 
 
@@ -214,6 +223,27 @@ public class Suzuran extends CustomPlayer {
     public String getCustomModeCharacterButtonSoundKey() {
         return "ATTACK_HEAVY";
     }
+
+    @Override
+    public void preBattlePrep() {
+        super.preBattlePrep();
+
+        //用于调试
+        SuzuranTipTracker.resetAllTips();
+
+
+         // 根据当前楼层判断是第几场战斗
+        if (AbstractDungeon.floorNum == 1) {
+            // 第一场战斗：显示狐火机制
+            SuzuranTipTracker.checkFoxfireTip();
+        } else if (AbstractDungeon.floorNum == 2) {
+            // 第二场战斗：显示灵符机制
+            SuzuranTipTracker.checkOfudaTip();
+        }
+    
+    }
+    
+
 
     
 

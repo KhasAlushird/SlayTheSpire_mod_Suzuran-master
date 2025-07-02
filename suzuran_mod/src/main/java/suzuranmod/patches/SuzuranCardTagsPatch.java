@@ -6,4 +6,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 public class SuzuranCardTagsPatch {
     @SpireEnum
     public static AbstractCard.CardTags FOXFIRE;
+    public static AbstractCard.CardTags FFRESPONCE;
 }

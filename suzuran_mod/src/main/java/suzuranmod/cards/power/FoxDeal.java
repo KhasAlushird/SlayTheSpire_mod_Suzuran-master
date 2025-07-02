@@ -17,7 +17,7 @@ public class FoxDeal extends CustomCard {
     public static final String ID = IdHelper.makePath("FoxDeal");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = CARD_STRINGS.NAME;
-    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "FoxDeal", false);
+    public static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.POWER, "FoxDeal", true);
     public static final int COST = 1;
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;
@@ -45,7 +45,7 @@ public class FoxDeal extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeBaseCost(0);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

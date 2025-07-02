@@ -8,7 +8,7 @@
      "SuzuranKhas:FFafterPower": {
       "NAME": "狐火增长",
       "DESCRIPTIONS": [ 
-        "下个回合开始时，获得 #b%d 点 #y狐火 ,然后移除该能力" 
+        "本回合结束时，获得 #b%d 点 #y狐火 (优先结算),然后移除该能力" 
       ]
     },
     "SuzuranKhas:HealThornPower": {
@@ -63,7 +63,7 @@
    "SuzuranKhas:DiffusionPower": {
     "NAME": "扩散",
     "DESCRIPTIONS": [
-      "回合开始时，获得 #b%d 点 #y再生 和 #y荆棘 ,将 #b%d 张 #y晕眩 置入你的抽牌堆"
+      "回合开始时，获得 #b%d 点 #y再生 和 #y荆棘 ,将 #b%d 张 #y晕眩 置入你的弃牌堆"
     ]
   },
   "SuzuranKhas:CircleOfLifePower": {

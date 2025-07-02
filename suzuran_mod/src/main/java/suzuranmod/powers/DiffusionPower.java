@@ -2,7 +2,7 @@ package suzuranmod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -61,7 +61,7 @@ public class DiffusionPower extends AbstractPower {
         // 将X张daze置入抽牌堆
         if (this.amount > 0) {
             AbstractDungeon.actionManager.addToBottom(
-                new MakeTempCardInDrawPileAction(new Dazed(), this.amount, true, true)
+                new MakeTempCardInDiscardAction(new Dazed(), this.amount)
             );
         }
     }

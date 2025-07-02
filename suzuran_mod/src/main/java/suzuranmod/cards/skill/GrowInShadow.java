@@ -27,7 +27,7 @@ public class GrowInShadow extends CustomCard {
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int MN_INCREASE = 2;
+    private int MN_INCREASE = 2;
 
     public GrowInShadow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -40,8 +40,7 @@ public class GrowInShadow extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.misc +=3; 
-            this.magicNumber = this.baseMagicNumber = this.misc;
+            this.MN_INCREASE++;
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

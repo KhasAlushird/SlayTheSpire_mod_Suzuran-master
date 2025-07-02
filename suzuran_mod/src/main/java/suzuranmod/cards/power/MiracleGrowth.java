@@ -24,7 +24,7 @@ public class MiracleGrowth extends CustomCard {
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    public static final CardRarity RARITY = CardRarity.RARE;
+    public static final CardRarity RARITY = CardRarity.UNCOMMON;
     public static final CardTarget TARGET = CardTarget.SELF;
 
     private static final int BASE_MAGIC = 15;

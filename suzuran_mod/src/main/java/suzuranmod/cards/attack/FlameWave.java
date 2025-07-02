@@ -23,7 +23,7 @@ public class FlameWave extends SuzuranCard {
     public static final String ID = IdHelper.makePath("FlameWave");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "FlameWave", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "FlameWave", true);
     private static final int COST = 3;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
@@ -33,7 +33,7 @@ public class FlameWave extends SuzuranCard {
 
     public FlameWave() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET,0);
-        this.baseDamage = 8;
+        this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 2; 
         this.foxfireGain = this.magicNumber;
         this.cardsToPreview = new Disappear();

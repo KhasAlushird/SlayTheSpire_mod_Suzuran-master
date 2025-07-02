@@ -19,7 +19,9 @@ import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 
 import suzuranmod.character.Foxfire;
 import suzuranmod.character.Suzuran;
+import suzuranmod.character.SuzuranCard;
 import suzuranmod.helpers.ImageHelper;
+import suzuranmod.patches.SuzuranCardTagsPatch;
 import suzuranmod.powers.BurnoutPower;
 import suzuranmod.powers.FireBreathPower;
 import suzuranmod.relics.AmuletInArm;
@@ -88,9 +90,23 @@ public class FoxfirePanel extends AbstractPanel {
             totalCount = energy;
             fontScale = 2.0F;
             energyVfxTimer = 2.0F;
+
+            updateHandCardsDescription();
+
             if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(FireBreathPower.POWER_ID)) {
                 FireBreathPower power = (FireBreathPower) AbstractDungeon.player.getPower(FireBreathPower.POWER_ID);
                 power.onTrigger(natural_down);
+            }
+        }
+    }
+
+    private static void updateHandCardsDescription() {
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hand != null) {
+            for (com.megacrit.cardcrawl.cards.AbstractCard card : AbstractDungeon.player.hand.group) {
+                // 检查是否是需要动态更新的卡牌
+                if (card.tags.contains(SuzuranCardTagsPatch.FFRESPONCE)) {
+                    ((SuzuranCard) card).update_FF_des();
+                }
             }
         }
     }

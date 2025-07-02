@@ -87,6 +87,10 @@ public abstract class SuzuranCard extends CustomCard {
     // 子类重写，请勿删除
 }
 
+    public void update_FF_des(){
+        // 子类重写，请勿删除
+    }
+
     // 复制方法
     @Override
     public abstract AbstractCard makeCopy();

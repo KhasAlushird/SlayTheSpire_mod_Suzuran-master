@@ -30,6 +30,7 @@ public class DefendHeal extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = 10;
         this.tags.add(CardTags.HEALING);
+        this.isEthereal = true;
     }
 
     @Override

@@ -27,7 +27,7 @@ public class Spiritualism extends SuzuranCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 6;
     private static final int MAGIC = 1;
     private static final int UPGRADE_PLUS_MAGIC = 1;
 

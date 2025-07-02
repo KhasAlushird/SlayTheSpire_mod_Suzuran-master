@@ -17,7 +17,7 @@ public class MaidenPrayer extends CustomCard {
     public static final String ID = IdHelper.makePath("MaidenPrayer");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "MaidenPrayer", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "MaidenPrayer", true);
     private static final int COST = 3;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
@@ -35,7 +35,7 @@ public class MaidenPrayer extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1); // 升级后多召回1张牌
+            this.upgradeBaseCost(2);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

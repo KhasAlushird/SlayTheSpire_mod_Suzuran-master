@@ -31,8 +31,8 @@ public class Sting extends CustomCard {
 
     public Sting() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 18;
-        this.baseBlock = 18;
+        this.baseDamage = 15;
+        this.baseBlock = 15;
         this.magicNumber = this.baseMagicNumber = 3; 
         this.cardsToPreview = new ThornScourge(); 
     }

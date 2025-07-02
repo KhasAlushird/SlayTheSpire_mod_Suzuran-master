@@ -4,7 +4,7 @@
       "FLAVOR": "蜷缩着，却坚强地生长着，就像它的主人", 
       "DESCRIPTIONS": [
         " #ysuzurankhas:狐火 首次小于或等于 #b1 时，获得 [E] [E] [E] ,抽 #b3 张牌" 
-      ]
+            ]
     },
     "SuzuranKhas:Bloom": {
       "NAME": "“绽放”", 
@@ -36,7 +36,7 @@
     },
     "SuzuranKhas:WakanCrystal": {
       "NAME": "灵力结晶", 
-      "FLAVOR": "待完成", 
+      "FLAVOR": "流转的灵力在此凝结为晶莹的晶体", 
       "DESCRIPTIONS": [
         "拾起时，获得2个 #ysuzurankhas:灵符 , 你在休息处获得的 #y灵符 数量翻倍" 
       ]

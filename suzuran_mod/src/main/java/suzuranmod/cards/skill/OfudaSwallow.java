@@ -19,12 +19,12 @@ public class OfudaSwallow extends CustomCard {
     public static final String ID = IdHelper.makePath("OfudaSwallow");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
-    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "OfudaSwallow", false);
+    private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.SKILL, "OfudaSwallow", true);
     private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public OfudaSwallow() {

@@ -26,7 +26,7 @@ public class Will_o_t_s extends SuzuranCard {
     public Will_o_t_s() {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.ENEMY,FOXFIRE_CONSUME);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 5;
         this.isInnate = true;
     }
 
@@ -39,7 +39,7 @@ public class Will_o_t_s extends SuzuranCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(10);
+            this.upgradeBaseCost(0);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

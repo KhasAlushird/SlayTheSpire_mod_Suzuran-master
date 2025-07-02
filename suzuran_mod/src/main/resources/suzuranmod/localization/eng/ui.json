@@ -1,0 +1,65 @@
+{
+  "Suzuran:FoxfireEnergy": {
+    "TEXT": [
+      "Foxfire",        
+      "Start with #b7 (gain #b3 additional in Boss and Elite battles). Reduces by #b1 at end of turn. When reduced to #b0, set HP to #b1, gain #yBurnout and #b-99 #yDexterity."
+    ]
+  },
+  "Suzuran:OfudaTip": {
+    "TEXT": [
+      "Ofuda",
+      "Collect Ofuda to exchange for various rewards ( #gHigher tier rewards include all lower tier rewards! )",
+      "1/12",
+      "Gain #b10 #yGold",
+      "2/12",
+      "Gain #b15 #yGold",
+      "3/12",
+      "Heal #b12 HP",
+      "4/12",
+      "Gain #b35 #yGold",
+      "5/12",
+      "Obtain a random #yCommon #yRelic",
+      "6/12",
+      "Permanently gain #b1 #yDexterity",
+      "7/12",
+      "Obtain a #yGhost #yIn #yA #yJar potion",
+      "8/12",
+      "Permanently gain #b1 #yStrength",
+      "9/12",
+      "Obtain a random #yUncommon #yRelic",
+      "10/12",
+      "Obtain a random #yRare #yRelic",
+      "11/12",
+      "Heal #b50% of Max HP and #gincrease Max HP by #g15",
+      "12/12",
+      "Obtain relic #yThree #yTails (next time will obtain #ySix #yTails)",
+      "Obtain relic #ySix #yTails (next time will obtain #yNine #yTails)",
+      "Obtain relic #yNine #yTails"
+    ]
+  },
+  "Suzuran:OfudaCampfireOption": {
+    "TEXT": [
+      "Pray",
+      "Gain #b2 #yOfuda",
+      "Gain #b4 #yOfuda"
+    ]
+  },
+  "Suzuran:OfudaRewardTitle": {
+    "TEXT": [
+      "Settle and #rClear Ofuda: %d/%d"
+    ]
+  },
+  "SuzuranKhas:SkinSelectScreen": {
+    "TEXT": [
+      "Select Skin",
+      "Default",
+      "Lostlands Flowering"
+    ]
+  },
+  "SuzuranKhas:Tips": {
+  "TEXT": [
+    " #rFoxfire is one of Suzuran's core mechanics. Try not to let it reach zero! (Automatically decreases by 1 point at the start of each turn)",
+    "Collect #rOfuda through various means to exchange for generous rewards after combat! #rOfuda count persists across battles."
+  ]
+}
+}

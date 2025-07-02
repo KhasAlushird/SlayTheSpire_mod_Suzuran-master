@@ -28,6 +28,7 @@ public class Grow extends CustomRelic {
     private static final RelicTier RELIC_TIER = RelicTier.STARTER;
     private static final LandingSound LANDING_SOUND = LandingSound.CLINK;
     private boolean usedThisCombat = false;
+    // private boolean startGameTipTriggered = false;
 
     public Grow() {
         super(ID, ImageMaster.loadImage(IMG_PATH), RELIC_TIER, LANDING_SOUND);
@@ -120,6 +121,29 @@ public class Grow extends CustomRelic {
             new OfudaCompensationPower(AbstractDungeon.player, 1), 1
         ));
         }
+
+    //     if(!this.startGameTipTriggered){
+    //     // 第一个对话
+    //     addToBot(new TalkAction(true, this.DESCRIPTIONS[1], 5.0F, 6.0F));
+        
+    //     // 创建一个延迟Action
+    //     addToBot(new AbstractGameAction() {
+    //         private float timer = 0f;
+    //         private final float delay = 5.0F;
+            
+    //         @Override
+    //         public void update() {
+    //             timer += com.badlogic.gdx.Gdx.graphics.getDeltaTime();
+    //             if (timer >= delay) {
+    //                 // 播放第二个对话
+    //                 addToBot(new TalkAction(true, Grow.this.DESCRIPTIONS[2], 5.0F, 6.0F));
+    //                 this.isDone = true;
+    //             }
+    //         }
+    //     });
+        
+    //     this.startGameTipTriggered = true;
+    // }
 
     }
 

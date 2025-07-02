@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -33,12 +34,16 @@ import basemod.interfaces.OnStartBattleSubscriber;
 import basemod.interfaces.PostBattleSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import suzuranmod.character.SkinSelectScreen;
 import suzuranmod.character.Suzuran;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_CHARACTER;
 import static suzuranmod.character.Suzuran.PlayerColorEnum.Suzuran_COLOR;
+import suzuranmod.character.SuzuranTipTracker;
+import suzuranmod.events.ForgottenTorii;
 import suzuranmod.helpers.AudioHelper;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.patches.OfudaRewardTypePatch;
+import suzuranmod.potions.FoxfirePotion;
 import suzuranmod.relics.AmuletInArm;
 import suzuranmod.relics.Bloom;
 import suzuranmod.relics.Grow;
@@ -149,6 +154,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.VineRazor());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.Sting());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FlameWave());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Grafting());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.BlazingInvocation());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FFFeast());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.CombustionSupport());
        
 
         //skill
@@ -182,11 +191,15 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.OfudaSwallow());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.MaidenPrayer());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxResentment());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Overgrowth());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.GrowInFlame());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
         //status
         basemod.BaseMod.addCard(new suzuranmod.cards.status.Disappear());
+        basemod.BaseMod.addCard(new suzuranmod.cards.status.PainOfGrowth());
+        basemod.BaseMod.addCard(new suzuranmod.cards.status.BloomJoy());
 
        
         //powers
@@ -285,8 +298,16 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
     
     @Override
     public void receiveEditCharacters() {
+         // 获取当前选择的皮肤对应的portrait
+        String currentPortrait = SkinSelectScreen.getSkin().portrait;
+        
+        // 检查portrait文件是否存在
+        if (!Gdx.files.internal(currentPortrait).exists()) {
+            logger.warn("Portrait image not found: " + currentPortrait + ", using default");
+            currentPortrait = MY_CHARACTER_PORTRAIT; // 使用默认portrait
+        }
         // 向basemod注册人物
-        BaseMod.addCharacter(new Suzuran(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT, Suzuran_CHARACTER);
+        BaseMod.addCharacter(new Suzuran(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, currentPortrait, Suzuran_CHARACTER);
     }
 
     @Override
@@ -300,10 +321,17 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
                 ((OfudaRewardItem)reward).ofudaCount,
                 0
             )
+
+
             
         );
         BaseMod.addSaveField("SuzuranOfuda", new OfudaManager());
+        BaseMod.addEvent(ForgottenTorii.ID, ForgottenTorii.class,TheBeyond.ID);
+
+        SuzuranTipTracker.initialize();
     }
+
+ 
 
     @Override
     public void receiveAddAudio() {
@@ -331,7 +359,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
 
 
         //register potions here
-        //BaseMod.addPotion(CushionPotion.class, Color.GREEN, Color.YELLOW, Color.CLEAR, "MuelSyseKhas:CushionPotion", MY_CHARACTER);
+        BaseMod.addPotion(FoxfirePotion.class, null, null, Color.CLEAR, "SuzuranKhas:FoxfirePotion", Suzuran_CHARACTER);
        
 
 

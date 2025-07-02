@@ -10,16 +10,14 @@ public class RemodelingAction extends AbstractGameAction {
     private AbstractPlayer p;
     private boolean freeToPlayOnce;
     private int energyOnUse;
-    private boolean upgraded;
     private static  int healAmount = 8;
 
-    public RemodelingAction(AbstractPlayer p, boolean freeToPlayOnce, int energyOnUse, boolean upgraded,int healAmount) {
+    public RemodelingAction(AbstractPlayer p, boolean freeToPlayOnce, int energyOnUse,int healAmount) {
         this.p = p;
         this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.HEAL;
         this.energyOnUse = energyOnUse;
-        this.upgraded = upgraded;
         this.healAmount = healAmount;
     }
 
@@ -40,9 +38,6 @@ public class RemodelingAction extends AbstractGameAction {
 
         // 计算恢复次数
         int healTimes = effect;
-        if (this.upgraded) {
-            healTimes += 1; // 升级后额外+1次
-        }
 
         // 执行恢复
         if (healTimes > 0) {

@@ -44,4 +44,10 @@ public abstract class ImageHelper {
     public static String get_event_img(String Imgname) {
         return BASE_PATH + "events\\" + Imgname + ".png";
     }
+    public static String get_char_res(String res_type , String id_String){
+        if (res_type.equals("models")){
+            return "suzuranmod\\char_res\\"+res_type+"\\"+id_String;
+        }
+        return "suzuranmod\\char_res\\"+res_type+"\\"+id_String+".png";
+    }
 }

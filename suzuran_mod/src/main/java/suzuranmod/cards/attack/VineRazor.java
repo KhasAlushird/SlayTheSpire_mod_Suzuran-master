@@ -25,20 +25,21 @@ public class VineRazor extends CustomCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     public VineRazor() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 14;
+        this.baseDamage = 20;
         this.cardsToPreview = new ThornScourge(); 
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(6);
+            this.upgradeMagicNumber(1);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -52,7 +53,7 @@ public class VineRazor extends CustomCard {
         
         // 将1张ThornScourge置入抽牌堆
         AbstractCard thornScourge = new ThornScourge();
-        this.addToBot(new MakeTempCardInDrawPileAction(thornScourge, 1, true, true));
+        this.addToBot(new MakeTempCardInDrawPileAction(thornScourge, this.magicNumber, true, true));
     }
 
     @Override

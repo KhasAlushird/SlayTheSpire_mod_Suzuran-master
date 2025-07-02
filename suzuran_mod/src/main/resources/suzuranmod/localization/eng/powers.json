@@ -1,104 +1,88 @@
 {
-    "ShamareKhas:SorceryPoison": {
-        "NAME": "Sorcery Poison",
-        "DESCRIPTIONS": [
-            "When the owner is attacked, if there is X amount of #yUnblockedDamage, deal X times #b%d damage, and reduce X stacks at the end of the attack."
-        ]
+    "SuzuranKhas:BurnoutPower": {
+      "NAME": "Burnout",
+      "DESCRIPTIONS": [ 
+        "#yFoxfire cannot grow in any way." 
+      ]
     },
-    "ShamareKhas:SorceryVulnerable": {
-        "NAME": "Sorcery Vulnerable",
-        "DESCRIPTIONS": [
-            "Damage taken from attacks is increased by #y75%. If #yUnblockedDamage is taken during the turn, reduce one stack at the end of the turn."
-        ]
+     "SuzuranKhas:FFafterPower": {
+      "NAME": "Foxfire Growth",
+      "DESCRIPTIONS": [ 
+        "At the end of this turn, gain #b%d #yFoxfire (triggers first), then remove this power." 
+      ]
     },
-    "ShamareKhas:SorceryWeak": {
-        "NAME": "Sorcery Weak",
-        "DESCRIPTIONS": [
-            "Damage dealt by attacks is reduced by #y50%. If an attack is made during the turn, reduce one stack at the end of the turn."
-        ]
+    "SuzuranKhas:HealThornPower": {
+      "NAME": "Healing Thorns",
+      "DESCRIPTIONS": [ 
+        "Whenever you are healed, gain #b%d #yThorns." 
+      ]
     },
-    "ShamareKhas:Namesis": {
-        "NAME": "Namesis",
-        "DESCRIPTIONS": [
-            "Whenever the owner takes #yUnblockedDamage, lose #b%d HP, then remove this power."
-        ]
+    "SuzuranKhas:FoxCursePower": {
+      "NAME": "Fox Curse",
+      "DESCRIPTIONS": [ 
+        "At the start of your turn, take #b%d damage, then increase #yFox Curse by #b8. Before a card applies Fox Curse, this start-of-turn effect triggers once." 
+      ]
     },
-    "ShamareKhas:NamesisToEnemy": {
-        "NAME": "Namesis",
-        "DESCRIPTIONS": [
-            "Whenever the owner takes #yUnblockedDamage, lose #b%d HP, then remove this power."
-        ]
-    },
-    "ShamareKhas:Pardon": {
-        "NAME": "Pardon",
-        "DESCRIPTIONS": [
-            "Lose 1 stack at the end of the turn. While having this power, #yNamesis will not trigger."
-        ]
-    },
-    "ShamareKhas:PeacefulPsyche": {
-        "NAME": "Peaceful Psyche",
-        "DESCRIPTIONS": [
-            "When #yNamesis is triggered, draw #b%d cards, gain %s."
-        ]
-    },
-    "ShamareKhas:CalamityMessenger": {
-        "NAME": "Calamity Messenger",
-        "DESCRIPTIONS": [
-            "Whenever you draw a #yDisaster card, draw #b%d cards."
-        ]
-    },
-    "ShamareKhas:HirudoPower": {
-        "NAME": "Hirudo",
-        "DESCRIPTIONS": [
-            "Whenever a card is #yExhausted, heal #b%d HP, gain #b%d #yNamesis."
-        ]
-    },
-    "ShamareKhas:Plague": {
-        "NAME": "Plague",
-        "DESCRIPTIONS": [
-            "At the end of each turn, place #b%d #yVenomousDisaster cards into your discard pile."
-        ]
-    },
-    "ShamareKhas:EdgePower": {
-        "NAME": "Edge Power",
-        "DESCRIPTIONS": [
-            "At the end of each turn, place #b%d #yCorruptedBlood cards into your discard pile."
-        ]
-    },
-    "ShamareKhas:PoisonBarrierPower": {
-        "NAME": "Poison Barrier",
-        "DESCRIPTIONS": [
-            "Whenever you are attacked this turn, apply #b%d stacks of #yPoison to the attacker."
-        ]
-    },
-    "ShamareKhas:DimBudPower": {
-        "NAME": "Dim Bud",
-        "DESCRIPTIONS": [
-            "Whenever the owner takes #yUnblockedDamage, place #b%d #yShadowDisaster cards into your draw pile."
-        ]
-    },
-    "ShamareKhas:DefilePower": {
-        "NAME": "Defile Power",
-        "DESCRIPTIONS": [
-            "At the start of each turn, randomly apply #b%d stacks of #ySorceryVulnerable, #b%d stacks of #ySorceryWeak, or #b%d stacks of #ySorceryPoison to a random enemy."
-        ]
-    },
-    "ShamareKhas:AruspicyPower": {
-        "NAME": "Aruspicy",
-        "DESCRIPTIONS": [
-            "At the start of each turn, draw #b%d cards, #yForesee #b%d."
-        ]
-    },
-    "ShamareKhas:TheFoolPower": {
-        "NAME": "The Fool's Power",
-        "DESCRIPTIONS": [
-            "At the start of each turn, discard up to #b%d cards. For each #yDisaster card discarded, gain [E], draw 2 cards."
-        ]
-    },
-    "ShamareKhas:NamesisExplosionPower": {
-        "NAME": "Namesis Explosion",
-        "DESCRIPTIONS": [
-            "After #b%d turns, gain #b%d #yNamesis."
-        ]
-    }
+    
+  "SuzuranKhas:DrawAddPower": {
+    "NAME": "Extra Draw",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b%d additional cards."
+    ]
+  },
+  "SuzuranKhas:OfudaAddPower": {
+    "NAME": "Ofuda Bonus",
+    "DESCRIPTIONS": [
+      "At the end of combat, if your #yOfuda count is odd, gain #b%d #yOfuda."
+    ]
+  },
+  "SuzuranKhas:AshHealPower": {
+    "NAME": "Ash Healing",
+    "DESCRIPTIONS": [
+      "Whenever you exhaust a card, heal #b%d HP."
+    ]
+  },
+  "SuzuranKhas:InterweavePower": {
+    "NAME": "Interweave",
+    "DESCRIPTIONS": [
+      "Whenever you are healed, gain #b%d #yMulti-Armor."
+    ]
+  },
+  "SuzuranKhas:FireBreathPower": {
+    "NAME": "Ember's Breath",
+    "DESCRIPTIONS": [
+      "Whenever #yFoxfire changes, gain #b%d Energy."
+    ]
+  },
+  "SuzuranKhas:OfudaReducePower": {
+    "NAME": "Ofuda Deduction",
+    "DESCRIPTIONS": [
+      "At the end of turn, remove this power. If you take damage, remove this power and lose #b%d #yOfuda."
+    ]
+  },
+   "SuzuranKhas:DiffusionPower": {
+    "NAME": "Diffusion",
+    "DESCRIPTIONS": [
+      "At the start of turn, gain #b%d #yRegeneration and #yThorns, then add #b%d #yDazed to your discard pile."
+    ]
+  },
+  "SuzuranKhas:CircleOfLifePower": {
+    "NAME": "Circle of Life",
+    "DESCRIPTIONS": [
+      "Your next #b%d Power cards cost 0 and return to your draw pile."
+    ]
+  },
+  "SuzuranKhas:AwakeningPower": {
+    "NAME": "Awakening",
+    "DESCRIPTIONS": [
+      "After #b%d more turns, fully heal.",
+      "At the start of next turn, fully heal."
+    ]
+  },
+  "SuzuranKhas:OfudaCompensationPower": {
+    "NAME": "Ofuda Compensation",
+    "DESCRIPTIONS": [
+      "You are facing powerful enemies. Upon victory, gain #b1 #yOfuda!"    
+    ]
+  }
 }

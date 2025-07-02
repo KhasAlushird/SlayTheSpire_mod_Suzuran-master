@@ -17,8 +17,8 @@
     },
     "SuzuranKhas:Light": { 
       "NAME": "点燃", 
-      "DESCRIPTION": "下个回合开始时,获得1点 suzurankhas:狐火 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": "下个回合开始时,获得1点 suzurankhas:狐火 NL 消耗 " 
+      "DESCRIPTION": "本回合结束时,获得1点 suzurankhas:狐火 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "本回合结束时,获得1点 suzurankhas:狐火 NL 消耗 " 
     },
     "SuzuranKhas:FoxSurge": { 
       "NAME": "灵狐涌动", 
@@ -102,8 +102,12 @@
     },
     "SuzuranKhas:FFCombo": { 
       "NAME": "狐火连击", 
-      "DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害", 
-      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,额外造成相当于2倍 suzurankhas:狐火 数量的伤害" 
+      "DESCRIPTION": "造成 !D! 点伤害,额外造成相当于 !M! 倍 suzurankhas:狐火 数量的伤害", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,额外造成相当于 !M 倍 suzurankhas:狐火 数量的伤害" ,
+      "EXTENDED_DESCRIPTION": [
+      "(额外造成",
+      "点伤害)"
+    ]
     },
     "SuzuranKhas:SeekingOfuda": { 
       "NAME": "求符", 
@@ -147,8 +151,8 @@
     },
     "SuzuranKhas:FFHomology": { 
       "NAME": "薪火同调", 
-      "DESCRIPTION": "下个回合开始时,获得3点 suzurankhas:狐火 ,将 !M! 张 *晕眩 置入你的抽牌堆和弃牌堆 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": "下个回合开始时,获得3点 suzurankhas:狐火 ,将 !M! 张 *晕眩 置入你的抽牌堆和弃牌堆 NL 消耗 " 
+      "DESCRIPTION": "本回合结束时,获得3点 suzurankhas:狐火 ,将 !M! 张 *晕眩 置入你的抽牌堆和弃牌堆 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "本回合结束时,获得3点 suzurankhas:狐火 ,将 !M! 张 *晕眩 置入你的抽牌堆和弃牌堆 NL 消耗 " 
     },
     "SuzuranKhas:WakanStrike": { 
       "NAME": "灵力打击", 
@@ -173,7 +177,7 @@
     "SuzuranKhas:FullMoon": { 
       "NAME": "满月", 
       "DESCRIPTION": "恢复 !M! 点生命值,在战斗结束时，如果你的 suzurankhas:灵符 数量为奇数，获得1个 *灵符 ", 
-      "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值，在战斗结束时，如果你的 suzurankhas:灵符 数量为奇数，获得1个 *灵符 " 
+      "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值,在战斗结束时，如果你的 suzurankhas:灵符 数量为奇数，获得1个 *灵符 " 
     },
     "SuzuranKhas:FoxTooth": { 
       "NAME": "狐牙", 
@@ -192,8 +196,8 @@
     },
     "SuzuranKhas:DefendHeal": { 
       "NAME": "御生", 
-      "DESCRIPTION": "获得 !B! 点格挡,恢复等量的生命值", 
-      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡,恢复等量的生命值" 
+      "DESCRIPTION": " 虚无 NL 获得 !B! 点格挡,恢复等量的生命值", 
+      "UPGRADE_DESCRIPTION": " 虚无 NL 获得 !B! 点格挡,恢复等量的生命值" 
     },
     "SuzuranKhas:PrairieFire": { 
       "NAME": "燎原", 
@@ -228,7 +232,7 @@
      "SuzuranKhas:Remodeling": { 
       "NAME": "重塑", 
       "DESCRIPTION": "恢复 !M! 点生命值X次", 
-      "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值X+1次"
+      "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值X次"
     },
     "SuzuranKhas:Proliferation": { 
       "NAME": "增生", 
@@ -237,13 +241,13 @@
     },
     "SuzuranKhas:Diffusion": { 
       "NAME": "扩散", 
-      "DESCRIPTION": "每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的抽牌堆", 
-      "UPGRADE_DESCRIPTION": "每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的抽牌堆"
+      "DESCRIPTION": "每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆", 
+      "UPGRADE_DESCRIPTION": " 固有 NL 每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆"
     },
     "SuzuranKhas:FertileSoil": { 
       "NAME": "丰壤", 
-      "DESCRIPTION": " 虚无 NL 抽 !M! 张牌，永久获得1点最大生命。", 
-      "UPGRADE_DESCRIPTION": " 虚无 NL 抽 !M! 张牌，永久获得1点最大生命。"
+      "DESCRIPTION": " 虚无 NL 抽 1 张牌，永久获得 !M! 点最大生命。", 
+      "UPGRADE_DESCRIPTION": " 虚无 NL 抽 1 张牌，永久获得 !M! 点最大生命。"
     },
     "SuzuranKhas:ConcentrateGrowth": { 
       "NAME": "专注生长", 
@@ -263,7 +267,7 @@
     "SuzuranKhas:GrowInShadow": { 
       "NAME": "暗中生长", 
       "DESCRIPTION": " 获得 !M! 点 suzurankhas:临时敏捷 ,每打出一次，这张牌在本局游戏中施加层数永久性增加2 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": " 获得 !M! 点 suzurankhas:临时敏捷 ,每打出一次，这张牌在本局游戏中施加层数永久性增加2 NL 消耗 "
+      "UPGRADE_DESCRIPTION": " 获得 !M! 点 suzurankhas:临时敏捷 ,每打出一次，这张牌在本局游戏中施加层数永久性增加3 NL 消耗 "
     },
     "SuzuranKhas:CircleOfLife": { 
       "NAME": "生命轮回", 
@@ -272,8 +276,8 @@
     },
     "SuzuranKhas:Awakening": { 
       "NAME": "觉醒", 
-      "DESCRIPTION": " 虚无 NL 在你的下 !M! 个回合开始后，恢复所有生命值", 
-      "UPGRADE_DESCRIPTION": " 虚无 NL 在你的下 !M! 个回合开始后，恢复所有生命值"
+      "DESCRIPTION": " 虚无 , 固有 NL 在你的下 !M! 个回合开始后，恢复所有生命值", 
+      "UPGRADE_DESCRIPTION": " 虚无 , 固有 NL 在你的下 !M! 个回合开始后，恢复所有生命值"
     },
       "SuzuranKhas:PerceiveFlame": { 
       "NAME": "感知火焰", 
@@ -297,8 +301,8 @@
     },
     "SuzuranKhas:VineRazor": { 
       "NAME": "藤蔓剃刀", 
-      "DESCRIPTION": "造成 !D! 点伤害，将1张 *荆棘鞭笞 置入你的抽牌堆", 
-      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将1张 *荆棘鞭笞 置入你的抽牌堆"
+      "DESCRIPTION": "造成 !D! 点伤害，将 !M! 张 *荆棘鞭笞 置入你的抽牌堆", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，将 !M! 张 *荆棘鞭笞 置入你的抽牌堆"
     },
     "SuzuranKhas:Sting": { 
       "NAME": "蛰刺", 
@@ -313,18 +317,67 @@
     "SuzuranKhas:FoxResentment": { 
       "NAME": "狐怨", 
       "DESCRIPTION": " suzurankhas:炽焰 (2): 施加1点 suzurankhas:狐咒 X次 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (2): 施加1点 suzurankhas:狐咒 X次 NL 消耗 "
+      "UPGRADE_DESCRIPTION": " suzurankhas:炽焰 (2): 施加1点 suzurankhas:狐咒 X+1次 NL 消耗 "
     },
     "SuzuranKhas:Disappear": { 
       "NAME": "消散", 
-      "DESCRIPTION": " 不能被打出 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 ", 
-      "UPGRADE_DESCRIPTION": " 不能被打出 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 "
+      "DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 ", 
+      "UPGRADE_DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 "
     },
     "SuzuranKhas:FlameWave": { 
       "NAME": "焰海狂潮", 
       "DESCRIPTION": "随机对敌人造成 !D! 点伤害3次,获得 !M! 点 suzurankhas:狐火 并将等量的 *消散 置入你的弃牌堆", 
       "UPGRADE_DESCRIPTION": "随机对敌人造成 !D! 点伤害4次,获得 !M! 点 suzurankhas:狐火 并将等量的 *消散 置入你的弃牌堆"
+    },
+    "SuzuranKhas:Grafting": { 
+      "NAME": "嫁接", 
+      "DESCRIPTION": "造成 !D! 点伤害，丢弃 !M! 张牌，并将 !M! 张 *荆棘鞭笞 置入你的手牌", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，丢弃 !M! 张牌，并将 !M! 张 *荆棘鞭笞 置入你的手牌"
+    },
+    "SuzuranKhas:BlazingInvocation": { 
+      "NAME": "炽焰祈咒", 
+      "DESCRIPTION": "造成 !D! 点伤害，未被 格挡 的伤害将回复你的 suzurankhas:狐火 (最多 !M! 点),将2张 *消散 置入你的弃牌堆", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，未被 格挡 的伤害将回复你的 suzurankhas:狐火 (最多 !M! 点),将2张 *消散 置入你的弃牌堆"
+    },
+    "SuzuranKhas:BloomJoy": { 
+      "NAME": "绽放的喜悦", 
+      "DESCRIPTION": "获得 [E] [E] ,抽1张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "获得 [E] [E] ,抽1张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 "
+    },
+    "SuzuranKhas:PainOfGrowth": { 
+      "NAME": "生长的痛楚", 
+      "DESCRIPTION": "将一张 *绽放的喜悦 置入你的手牌。你每在战斗中失去生命一次，这张牌的耗能就减少 [E] , 消耗 ", 
+      "UPGRADE_DESCRIPTION": "将一张 *绽放的喜悦 置入你的手牌。你每在战斗中失去生命一次，这张牌的耗能就减少 [E] , 消耗 "
+    },
+    "SuzuranKhas:Overgrowth": { 
+      "NAME": "过度生长", 
+      "DESCRIPTION": " 保留 NL 将 M! 张 *生长的痛楚 置入你的弃牌堆，每当这张牌被保留时，额外放入1张", 
+      "UPGRADE_DESCRIPTION": " 固有 , 保留 NL 将 M! 张 *生长的痛楚 置入你的弃牌堆，每当这张牌被保留时，额外放入1张"
+    },
+    "SuzuranKhas:GrowInFlame": { 
+      "NAME": "浴火生长", 
+      "DESCRIPTION": " 消耗 1张牌，抽1张牌，将1张 *生长的痛楚 置入你的抽牌堆 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": " 消耗 1张牌，抽1张牌，将1张 *生长的痛楚 置入你的抽牌堆"
+    },
+    "SuzuranKhas:FFFeast": { 
+      "NAME": "狐火盛宴", 
+      "DESCRIPTION": "随机对敌人造成 !D! 点伤害1次。你每有 !M! 点 suzurankhas:狐火 ，额外造成一次伤害。", 
+      "UPGRADE_DESCRIPTION": "随机对敌人造成 !D! 点伤害1次。你每有 !M! 点 suzurankhas:狐火 ，额外造成一次伤害。",
+      "EXTENDED_DESCRIPTION": [
+      "(额外造成",
+      "次)"
+    ]
+    },
+    "SuzuranKhas:CombustionSupport": { 
+      "NAME": "助燃", 
+      "DESCRIPTION": "造成 !D! 点伤害,获得 !M! 点 力量。你每有2点 suzurankhas:狐火 ,获得 [E] ", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,获得 !M! 点 力量。你每有2点 suzurankhas:狐火 ,获得 [E] ",
+      "EXTENDED_DESCRIPTION": [
+      "(额外获得",
+      " [E] )"
+    ]
     }
+    
 
   
   

@@ -1,412 +1,385 @@
 {
-    "ShamareKhas:Strike": { 
+    "SuzuranKhas:Strike": { 
       "NAME": "Strike", 
       "DESCRIPTION": "Deal !D! damage.", 
       "UPGRADE_DESCRIPTION": "Deal !D! damage." 
     },
 
-    "ShamareKhas:Defend": { 
+    "SuzuranKhas:Defend": { 
       "NAME": "Defend", 
       "DESCRIPTION": "Gain !B! Block.", 
       "UPGRADE_DESCRIPTION": "Gain !B! Block." 
     },
-    "ShamareKhas:PoisonShot": { 
-      "NAME": "Poison Shot", 
-      "DESCRIPTION": "Deal !D! damage, apply !M! stacks of shamarekhas:SorceryPoison.", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage, apply !M! stacks of shamarekhas:SorceryPoison." 
+    "SuzuranKhas:FoxfireStrike": { 
+      "NAME": "Foxfire Strike", 
+      "DESCRIPTION": "suzurankhas:blaze (1): Deal !D! damage. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (1): Deal !D! damage. NL Exhaust." 
     },
-    "ShamareKhas:CurseStrike": { 
-      "NAME": "Curse Strike", 
-      "DESCRIPTION": "Deal !D! damage, apply !M! stacks of shamarekhas:SorceryVulnerable.", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage, apply !M! stacks of shamarekhas:SorceryVulnerable." 
+    "SuzuranKhas:Light": { 
+      "NAME": "Ignite", 
+      "DESCRIPTION": "At the end of this turn, gain 1 suzurankhas:foxfire. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "At the end of this turn, gain 1 suzurankhas:foxfire. NL Exhaust." 
     },
-    "ShamareKhas:Shadow": { 
-        "NAME": "Shadow", 
-        "DESCRIPTION": "Gain !B! Block, apply !M! stacks of shamarekhas:SorceryWeak.", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block, apply !M! stacks of shamarekhas:SorceryWeak." 
-      },
-      "ShamareKhas:PoisonDisaster": { 
-        "NAME": "VenomousDisaster", 
-        "DESCRIPTION": "Cannot be played, Ethereal NL When drawn, randomly apply !M! stacks of Poison to an enemy, and increase the value of *VenomousDisaster by 1 for this combat.", 
-        "UPGRADE_DESCRIPTION": "Cannot be played NL *Ethereal NL At the end of your turn, randomly apply !M! stacks of Poison to an enemy, and strengthen *VenomousDisaster for this combat." 
-      },
-      "ShamareKhas:FireDisaster": { 
-        "NAME": "Flame Disaster", 
-        "DESCRIPTION": "Cannot be played, Ethereal NL When drawn, deal !M! damage to all enemies, and increase the value of *FlameDisaster by 6 for this combat.", 
-        "UPGRADE_DESCRIPTION": "Cannot be played NL *Ethereal NL At the end of your turn, randomly apply !M! stacks of Poison to an enemy, and strengthen *VenomousDisaster for this combat." 
-      },
-      "ShamareKhas:ShadowDisaster": { 
-        "NAME": "ShadowDisaster", 
-        "DESCRIPTION": "Cannot be played, Ethereal NL When drawn, randomly make an enemy with an attack intent lose !M! Strength this turn, and increase the value of *shadowdisaster by 3 for this combat.", 
-        "UPGRADE_DESCRIPTION": "Cannot be played NL *Ethereal NL At the end of your turn, randomly apply !M! stacks of Poison to an enemy, and strengthen *VenomousDisaster for this combat." 
-      },
-      "ShamareKhas:HolyDisaster": { 
-        "NAME": "HolyDisaster", 
-        "DESCRIPTION": "Cannot be played, Ethereal NL When drawn, draw !M! cards, gain !M! stacks of Regen, put *each disaster into your discard pile, and increase the value of *holydisaster by 1 for this combat.", 
-        "UPGRADE_DESCRIPTION": "Cannot be played NL *Ethereal NL At the end of your turn, randomly apply !M! stacks of Poison to an enemy, and strengthen *VenomousDisaster for this combat." 
-      },
-      "ShamareKhas:PoisonSeed": { 
-        "NAME": "Poison Seed", 
-        "DESCRIPTION": "Draw 1 card, put !M! copies of shamarekhas:VenomousDisaster into your discard pile.", 
-        "UPGRADE_DESCRIPTION": "Draw 2 cards, put !M! copies of shamarekhas:VenomousDisaster into your discard pile." 
-      },  
-        "ShamareKhas:ArousingFlame": { 
-            "NAME": "Arousing Flame", 
-            "DESCRIPTION": "Deal !D! damage, add !M! shamarekhas:FlameDisaster and *Burn+ to your draw pile", 
-            "UPGRADE_DESCRIPTION": "Deal !D! damage, add !M! shamarekhas:FlameDisaster and *Burn to your draw pile"
-        },
-        "ShamareKhas:ShadowStep": { 
-            "NAME": "Shadow Step", 
-            "DESCRIPTION": "Gain !B! Block. Add !M! shamarekhas:ShadowDisaster to your draw pile NL Exhaust", 
-            "UPGRADE_DESCRIPTION": "Gain !B! Block. Add !M! shamarekhas:ShadowDisaster to your draw pile NL Exhaust"
-        },
-        "ShamareKhas:FinalVoodoo": { 
-          "NAME": "Final Voodoo", 
-          "DESCRIPTION": "Add 1 shamarekhas:HolyDisaster to your draw pile, gain !M! shamarekhas:Namesis NL Exhaust", 
-          "UPGRADE_DESCRIPTION": "Add 1 shamarekhas:HolyDisaster to your draw pile, gain !M! shamarekhas:Namesis NL Exhaust"
-      },
-      "ShamareKhas:SacrificialStab": { 
-          "NAME": "Sacrificial Stab", 
-          "DESCRIPTION": "Deal !D! damage, gain !B! Block, gain !M! shamarekhas:Namesis", 
-          "UPGRADE_DESCRIPTION": "Deal !D! damage, gain !B! Block, gain !M! shamarekhas:Namesis"
-      },
-      "ShamareKhas:Mercy": { 
-        "NAME": "Mercy", 
-        "DESCRIPTION": "Remove all shamarekhas:Namesis NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Remove all shamarekhas:Namesis NL Exhaust"
+    "SuzuranKhas:FoxSurge": { 
+      "NAME": "Fox Surge", 
+      "DESCRIPTION": "suzurankhas:blaze (2): Draw !M! cards.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (2): Draw !M! cards." 
     },
-    "ShamareKhas:DarkAttack": { 
-        "NAME": "Dark Attack", 
-        "DESCRIPTION": "Deal !D! damage, discard !M! cards. If you discard a Curse or *Status card, gain [E] and draw 1 card", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage, discard !M! cards. If you discard a Curse or *Status card, gain [E] and draw 1 card"
+    "SuzuranKhas:Quenching": { 
+      "NAME": "Quenching", 
+      "DESCRIPTION": "suzurankhas:blaze (2): Gain [E] [E] [E] [E]. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (2): Gain [E] [E] [E] [E] [E]. NL Exhaust." 
+    },
+     "SuzuranKhas:Pullout": { 
+      "NAME": "All Out", 
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Vulnerable to yourself.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Vulnerable to yourself." 
+    },
+    "SuzuranKhas:Leapup": { 
+      "NAME": "Ascension", 
+      "DESCRIPTION": "Deal !D! damage. Gain 1 suzurankhas:foxfire. You cannot gain Block from cards for the next !M! turns.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain 1 suzurankhas:foxfire. You cannot gain Block from cards for the next !M! turns." 
+    },
+     "SuzuranKhas:EmerCare": { 
+      "NAME": "Emergency Care", 
+      "DESCRIPTION": "Add !M! *Bandage Up to your hand. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Add !M! *Bandage Up to your hand. NL Exhaust." 
+    },
+    "SuzuranKhas:FFHaze": { 
+      "NAME": "Foxfire Haze", 
+      "DESCRIPTION": "Choose and Exhaust up to X cards from your hand. For each card Exhausted, gain 1 suzurankhas:foxfire and 2 Strength. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Choose and Exhaust up to X cards from your hand. For each card Exhausted (including this card), gain 1 suzurankhas:foxfire and 2 Strength. Exhaust." 
+    },
+    "SuzuranKhas:FoxProtect": { 
+      "NAME": "Fox Protection", 
+      "DESCRIPTION": "suzurankhas:blaze (3): Gain !M! Intangible. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (3): Gain !M! Intangible. NL Exhaust." 
+    },
+    "SuzuranKhas:LightBurn": { 
+      "NAME": "Sacred Blaze", 
+      "DESCRIPTION": "Deal !D! damage 3 times. Heal !M! HP. Add a *Burn to your hand.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. Heal !M! HP. Add a *Burn to your hand." 
+    },
+    "SuzuranKhas:Twinkling": { 
+      "NAME": "Twinkling", 
+      "DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity.", 
+      "UPGRADE_DESCRIPTION": "Gain !B! Block. Gain !M! Dexterity." 
+    },
+    "SuzuranKhas:HealThorn": { 
+      "NAME": "Healing Thorns", 
+      "DESCRIPTION": "Whenever you are healed, gain !M! Thorns.", 
+      "UPGRADE_DESCRIPTION": "Whenever you are healed, gain !M! Thorns." 
+    },
+    "SuzuranKhas:Will_o_t_s": { 
+      "NAME": "Will-o'-the-Wisp", 
+      "DESCRIPTION": "Innate. NL suzurankhas:blaze (1): Apply !M! suzurankhas:foxcurse. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Innate. NL suzurankhas:blaze (1): Apply !M! suzurankhas:foxcurse. NL Exhaust." 
+    },
+    "SuzuranKhas:CircleHealing": { 
+      "NAME": "Circle of Healing", 
+      "DESCRIPTION": "Gain !M! Regeneration. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Gain !M! Regeneration. NL Exhaust." 
+    },
+    "SuzuranKhas:Glimmer": { 
+      "NAME": "Glimmer", 
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. Heal !M! HP.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Heal !M! HP." 
+    },
+    "SuzuranKhas:BraceUp": { 
+      "NAME": "Brace Up", 
+      "DESCRIPTION": "Deal !D! damage. Draw !M! cards. Each time you are healed, reduce this card's cost by 1.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! cards. Each time you are healed, reduce this card's cost by 1." 
+    },
+    "SuzuranKhas:MiracleGrowth": { 
+      "NAME": "Miracle Growth", 
+      "DESCRIPTION": "Lose !M! HP (cannot reduce HP below 1). Draw 1 card. At the start of your turn, draw 1 additional card. Innate.", 
+      "UPGRADE_DESCRIPTION": "Lose !M! HP (cannot reduce HP below half max HP). Draw 1 card. At the start of your turn, draw 1 additional card. Innate." 
+    },
+    "SuzuranKhas:ThornWrapped": { 
+      "NAME": "Thorn Wrapped", 
+      "DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Thorns.", 
+      "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block and !M! Thorns." 
+    },
+    "SuzuranKhas:FFCombo": { 
+      "NAME": "Foxfire Combo", 
+      "DESCRIPTION": "Deal !D! damage. Deal additional damage equal to 2x your suzurankhas:foxfire.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Deal additional damage equal to 3x your suzurankhas:foxfire.",
+      "EXTENDED_DESCRIPTION": [
+      "(Deal ",
+      " additional damage)"
+    ]
+    },
+    "SuzuranKhas:SeekingOfuda": { 
+      "NAME": "Seeking Ofuda", 
+      "DESCRIPTION": "Gain !B! Block. Gain !M! suzurankhas:ofuda. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Gain !B! Block. Gain !M! suzurankhas:ofuda. NL Exhaust." 
+    },
+    "SuzuranKhas:OfudaKill": { 
+      "NAME": "Ofuda Kill", 
+      "DESCRIPTION": "Deal !D! damage. If this kills an enemy, gain !M! suzurankhas:ofuda. NL Exhaust.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. If this kills an enemy, gain !M! suzurankhas:ofuda. NL Exhaust." 
     },
     
-      "ShamareKhas:BloodCeremony": { 
-          "NAME": "Blood Ceremony", 
-          "DESCRIPTION": "Draw !M! cards, double your shamarekhas:Namesis, gain 4 shamarekhas:Namesis", 
-          "UPGRADE_DESCRIPTION": "Draw !M! cards, double your shamarekhas:Namesis, gain 4 shamarekhas:Namesis"
-      },
-      "ShamareKhas:WitherStrike": { 
-          "NAME": "Wither Strike", 
-          "DESCRIPTION": "Deal !D! damage. If it does not kill the target, apply !M! shamarekhas:Namesis to yourself", 
-          "UPGRADE_DESCRIPTION": "Deal !D! damage. If it does not kill the target, apply !M! shamarekhas:Namesis to yourself"
-      },
-  
-      "ShamareKhas:SoulWell": { 
-        "NAME": "Soul Well", 
-        "DESCRIPTION": "Ethereal NL Gain !B! Block. Additionally, gain Block equal to the number of shamarekhas:Namesis.", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block. Additionally, gain Block equal to the number of shamarekhas:Namesis."
+    "SuzuranKhas:OfudaDance": { 
+      "NAME": "Ofuda Whirl", 
+      "DESCRIPTION": "Deal !D! damage to a random enemy. Repeat once for each suzurankhas:ofuda  you have.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. Repeat once for each suzurankhas:ofuda  you have." 
     },
-    "ShamareKhas:SoulScorch": { 
-        "NAME": "Soul Scorch", 
-        "DESCRIPTION": "Ethereal NL Exhaust a card from your hand, draw !M! cards NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Ethereal NL Exhaust a card from your hand, draw !M! cards NL Exhaust"
+    "SuzuranKhas:Pruning": { 
+      "NAME": "Pruning", 
+      "DESCRIPTION": "Gain !M! Strength. Lose 2 Dexterity.", 
+      "UPGRADE_DESCRIPTION": "Gain !M! Strength. Lose 2 Dexterity." 
     },
-      "ShamareKhas:ViolentPleasure": { 
-        "NAME": "Violent Pleasure", 
-        "DESCRIPTION": "Apply !M! stacks of Weak to yourself. Deal !D! damage, apply 2 stacks of shamarekhas:SorceryVulnerable.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of Weak to yourself. Deal !D! damage, apply 2 stacks of shamarekhas:SorceryVulnerable." 
+    "SuzuranKhas:FoxDeal": { 
+      "NAME": "Fox Deal", 
+      "DESCRIPTION": "Ethereal  NL Gain !M! suzurankhas:ofuda . At the start of each turn, gain 1 less [E].", 
+      "UPGRADE_DESCRIPTION": "Ethereal  NL Gain !M! suzurankhas:ofuda . At the start of each turn, gain 1 less [E]." 
     },
-    "ShamareKhas:BrokenImage": { 
-        "NAME": "Broken Image", 
-        "DESCRIPTION": "Apply !M! stacks of Frail to yourself. Gain !B! Block.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of Frail to yourself. Gain !B! Block."
+    "SuzuranKhas:FoxFeast": { 
+      "NAME": "Mad Fox Feast", 
+      "DESCRIPTION": "Ethereal . Deal !D! damage. If you deal *unblocked damage, apply !M! suzurankhas:foxcurse .", 
+      "UPGRADE_DESCRIPTION": "Ethereal . Deal !D! damage. If you deal *unblocked damage, apply !M! suzurankhas:foxcurse ." 
     },
-    "ShamareKhas:FireHeart": { 
-        "NAME": "Fire Heart", 
-        "DESCRIPTION": "Exhaust X cards, heal X HP and put X copies of shamarekhas:FlameDisaster into your draw pile. NL Exhaust.", 
-        "UPGRADE_DESCRIPTION": "Exhaust X+1 cards, heal X+1 HP and put X+1 copies of shamarekhas:FlameDisaster into your draw pile. NL Exhaust."
+    "SuzuranKhas:RemoveDisaster": { 
+      "NAME": "Ward Off Disaster", 
+      "DESCRIPTION": "Retain . Gain !B! Block . Spend 1 suzurankhas:ofuda  to trigger !M! additional times. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Retain . Gain !B! Block . Spend 1 suzurankhas:ofuda  to trigger !M! additional times. NL Exhaust ." 
     },
-    "ShamareKhas:NightScentedTea": { 
-        "NAME": "Night-Scented Tea", 
-        "DESCRIPTION": "Gain !B! Block, discard !M! cards. If you discard a Curse or *Status card, put a shamarekhas:shadowdisaster into your draw pile and draw 1 card.", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block, discard !M! cards. If you discard a Curse or *Status card, put a shamarekhas:shadowdisaster into your draw pile and draw 1 card."
+    "SuzuranKhas:OfudaPierce": { 
+      "NAME": "Ofuda Pierce", 
+      "DESCRIPTION": "Deal !D! damage. Spend 1 suzurankhas:ofuda  to deal 4 additional hits. If this kills an enemy, don't spend suzurankhas:ofuda . Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Spend 1 suzurankhas:ofuda  to deal 4 additional hits. If this kills an enemy, don't spend suzurankhas:ofuda . Exhaust ." 
     },
-    "ShamareKhas:InsultToInjury": { 
-        "NAME": "Insult to Injury", 
-        "DESCRIPTION": "Deal !D! damage. If the target has a debuff, apply !M! stacks of shamarekhas:SorceryWeak.", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage. If the target has a debuff, apply !M! stacks of shamarekhas:SorceryWeak."
+    "SuzuranKhas:FFHomology": { 
+      "NAME": "Foxfire Resonance", 
+      "DESCRIPTION": "At the end of this turn, gain 3 suzurankhas:foxfire . Add !M! *Dazed to your draw pile and discard pile. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "At the end of this turn, gain 3 suzurankhas:foxfire . Add !M! *Dazed to your draw pile and discard pile. NL Exhaust ." 
     },
-    "ShamareKhas:DarkAffine": { 
-        "NAME": "Dark Affine", 
-        "DESCRIPTION": "Gain !B! Block. For every 4 stacks of shamarekhas:Namesis you have, reduce this card's cost by [E].", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block. For every 4 stacks of shamarekhas:Namesis you have, reduce this card's cost by [E]."
+    "SuzuranKhas:WakanStrike": { 
+      "NAME": "Spirit Strike", 
+      "DESCRIPTION": "Deal !D! damage. If your current HP is at or below half your Max HP, gain 1 suzurankhas:ofuda . NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. If your current HP is at or below half your Max HP, gain 1 suzurankhas:ofuda . NL Exhaust ." 
     },
-    "ShamareKhas:FireWaltz": { 
-        "NAME": "Fire Waltz", 
-        "DESCRIPTION": "Discard all your hand cards, draw cards until your hand is full, and put !M! copies of *Burn into your draw pile. NL Exhaust.", 
-        "UPGRADE_DESCRIPTION": "Discard all your hand cards, draw cards until your hand is full, and put !M! copies of *Burn into your draw pile. NL Exhaust."
+    "SuzuranKhas:Denotation": { 
+      "NAME": "Detonation", 
+      "DESCRIPTION": "suzurankhas:blaze (2): Deal !D! damage and draw !M! cards.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (2): Deal !D! damage and draw !M! cards." 
     },
-    "ShamareKhas:CalamityGrasp": { 
-        "NAME": "Calamity Grasp", 
-        "DESCRIPTION": "Apply !M! stacks of shamarekhas:Namesis to yourself. Whenever you draw a *Disaster card, draw 1 card.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of shamarekhas:Namesis to yourself. Whenever you draw a *Disaster card, draw 1 card."
+    "SuzuranKhas:LonelyVigil": { 
+      "NAME": "Lonely Vigil", 
+      "DESCRIPTION": "Gain !B! Block . If this is the only Skill in your hand, gain 1 suzurankhas:ofuda . NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain !B! Block . If this is the only Skill in your hand, gain 1 suzurankhas:ofuda . NL Exhaust . Retain ." 
     },
-    "ShamareKhas:BlackBile": { 
-        "NAME": "BlackBile", 
-        "DESCRIPTION": "Cannot be played NL At the end of your turn, gain 3 stacks of shamarekhas:Namesis.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of shamarekhas:Namesis to yourself. Whenever you draw a *Disaster card, draw 1 card."
+    "SuzuranKhas:FoxFete": { 
+      "NAME": "Fox Festival", 
+      "DESCRIPTION": "suzurankhas:blaze (1): Gain !M! Ritual.", 
+      "UPGRADE_DESCRIPTION": "Innate. NL suzurankhas:blaze (1): Gain !M! Ritual." 
     },
-    "ShamareKhas:FallenBlood": { 
-        "NAME": "Fallen Blood", 
-        "DESCRIPTION": "Cannot be played, Ethereal NL When drawn, draw 1 card, gain 3 stacks of shamarekhas:Namesis, apply 12 stacks of shamarekhas:Namesis to a random enemy, and put 2 copies of this card into your discard pile.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of shamarekhas:Namesis to yourself. Whenever you draw a *Disaster card, draw 1 card."
+    "SuzuranKhas:FullMoon": { 
+      "NAME": "Full Moon", 
+      "DESCRIPTION": "Heal !M! HP.At the end of combat, if your suzurankhas:ofuda  count is odd, gain 1 *Ofuda.", 
+      "UPGRADE_DESCRIPTION": "Heal !M! HP.At the end of combat, if your suzurankhas:ofuda  count is odd, gain 1 *Ofuda." 
     },
-    "ShamareKhas:RedForm": { 
-        "NAME": "Red Form", 
-        "DESCRIPTION": "Gain !M! stacks of shamarekhas:Namesis, choose 1 of 3 red non-attack cards to add to your hand, it costs 0 this turn. NL Exhaust.", 
-        "UPGRADE_DESCRIPTION": "Gain !M! stacks of shamarekhas:Namesis, choose 1 of 3 red non-attack cards to add to your hand, it costs 0 this turn. NL Exhaust."
+    "SuzuranKhas:FoxTooth": { 
+      "NAME": "Fox Fang", 
+      "DESCRIPTION": "Draw !M! cards. Deal !D! damage. Heal HP equal to unblocked damage dealt.", 
+      "UPGRADE_DESCRIPTION": "Draw !M! cards. Deal !D! damage. Heal HP equal to unblocked damage dealt." 
     },
-    "ShamareKhas:BodyFluidReconcile": { 
-        "NAME": "Body Fluid Reconcile", 
-        "DESCRIPTION": "Deal !D! damage 4 times, draw !M! cards, put 1 shamarekhas:BlackBile into your draw pile.", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage 4 times, draw !M! cards, put 1 shamarekhas:BlackBile into your draw pile."
+    "SuzuranKhas:BindingCircle": { 
+      "NAME": "Binding Circle", 
+      "DESCRIPTION": "All enemies gain 5 Weak and lose !M! Strength for one turn. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "All enemies gain 5 Weak and lose !M! Strength for one turn. NL Exhaust ." 
     },
-    "ShamareKhas:IncurableDisease": { 
-        "NAME": "Incurable Disease", 
-        "DESCRIPTION": "Ethereal NL Choose 1 *Disaster card, put 2 copies of it on top of your draw pile, draw !M! cards. NL Exhaust.", 
-        "UPGRADE_DESCRIPTION": "Choose 1 *Disaster card, put 2 copies of it on top of your draw pile, draw !M! cards. NL Exhaust."
+    "SuzuranKhas:GoAway": { 
+      "NAME": "Keep Away", 
+      "DESCRIPTION": "suzurankhas:blaze (1): Gain !M! Thorns .", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (1): Gain !M! Thorns ." 
     },
-    "ShamareKhas:SuperNatural": { 
-        "NAME": "Super Natural", 
-        "DESCRIPTION": "Deal !D! damage to random enemies !M! times. If you have a Curse or *Status card in your hand, halve your shamarekhas:Namesis.", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to random enemies !M! times. If you have a Curse or *Status card in your hand, halve your shamarekhas:Namesis."
+    "SuzuranKhas:DefendHeal": { 
+      "NAME": "Guard Life", 
+      "DESCRIPTION": "Ethereal NL Gain !B! Block . Heal HP equal to Block  gained.", 
+      "UPGRADE_DESCRIPTION": "Ethereal NL Gain !B! Block . Heal HP equal to Block  gained." 
     },
-    "ShamareKhas:Necrocytosis": { 
-        "NAME": "Necrocytosis", 
-        "DESCRIPTION": "Apply !M! stacks of shamarekhas:SorceryPoison to a random enemy. If you have no debuffs, put a random Curse into your draw pile.", 
-        "UPGRADE_DESCRIPTION": "Apply !M! stacks of shamarekhas:SorceryPoison to a random enemy. If you have no debuffs, put a random Curse into your draw pile."
+    "SuzuranKhas:PrairieFire": { 
+      "NAME": "Prairie Fire", 
+      "DESCRIPTION": "suzurankhas:blaze (1): Apply 1 Vulnerable to ALL characters. Your next !M! Attack cards cost 0.", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (1): Apply 1 Vulnerable to ALL characters. Your next !M! Attack cards cost 0."
     },
-    "ShamareKhas:ChoirOfPain": { 
-        "NAME": "Choir of Pain", 
-        "DESCRIPTION": "Deal !D! damage to all enemies. For each enemy hit, put 1 shamarekhas:BlackBile into your hand.", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. For each enemy hit, put 1 shamarekhas:BlackBile into your hand."
+    "SuzuranKhas:AshHeal": { 
+      "NAME": "Ash Healing", 
+      "DESCRIPTION": "Whenever you Exhaust  a card, heal !M! HP.", 
+      "UPGRADE_DESCRIPTION": "Whenever you Exhaust  a card, heal !M! HP."
     },
-    "ShamareKhas:HirudoTherapy": { 
-        "NAME": "Hirudo Therapy", 
-        "DESCRIPTION": "Whenever a card is Exhausted, heal !M! HP and gain !M! stacks of shamarekhas:Namesis.", 
-        "UPGRADE_DESCRIPTION": "Whenever a card is Exhausted, heal !M! HP and gain !M! stacks of shamarekhas:Namesis."
+    "SuzuranKhas:Interweave": { 
+      "NAME": "Interweave", 
+      "DESCRIPTION": "Whenever you are healed, gain !M! suzurankhas:plantedarmor .", 
+      "UPGRADE_DESCRIPTION": "Whenever you are healed, gain !M! suzurankhas:plantedarmor ."
     },
-    "ShamareKhas:Dressmaker": { 
-      "NAME": "Dressmaker", 
-      "DESCRIPTION": "Deal !D! damage 4 times. shamarekhas:DespairTouch (60): Your next !M! Attack cards cost 0 NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage 4 times. shamarekhas:DespairTouch (60): Your next !M! Attack cards cost 0 NL Exhaust"
-  },
-  "ShamareKhas:SorceryStrike": { 
-      "NAME": "Sorcery Strike", 
-      "DESCRIPTION": "Deal !D! damage, draw !M! cards, apply !M! layers of shamarekhas:SorceryVulnerable NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage, draw !M! cards, apply !M! layers of shamarekhas:SorceryVulnerable NL Exhaust"
-  },
-  "ShamareKhas:SorceryDefend": { 
-      "NAME": "Sorcery Defend", 
-      "DESCRIPTION": "Gain !B! Block, draw !M! cards, apply !M! layers of shamarekhas:SorceryWeak NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Gain !B! Block, draw !M! cards, apply !M! layers of shamarekhas:SorceryWeak NL Exhaust"
-  },
-  "ShamareKhas:CursedApparition": { 
-      "NAME": "Cursed Apparition", 
-      "DESCRIPTION": "Ethereal NL Apply 2 Vulnerable and 1 Intangible NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Apply 2 Vulnerable and 1 Intangible NL Exhaust"
-  },
-  "ShamareKhas:ConcentratedSulfuricAcid": { 
-    "NAME": "Concentrated Sulfuric Acid", 
-    "DESCRIPTION": "Remove all Block and Artifact from an enemy,apply !M! Vulnerable NL Exhaust", 
-    "UPGRADE_DESCRIPTION": "Remove all Block and Artifact from an enemy,apply !M! Vulnerable NL Exhaust"
-},
-"ShamareKhas:DepartedEcho": { 
-        "NAME": "Departed Echo", 
-        "DESCRIPTION": "Deal !D! damage and apply 1 shamarekhas:SorceryVulnerable X times", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 shamarekhas:SorceryVulnerable X times"
+    "SuzuranKhas:FireBreath": { 
+      "NAME": "Ember's Breath", 
+      "DESCRIPTION": "Whenever your suzurankhas:foxfire  changes, gain 1 [E].", 
+      "UPGRADE_DESCRIPTION": "Whenever your suzurankhas:foxfire  changes, gain 1 [E]."
     },
-    "ShamareKhas:Deal": { 
-        "NAME": "Deal", 
-        "DESCRIPTION": "Gain !M! shamarekhas:Namesis, gain 3 Strength and 1 Dexterity", 
-        "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Namesis, gain 3 Strength and 2 Dexterity"
+    "SuzuranKhas:Poised": { 
+      "NAME": "Poised", 
+      "DESCRIPTION": "Deal !D! damage. Draw !M! cards. Each time this card is played this combat, draw 1 additional card.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! cards. Each time this card is played this combat, draw 1 additional card."
     },
-    "ShamareKhas:WitchBrew": { 
-      "NAME": "Witch Brew", 
-      "DESCRIPTION": "Deal !D! damage. If it kills, at the end of combat, randomly gain a rare potion and 7 gold NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage. If it kills, at the end of combat, randomly gain a rare potion and 7 gold NL Exhaust"
-  },
-  "ShamareKhas:InferiorReagent": { 
-      "NAME": "Inferior Reagent", 
-      "DESCRIPTION": "Apply !M! shamarekhas:SorceryWeak. Each time this card is played, its cost increases by 1 for this combat.", 
-      "UPGRADE_DESCRIPTION": "Apply !M! shamarekhas:SorceryWeak. Each time this card is played, its cost increases by 1 for this combat."
-  },
-  "ShamareKhas:Surgery": { 
-        "NAME": "Surgery", 
-        "DESCRIPTION": "Deal !D! damage. If it deals *unblocked damage, apply !M! shamarekhas:Namesis", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage. If it deals *unblocked damage, apply !M! shamarekhas:Namesis"
+    "SuzuranKhas:Spiritualism": { 
+      "NAME": "Spiritualism", 
+      "DESCRIPTION": "Gain !B! Block  and !M! suzurankhas:ofuda . If you lose HP before the start of your next turn, lose !M! *Ofuda. Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain !B! Block  and !M! suzurankhas:ofuda . If you lose HP before the start of your next turn, lose !M! *Ofuda. Exhaust ."
     },
-    "ShamareKhas:TheFool": { 
-        "NAME": "The Fool", 
-        "DESCRIPTION": "At the start of each turn, discard up to 2 cards. For each *Disaster card discarded, gain [E] and draw 2 cards", 
-        "UPGRADE_DESCRIPTION": "At the start of each turn, discard up to 2 cards. For each *Disaster card discarded, gain [E] and draw 2 cards"
+    "SuzuranKhas:Remodeling": { 
+      "NAME": "Remodeling", 
+      "DESCRIPTION": "Heal !M! HP X times.", 
+      "UPGRADE_DESCRIPTION": "Heal !M! HP X times."
     },
-    "ShamareKhas:Defile": { 
-        "NAME": "Defile", 
-        "DESCRIPTION": "Gain !M! shamarekhas:Namesis. At the start of your turn, randomly apply 1 shamarekhas:SorceryEffect to an enemy.", 
-        "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Namesis. At the start of your turn, randomly apply 1 shamarekhas:SorceryEffect to an enemy."
+    "SuzuranKhas:Proliferation": { 
+      "NAME": "Proliferation", 
+      "DESCRIPTION": "Double your Thorns . NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain !M! Thorns . Double your *Thorns. NL Exhaust ."
     },
-    "ShamareKhas:Aruspicy": { 
-        "NAME": "Aruspicy", 
-        "DESCRIPTION": "Gain !M! shamarekhas:Namesis. At the start of your turn, draw 1 card, Scry 2.", 
-        "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Namesis. At the start of your turn, draw 1 card, Scry 2."
+    "SuzuranKhas:Diffusion": { 
+      "NAME": "Diffusion", 
+      "DESCRIPTION": "At the start of each turn, gain 2 Regen and Thorns , then add 1 *Dazed to your discard pile.", 
+      "UPGRADE_DESCRIPTION": " Innate NL At the start of each turn, gain 2 Regen and Thorns , then add 1 *Dazed to your discard pile."
     },
-    "ShamareKhas:Hospitable": { 
-        "NAME": "Hospitable", 
-        "DESCRIPTION": "Deal !D! damage, gain !B! Block, add 1 shamarekhas:SuspiciousApple to your draw pile NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage, gain !B! Block, add 1 shamarekhas:SuspiciousApple to your draw pile NL Exhaust"
+
+    
+    "SuzuranKhas:FertileSoil": { 
+      "NAME": "Fertile Soil", 
+      "DESCRIPTION": "Ethereal  NL Draw 1 cards. Permanently gain !M! Max HP.", 
+      "UPGRADE_DESCRIPTION": "Ethereal  NL Draw 1 cards. Permanently gain !M! Max HP."
     },
-    "ShamareKhas:CursedNova": { 
-        "NAME": "Cursed Nova", 
-        "DESCRIPTION": "Deal !D! damage to all enemies, add !M! shamarekhas:FlameDisaster to your draw pile", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies, add !M! shamarekhas:FlameDisaster to your draw pile"
+    "SuzuranKhas:ConcentrateGrowth": { 
+      "NAME": "Focused Growth", 
+      "DESCRIPTION": "Discard 2 cards. Gain !M! suzurankhas:temporarystrength.", 
+      "UPGRADE_DESCRIPTION": "Discard 2 cards. Gain !M! suzurankhas:temporarystrength."
     },
-    "ShamareKhas:FireThornblade": { 
-        "NAME": "Fire Thornblade", 
-        "DESCRIPTION": "Deal !D! damage, lose 3 HP, gain !M! Thorns, add 1 shamarekhas:FlameDisaster to your draw pile NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage, lose 3 HP, gain !M! Thorns, add 1 shamarekhas:FlameDisaster to your draw pile NL Exhaust"
+    "SuzuranKhas:OfudaBladeWard": { 
+      "NAME": "Blade Ofuda Ward", 
+      "DESCRIPTION": "Deal !D! damage. Spend 1 suzurankhas:ofuda  to gain !M! suzurankhas:buffer . NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Spend 1 suzurankhas:ofuda  to gain !M! suzurankhas:buffer . NL Exhaust ."
     },
-    "ShamareKhas:DimBud": { 
-        "NAME": "Dim Bud", 
-        "DESCRIPTION": "Whenever you take *unblocked damage, add 1 shamarekhas:ShadowDisaster to your draw pile", 
-        "UPGRADE_DESCRIPTION": "Whenever you take *unblocked damage, add 1 shamarekhas:ShadowDisaster to your draw pile"
+    "SuzuranKhas:Incineration": { 
+      "NAME": "Incineration", 
+      "DESCRIPTION": "Ethereal  NL Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire .", 
+      "UPGRADE_DESCRIPTION": "Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire ."
     },
-    "ShamareKhas:ThoughtSteal": { 
-        "NAME": "Thought Steal", 
-        "DESCRIPTION": "Choose an enemy, select the shamarekhas:OptimalEffect based on its intent NL Exhaust ", 
-        "UPGRADE_DESCRIPTION": "Choose an enemy, select the shamarekhas:OptimalEffect based on its intent NL Exhaust "
+    "SuzuranKhas:GrowInShadow": { 
+      "NAME": "Shadow Growth", 
+      "DESCRIPTION": "Gain !M! suzurankhas:temporarydexterity. Each time this card is played this run, permanently increase the amount by 2. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain !M! suzurankhas:temporarydexterity. Each time this card is played this run, permanently increase the amount by 3. NL Exhaust ."
     },
-    "ShamareKhas:ForbiddenWords": { 
-        "NAME": "Forbidden Words", 
-        "DESCRIPTION": "Deal !D! damage and apply a random negative effect to the target", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage and apply a random negative effect to the target"
+    "SuzuranKhas:CircleOfLife": { 
+      "NAME": "Circle of Life", 
+      "DESCRIPTION": "suzurankhas:blaze (1): Your next !M! Power cards cost 0 and return to your draw pile. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (1): Your next !M! Power cards cost 0 and return to your draw pile. NL Exhaust ."
     },
-    "ShamareKhas:PoisonBarrier": { 
-      "NAME": "Poison Barrier", 
-      "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, apply !M! Poison to the attacker.", 
-      "UPGRADE_DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, apply !M! Poison to the attacker."
-  },
-  "ShamareKhas:NoxiousFlow": { 
-      "NAME": "Noxious Flow", 
-      "DESCRIPTION": "Add !M! shamarekhas:VenomousDisaster to your draw pile, apply !M! shamarekhas:SorceryPoison to all enemies. If you have a negative effect, gain [E] [E] [E] NL Exhaust", 
-      "UPGRADE_DESCRIPTION": "Add !M! shamarekhas:VenomousDisaster to your draw pile, apply !M! shamarekhas:SorceryPoison to all enemies. If you have a negative effect, gain [E] [E] [E] NL Exhaust"
-  },
-  "ShamareKhas:SuspiciousApple": { 
-        "NAME": "Suspicious Apple", 
-        "DESCRIPTION": "Ethereal, Exhaust NL Heal a target for !M! HP, apply 1 Vulnerable to it,apply the same effect to yourself when triggering Ethereal ", 
-        "UPGRADE_DESCRIPTION": "Ethereal, Exhaust NL Heal a target for !M! HP, apply 1 Vulnerable to it,apply the same effect to yourself when triggering Ethereal "
+    "SuzuranKhas:Awakening": { 
+      "NAME": "Awakening", 
+      "DESCRIPTION": "Ethereal , Innate NL After !M! more turns, fully heal.", 
+      "UPGRADE_DESCRIPTION": "Ethereal , Innate NL After !M! more turns, fully heal."
     },
-    "ShamareKhas:EdgeRunner": { 
-        "NAME": "Edge Runner", 
-        "DESCRIPTION": "At the end of each turn, add 1 shamarekhas:CorruptedBlood to your discard pile", 
-        "UPGRADE_DESCRIPTION": "At the end of each turn, add 1 shamarekhas:CorruptedBlood to your discard pile"
+    "SuzuranKhas:PerceiveFlame": { 
+      "NAME": "Perceive Flame", 
+      "DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze.", 
+      "UPGRADE_DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze."
     },
-    "ShamareKhas:OmenOfDefeat": { 
-        "NAME": "Omen of Defeat", 
-        "DESCRIPTION": "Randomly Exhaust 1 Curse or *Status card from your hand, draw !M! cards. Otherwise, add 1 shamarekhas:BlackBile to your hand", 
-        "UPGRADE_DESCRIPTION": "Randomly Exhaust 1 Curse or *Status card from your hand, draw !M! cards. Otherwise, add 1 shamarekhas:BlackBile to your hand"
+    "SuzuranKhas:OfudaSwallow": { 
+      "NAME": "Ofuda Devour", 
+      "DESCRIPTION": "Lose !M! HP (cannot reduce HP below 1). Gain 1 [E]. Repeat once for each suzurankhas:ofuda  you have. Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Lose !M! HP (cannot reduce HP below 1). Gain 1 [E]. Repeat once for each suzurankhas:ofuda  you have. Exhaust ."
     },
-    "ShamareKhas:PlagueScholar": { 
-        "NAME": "Plague Scholar", 
-        "DESCRIPTION": "At the end of each turn, add 1 shamarekhas:VenomousDisaster to your discard pile", 
-        "UPGRADE_DESCRIPTION": "Innate NL At the end of each turn, add 1 shamarekhas:VenomousDisaster to your discard pile"
+    "SuzuranKhas:FoxRage": { 
+      "NAME": "Fox Rage", 
+      "DESCRIPTION": "Deal !D! damage to ALL enemies. Each time you lose HP this combat, increase this card's damage by !M! for the rest of combat.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Each time you lose HP this combat, increase this card's damage by !M! for the rest of combat."
     },
-    "ShamareKhas:BloodBloom": { 
-      "NAME": "Blood Bloom", 
-      "DESCRIPTION": "Trigger your shamarekhas:Namesis, gain [E] [E]", 
-      "UPGRADE_DESCRIPTION": "Trigger your shamarekhas:Namesis, gain [E] [E] [E]"
-  },
-  "ShamareKhas:ScarletTide": { 
-      "NAME": "Scarlet Tide", 
-      "DESCRIPTION": "Deal !D! damage, draw 3 cards, discard 3 cards, add !M! shamarekhas:BlackBile to your hand", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage, draw 3 cards, discard 3 cards, add !M! shamarekhas:BlackBile to your hand"
-  },
-  "ShamareKhas:SinOutbreak": { 
-    "NAME": "Sin Outbreak", 
-    "DESCRIPTION": "Gain !M! shamarekhas:Namesis, clear all negative effects from the target. For each effect cleared, deal !D! damage NL Exhaust", 
-    "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Namesis, clear all negative effects from the target and yourself. For each effect cleared, deal !D! damage NL Exhaust"
-},
-"ShamareKhas:Betrayal": { 
-    "NAME": "Betrayal", 
-    "DESCRIPTION": "Choose an enemy, deal damage to all enemies equal to its attack power", 
-    "UPGRADE_DESCRIPTION": "Choose an enemy, deal damage to all enemies equal to its attack power+ !M! "
-},
-"ShamareKhas:Whisper": { 
-        "NAME": "Whisper", 
-        "DESCRIPTION": "Reduce all enemies' Strength by !M! NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Reduce all enemies' Strength by !M! NL Exhaust"
+    "SuzuranKhas:ThornScourge": { 
+      "NAME": "Thorn Scourge", 
+      "DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 3 HP. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 3 HP. NL Exhaust ."
     },
-    "ShamareKhas:BlazeFurnace": { 
-        "NAME": "Blaze Furnace", 
-        "DESCRIPTION": "Draw 3 cards. Can only be played if you have !M! or fewer cards in hand (excluding *BlazeFurnace and Curses, *Status cards)", 
-        "UPGRADE_DESCRIPTION": "Draw 3 cards. Can only be played if you have !M! or fewer cards in hand (excluding *BlazeFurnace and Curses, *Status cards)"
+    "SuzuranKhas:VineRazor": { 
+      "NAME": "Vine Razor", 
+      "DESCRIPTION": "Deal !D! damage. Add !M! *ThornScourge to your draw pile.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Add !M! *ThornScourge to your draw pile."
     },
-    "ShamareKhas:SerialDisaster": { 
-        "NAME": "Serial Disaster", 
-        "DESCRIPTION": "Deal !D! damage to all enemies 2 times. For each instance of *unblocked damage, add a *Disaster card to your discard pile NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies 2 times. For each instance of *unblocked damage, add a *Disaster card to your discard pile NL Exhaust"
+    "SuzuranKhas:Sting": { 
+      "NAME": "Sting", 
+      "DESCRIPTION": "Deal !D! damage. Gain !B! Block . Add !M! *ThornScourge to your discard pile.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain !B! Block . Add !M! *ThornScourge to your discard pile."
     },
-    "ShamareKhas:DrinkingPoisonToQuenchThirst": { 
-        "NAME": "Quenching Thirst With Poison", 
-        "DESCRIPTION": "Gain !B! Block, after 3 turns, gain !M! shamarekhas:Namesis NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block, after 3 turns, gain !M! shamarekhas:Namesis NL Exhaust"
+    "SuzuranKhas:MaidenPrayer": { 
+      "NAME": "Maiden's Prayer", 
+      "DESCRIPTION": "Return !M! random exhausted cards to your hand. They cost 0 this turn. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Return !M! random exhausted cards to your hand. They cost 0 this turn. NL Exhaust ."
     },
-    "ShamareKhas:NightmareGaze": { 
-        "NAME": "Nightmare Gaze", 
-        "DESCRIPTION": "Gain !M! shamarekhas:Namesis, deal !D! damage, shamarekhas:DespairTouch (40): trigger 2 additional effects, NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Namesis, deal !D! damage, shamarekhas:DespairTouch (40): trigger 2 additional effects, NL Exhaust"
+    "SuzuranKhas:FoxResentment": { 
+      "NAME": "Fox Resentment", 
+      "DESCRIPTION": "suzurankhas:blaze (2): Apply 1 suzurankhas:foxcurse X times. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "suzurankhas:blaze (2): Apply 1 suzurankhas:foxcurse X+1 times. NL Exhaust ."
     },
-    "ShamareKhas:TortureTreatment": { 
-        "NAME": "Torture Treatment", 
-        "DESCRIPTION": "Ethereal NL Gain !M! shamarekhas:Namesis, heal 7 HP, shamarekhas:DespairTouch (20): trigger 2 additional effects, NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Ethereal NL Gain !M! shamarekhas:Namesis, heal 7 HP, shamarekhas:DespairTouch (20): trigger 2 additional effects, NL Exhaust"
+    "SuzuranKhas:Disappear": { 
+      "NAME": "Dissipate", 
+      "DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 1). NL Ethereal .", 
+      "UPGRADE_DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 1). NL Ethereal ."
     },
-    "ShamareKhas:AmuletOfUndying": { 
-        "NAME": "Amulet of Undying", 
-        "DESCRIPTION": "Gain !B! Block, shamarekhas:DespairTouch (30): gain 2 additional shamarekhas:Buffer NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Gain !B! Block, shamarekhas:DespairTouch (30): gain 2 additional shamarekhas:Buffer NL Exhaust"
+    "SuzuranKhas:FlameWave": { 
+      "NAME": "Flame Tide", 
+      "DESCRIPTION": "Deal !D! damage to random enemies 3 times. Gain !M! suzurankhas:foxfire  and add that many *Dissipate to your discard pile.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to random enemies 4 times. Gain !M! suzurankhas:foxfire  and add that many *Dissipate to your discard pile."
     },
-    "ShamareKhas:DoomsdayProphecy": { 
-        "NAME": "Doomsday Prophecy", 
-        "DESCRIPTION": "Gain [E], shamarekhas:DespairTouch (50): randomly add 3 *Disaster cards to your draw pile, NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Gain [E], draw 1 card, shamarekhas:DespairTouch (50): randomly add 3 *Disaster cards to your draw pile, NL Exhaust"
+    "SuzuranKhas:Grafting": { 
+      "NAME": "Grafting", 
+      "DESCRIPTION": "Deal !D! damage. Discard !M! cards and add !M! *ThornScourge to your hand.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Discard !M! cards and add !M! *ThornScourge to your hand."
     },
-    "ShamareKhas:NecromanticPoison": { 
-        "NAME": "Necromantic Poison", 
-        "DESCRIPTION":"Apply 3 Poison. If the target already has Poison, apply an additional !M! shamarekhas:SorceryPoison.", 
-        "UPGRADE_DESCRIPTION": "Apply 3 Poison. If the target already has Poison, apply an additional !M! shamarekhas:SorceryPoison."
-      },
-      "ShamareKhas:SoulSiphon": { 
-        "NAME": "Soul Siphon", 
-        "DESCRIPTION": "Deal !D! damage, heal 9 HP, gain !M! shamarekhas:Namesis NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "Deal !D! damage, heal 9 HP, gain !M! shamarekhas:Namesis NL Exhaust"
+    "SuzuranKhas:BlazingInvocation": { 
+      "NAME": "Blazing Invocation", 
+      "DESCRIPTION": "Deal !D! damage. Restore suzurankhas:foxfire  equal to unblocked damage dealt (up to !M!). Add 2 *Dissipate to your discard pile.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Restore suzurankhas:foxfire  equal to unblocked damage dealt (up to !M!). Add 2 *Dissipate to your discard pile."
     },
-    "ShamareKhas:Salvation": { 
-        "NAME": "Salvation", 
-        "DESCRIPTION": "Gain !M! shamarekhas:Pardon, lose 1 [E] at the start of each turn", 
-        "UPGRADE_DESCRIPTION": "Gain !M! shamarekhas:Pardon, lose 1 [E] at the start of each turn"
+    "SuzuranKhas:BloomJoy": { 
+      "NAME": "Blooming Joy", 
+      "DESCRIPTION": "Gain [E] [E]. Draw 1 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain [E] [E]. Draw 1 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust ."
     },
-    "ShamareKhas:PeaceAltar": { 
-        "NAME": "Peace Altar", 
-        "DESCRIPTION": "Whenever you trigger shamarekhas:Namesis, draw 2 cards, gain [E] [E]", 
-        "UPGRADE_DESCRIPTION": "Whenever you trigger shamarekhas:Namesis, draw 2 cards, gain [E] [E]"
+    "SuzuranKhas:PainOfGrowth": { 
+      "NAME": "Pain of Growth", 
+      "DESCRIPTION": "Add 1 *BloomingJoy to your hand. Each time you lose HP this combat, reduce this card's cost by [E] . Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Add 1 *BloomingJoy to your hand. Each time you lose HP this combat, reduce this card's cost by [E] . Exhaust ."
     },
-    "ShamareKhas:EvilBoding": { 
-        "NAME": "Evil Boding", 
-        "DESCRIPTION": "For each shamarekhas:Namesis you have, apply the same amount of shamarekhas:Namesis to an enemy NL Exhaust", 
-        "UPGRADE_DESCRIPTION": "For each shamarekhas:Namesis you have, apply the same amount of shamarekhas:Namesis to an enemy NL Exhaust"
+    "SuzuranKhas:Overgrowth": { 
+      "NAME": "Overgrowth", 
+      "DESCRIPTION": "Retain  NL Add !M! *PainOfGrowth to your discard pile. Each time this card is retained, add 1 additional copy.", 
+      "UPGRADE_DESCRIPTION": " Innate , Retain  NL Add !M! *PainOfGrowth to your discard pile. Each time this card is retained, add 1 additional copy. NL Innate."
+    },
+    "SuzuranKhas:GrowInFlame": { 
+      "NAME": "Flame Growth", 
+      "DESCRIPTION": "Exhaust  1 card. Draw 1 card. Add 1 *PainOfGrowth to your draw pile. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Exhaust  1 card. Draw 1 card. Add 1 *PainOfGrowth to your draw pile."
+    },
+    "SuzuranKhas:FFFeast": { 
+      "NAME": "Foxfire Feast", 
+      "DESCRIPTION": "Deal !D! damage to a random enemy once. Deal 1 additional hit for every !M! suzurankhas:foxfire  you have.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy once. Deal 1 additional hit for every !M! suzurankhas:foxfire  you have.",
+      "EXTENDED_DESCRIPTION": [
+        "(Deal ",
+        " additional hits)"
+      ]
+    },
+    "SuzuranKhas:CombustionSupport": { 
+      "NAME": "Combustion Support", 
+      "DESCRIPTION": "Deal !D! damage. Gain !M! Strength. Gain 1 [E] for every 2 suzurankhas:foxfire  you have.", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain !M! Strength. Gain 1 [E] for every 2 suzurankhas:foxfire  you have.",
+      "EXTENDED_DESCRIPTION": [
+        "(Gain ",
+        " [E])"
+      ]
     }
-    
 
 
-
-
-    
-
-    
-    
-
-    
-    
 }

@@ -25,13 +25,14 @@ public class Awakening extends CustomCard {
     public static final CardRarity RARITY = CardRarity.RARE;
     public static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int BASE_AMOUNT = 4;
+    private static final int BASE_AMOUNT = 5;
 
     public Awakening() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = BASE_AMOUNT;
         this.magicNumber = BASE_AMOUNT;
         this.isEthereal = true;
+        this.isInnate = true;
     }
 
     @Override
