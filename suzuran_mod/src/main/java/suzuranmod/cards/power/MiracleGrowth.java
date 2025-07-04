@@ -41,10 +41,12 @@ public class MiracleGrowth extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
+
         int draw_card = 1;
         int hpLoss ;
         if (this.upgraded){
-            hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - (int) 0.5*p.maxHealth));
+            hpLoss = Math.min(this.magicNumber, Math.max(0, p.currentHealth - (int) (0.5*p.maxHealth)));
         }
         else{
             hpLoss = Math.min(this.magicNumber, p.currentHealth-1);

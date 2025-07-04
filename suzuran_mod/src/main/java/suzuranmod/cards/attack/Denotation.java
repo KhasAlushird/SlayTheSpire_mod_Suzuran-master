@@ -37,6 +37,7 @@ public class Denotation extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         doSuzuranBaseUse(p, m);
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new DrawCardAction(p, this.magicNumber));

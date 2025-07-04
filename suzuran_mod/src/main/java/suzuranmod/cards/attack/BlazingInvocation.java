@@ -48,6 +48,7 @@ public class BlazingInvocation extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         // 执行BlazingInvocationAction：造成伤害并根据未被格挡伤害恢复狐火
         this.addToBot(new BlazingInvocationAction(
             m, p, this.damage, this.damageTypeForTurn, 

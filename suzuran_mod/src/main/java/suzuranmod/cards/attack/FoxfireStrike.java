@@ -36,6 +36,7 @@ public class FoxfireStrike extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         doSuzuranBaseUse(p, m); 
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }

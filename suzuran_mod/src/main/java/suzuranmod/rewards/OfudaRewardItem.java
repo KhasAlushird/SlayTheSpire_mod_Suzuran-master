@@ -7,13 +7,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.potions.GhostInAJar;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.OddlySmoothStone;
-import com.megacrit.cardcrawl.relics.Vajra;
 
 import basemod.abstracts.CustomReward;
 import suzuranmod.helpers.ImageHelper;
 import suzuranmod.modcore.OfudaManager;
 import suzuranmod.patches.OfudaRewardTypePatch;
+import suzuranmod.relics.FFStrengthing;
 import suzuranmod.relics.NineTails;
 import suzuranmod.relics.SixTails;
 import suzuranmod.relics.ThreeTails;
@@ -68,36 +67,40 @@ public class OfudaRewardItem extends CustomReward {
                 AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.COMMON);
                 relic.instantObtain();
             }
-            // 6/12: 获得 Oddly Smooth Stone（永久+1敏捷）
+            // 6/12: （永久+1敏捷）
             if (count >= 6) {
-                AbstractRelic relic = new OddlySmoothStone();
-                if (relic != null) {
-                    relic.instantObtain();
-                }
+                if (p.hasRelic(FFStrengthing.ID)) {
+                ((FFStrengthing) p.getRelic(FFStrengthing.ID)).addDexterity(1);
+            } else {
+                AbstractRelic relic = new FFStrengthing();
+                relic.instantObtain();
+                ((FFStrengthing) p.getRelic(FFStrengthing.ID)).addDexterity(1);
+            }
             }
             // 7/12: 获得一瓶罐装幽灵
             if (count >= 7) {
                 p.obtainPotion(new GhostInAJar());
             }
-            // 8/12: 获得 Vajra（永久+1力量）
+            // 8/12: 永久+1力量）
             if (count >= 8) {
-                AbstractRelic relic = new Vajra();
+                if (p.hasRelic(FFStrengthing.ID)) {
+                ((FFStrengthing) p.getRelic(FFStrengthing.ID)).addStrength(1);
+            } else {
+                AbstractRelic relic = new FFStrengthing();
                 relic.instantObtain();
+                ((FFStrengthing) p.getRelic(FFStrengthing.ID)).addStrength(1);
             }
-            // 9/12: 获得随机一个罕见遗物
-            if (count >= 9) {
-                AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.RARE);
-                relic.instantObtain();
             }
-            // 10/12: 获得随机一个稀有遗物
+            // 10/12: 获得随机一个罕见遗物
             if (count >= 10) {
-                AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.RARE);
+                AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.UNCOMMON);
                 relic.instantObtain();
             }
-            // 11/12: 恢复最大生命值的50%并将最大生命值提升15
+
+            // 11/12: 恢复最大生命值的50%并将最大生命值提升12
             if (count >= 11) {
                 p.heal((int)(p.maxHealth * 0.5));
-                p.increaseMaxHp(15, true);
+                p.increaseMaxHp(12, true);
             }
             // 12/12: 获得九尾
             if (count >= 12) {
@@ -106,7 +109,12 @@ public class OfudaRewardItem extends CustomReward {
                 OfudaManager.incrementTailRewardCount();
             }
 
-            OfudaManager.setOfuda(0);
+            if(count>=9){
+                OfudaManager.setOfuda(2);
+            }
+            else{
+                OfudaManager.setOfuda(0);
+            }
         }
         this.isDone = true;
         return true;

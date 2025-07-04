@@ -46,6 +46,7 @@ import suzuranmod.patches.OfudaRewardTypePatch;
 import suzuranmod.potions.FoxfirePotion;
 import suzuranmod.relics.AmuletInArm;
 import suzuranmod.relics.Bloom;
+import suzuranmod.relics.FFStrengthing;
 import suzuranmod.relics.Grow;
 import suzuranmod.relics.NineTails;
 import suzuranmod.relics.RottingStick;
@@ -158,6 +159,10 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.BlazingInvocation());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.FFFeast());
         basemod.BaseMod.addCard(new suzuranmod.cards.attack.CombustionSupport());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.ThornSmash());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.FlameAssault());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Tempering());
+        basemod.BaseMod.addCard(new suzuranmod.cards.attack.Pyroblast());
        
 
         //skill
@@ -193,6 +198,9 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxResentment());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.Overgrowth());
         basemod.BaseMod.addCard(new suzuranmod.cards.skill.GrowInFlame());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.VastSurvival());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.Bell());
+        basemod.BaseMod.addCard(new suzuranmod.cards.skill.FoxDomain());
        
         //basemod.BaseMod.addCard(new suzuranmod.cards.skill.MindControl());    abondoned
 
@@ -356,6 +364,7 @@ public class TheCore implements EditCardsSubscriber,EditStringsSubscriber,EditCh
         BaseMod.addRelicToCustomPool(new ThreeTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new SixTails(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
         BaseMod.addRelicToCustomPool(new WakanCrystal(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
+        BaseMod.addRelicToCustomPool(new FFStrengthing(),Suzuran.PlayerColorEnum.Suzuran_COLOR);
 
 
         //register potions here

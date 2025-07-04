@@ -151,7 +151,7 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
     private int countFoxfireCards(ArrayList<AbstractCard> cardGroup) {
         int count = 0;
         for (AbstractCard card : cardGroup) {
-            if (card.hasTag(SuzuranCardTagsPatch.FOXFIRE)) {
+            if (card.hasTag(SuzuranCardTagsPatch.FOXFIRE)||card.hasTag(SuzuranCardTagsPatch.DYINGFLAME)) {
                 count++;
             }
         }
@@ -162,7 +162,7 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
     private AbstractCard findFoxfireCard() {
         ArrayList<AbstractCard> foxfireCards = new ArrayList<>();
         for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
-            if (card.hasTag(SuzuranCardTagsPatch.FOXFIRE)) {
+            if (card.hasTag(SuzuranCardTagsPatch.FOXFIRE)||card.hasTag(SuzuranCardTagsPatch.DYINGFLAME)) {
                 foxfireCards.add(card);
             }
         }

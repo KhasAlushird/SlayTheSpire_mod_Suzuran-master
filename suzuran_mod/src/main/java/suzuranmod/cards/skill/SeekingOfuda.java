@@ -30,6 +30,8 @@ public class SeekingOfuda extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         gainOfuda(this.magicNumber);
         this.addToBot(new GainBlockAction(p, p, this.block));
     }

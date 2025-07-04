@@ -48,6 +48,8 @@ public class GrowInShadow extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useFastAttackAnimation();
+
         // 施加敏捷
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.magicNumber), this.magicNumber));

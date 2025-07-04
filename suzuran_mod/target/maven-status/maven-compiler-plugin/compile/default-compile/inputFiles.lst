@@ -23,6 +23,7 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\OfudaBladeWard.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\actions\FoxFeastAction.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\actions\OfudaKillAction.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\FoxDomain.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\character\SuzuranTipTracker.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\modcore\FoxfirePanel.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\AshHealPower.java
@@ -57,6 +58,7 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\FireBreathPower.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\CircleOfLife.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\character\SkinSelectScreen.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\relics\FFStrengthing.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\SeekingOfuda.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\EmerCare.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\HealThornPower.java
@@ -74,6 +76,7 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\FoxTooth.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\actions\MaidenPrayerAction.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\BurnoutPower.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\ThornSmash.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\PrairieFire.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\character\SuzuranCard.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\potions\FoxfirePotion.java
@@ -81,14 +84,17 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\helpers\ImageHelper.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\FoxResentment.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\FFHaze.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\VastSurvival.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\power\FoxFete.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\BlazingInvocation.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\Spiritualism.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\actions\ProliferationAction.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\FoxFeast.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\Tempering.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\CombustionSupport.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\modcore\FoxfirePatch.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\MaidenPrayer.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\Pyroblast.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\DrawAddPower.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\patches\SuzuranCardTagsPatch.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\patches\OfudaRewardScreenPatch.java
@@ -97,6 +103,7 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\power\AshHeal.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\Remodeling.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\Will_o_t_s.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\FlameAssault.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\LonelyVigil.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\Poised.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\OfudaReducePower.java
@@ -124,6 +131,7 @@ E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\patches\SkinSelectPatch.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\powers\OfudaAddPower.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\FlameWave.java
+E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\skill\Bell.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\power\FireBreath.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\attack\Sting.java
 E:\my_projects\my_java_projects\SlayTheSpire_mod_Suzuran-master\suzuran_mod\src\main\java\suzuranmod\cards\power\Diffusion.java

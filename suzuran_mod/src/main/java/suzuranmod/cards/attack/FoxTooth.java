@@ -47,6 +47,7 @@ public class FoxTooth extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         this.addToBot(new DrawCardAction(p, this.magicNumber));
         this.addToBot(new FoxToothAction(m, p, this.damage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }

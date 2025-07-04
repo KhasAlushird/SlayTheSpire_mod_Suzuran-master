@@ -50,6 +50,8 @@ public class Overgrowth extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         // 将M张PainOfGrowth置入弃牌堆
         for (int i = 0; i < this.magicNumber; i++) {
             AbstractCard painOfGrowth = new PainOfGrowth();

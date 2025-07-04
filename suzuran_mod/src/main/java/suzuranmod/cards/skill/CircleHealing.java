@@ -38,6 +38,8 @@ public class CircleHealing extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useFastAttackAnimation();
+
         this.addToBot(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
     }
 

@@ -37,6 +37,8 @@ public class Pruning extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -2), -2));
     }

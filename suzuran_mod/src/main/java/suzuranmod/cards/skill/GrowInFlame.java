@@ -46,6 +46,8 @@ public class GrowInFlame extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useFastAttackAnimation();
+
         // 选择并消耗1张牌
         this.addToBot(new ExhaustAction(1, false, false, false));
         

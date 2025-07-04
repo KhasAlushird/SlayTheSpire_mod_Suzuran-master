@@ -43,7 +43,8 @@ public class FertileSoil extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-       
+               p.useSlowAttackAnimation();
+
         this.addToBot(new DrawCardAction(p,1));
         
         p.increaseMaxHp(this.magicNumber, true);

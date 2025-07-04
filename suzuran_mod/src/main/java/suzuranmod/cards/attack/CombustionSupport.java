@@ -52,6 +52,7 @@ public class CombustionSupport extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         // 造成伤害
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
                      AbstractGameAction.AttackEffect.FIRE));

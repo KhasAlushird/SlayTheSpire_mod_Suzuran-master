@@ -40,6 +40,8 @@ public class GoAway extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         doSuzuranBaseUse(p, m);
         addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
     }

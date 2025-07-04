@@ -35,6 +35,8 @@ public class Interweave extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.addToBot(new ApplyPowerAction(p, p, new InterweavePower(p, this.magicNumber), this.magicNumber));
     }
 

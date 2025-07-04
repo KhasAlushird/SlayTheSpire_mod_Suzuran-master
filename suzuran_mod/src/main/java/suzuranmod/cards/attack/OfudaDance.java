@@ -48,6 +48,7 @@ public class OfudaDance extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         int repeat = 1 + OfudaManager.getOfuda();
         for (int i = 0; i < repeat; i++) {
             ArrayList<AbstractMonster> monsters = new ArrayList<>();

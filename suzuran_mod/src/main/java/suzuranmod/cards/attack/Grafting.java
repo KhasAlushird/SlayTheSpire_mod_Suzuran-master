@@ -48,6 +48,7 @@ public class Grafting extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useFastAttackAnimation();
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
                      AbstractGameAction.AttackEffect.SLASH_HEAVY));
         

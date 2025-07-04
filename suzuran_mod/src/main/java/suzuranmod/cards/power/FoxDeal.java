@@ -37,6 +37,8 @@ public class FoxDeal extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         suzuranmod.modcore.OfudaManager.addOfuda(this.magicNumber);
         this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1), 1));
     }

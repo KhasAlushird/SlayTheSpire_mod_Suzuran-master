@@ -32,6 +32,8 @@ public class Will_o_t_s extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useFastAttackAnimation();
+
         doSuzuranBaseUse(p, m); 
     addToBot(new ApplyPowerAction(m, p, new FoxCursePower(m, this.magicNumber), this.magicNumber));    }
 

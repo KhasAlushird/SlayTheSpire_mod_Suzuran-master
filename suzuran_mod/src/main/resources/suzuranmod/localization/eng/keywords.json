@@ -53,5 +53,12 @@
           "temporarydexterity"
         ],
         "DESCRIPTION": "Gain X #yDexterity. At the end of your turn, lose X #yDexterity."
-      }
+      },
+      {
+  "NAMES": [
+    "dyingflame",
+    "dyingflame (X)"
+  ],
+  "DESCRIPTION": "If your #yFoxfire is X or lower, trigger additional effect. Cannot be used while you have #yBurnout ."
+}
 ]

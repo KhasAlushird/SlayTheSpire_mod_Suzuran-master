@@ -37,6 +37,8 @@ public class CircleOfLife extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.doSuzuranBaseUse(p, m);
         this.addToBot(new ApplyPowerAction(p, p, new CircleOfLifePower(p, this.magicNumber), this.magicNumber));
     }

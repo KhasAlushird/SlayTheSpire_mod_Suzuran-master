@@ -43,6 +43,8 @@ public class MaidenPrayer extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         // 执行MaidenPrayerAction，参数为magicNumber
         this.addToBot(new MaidenPrayerAction(this.magicNumber));
     }

@@ -44,6 +44,8 @@ public class Proliferation extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         if (this.upgraded) {
             // 升级后：先获得2点荆棘
             this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));

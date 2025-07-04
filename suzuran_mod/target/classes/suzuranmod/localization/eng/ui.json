@@ -26,11 +26,11 @@
       "8/12",
       "Permanently gain #b1 #yStrength",
       "9/12",
-      "Obtain a random #yUncommon #yRelic",
+      "Obtain 2 #yOfuda ",
       "10/12",
-      "Obtain a random #yRare #yRelic",
+      "Obtain a random #yUncommon #yRelic",
       "11/12",
-      "Heal #b50% of Max HP and #gincrease Max HP by #g15",
+      "Heal #b50% of Max HP and #gincrease Max HP by #g12",
       "12/12",
       "Obtain relic #yThree #yTails (next time will obtain #ySix #yTails)",
       "Obtain relic #ySix #yTails (next time will obtain #yNine #yTails)",
@@ -58,8 +58,8 @@
   },
   "SuzuranKhas:Tips": {
   "TEXT": [
-    " #rFoxfire is one of Suzuran's core mechanics. Try not to let it reach zero! (Automatically decreases by 1 point at the start of each turn)",
-    "Collect #rOfuda through various means to exchange for generous rewards after combat! #rOfuda count persists across battles."
+    " #rFoxfire #ris #rone #rof #rSuzuran's #rcore #rmechanics. #rTry #rnot #rto #rlet #rit #rreach #rzero! #r(Automatically #rdecreases #rby #r1 #rpoint #rat #rthe #rstart #rof #reach #rturn)",
+    "#rCollect #rOfuda #rthrough #rvarious #rmeans #rto #rexchange #rfor #rgenerous #rrewards #rafter #rcombat! #rOfuda #rcount #rpersists #racross #rbattles."
   ]
 }
 }

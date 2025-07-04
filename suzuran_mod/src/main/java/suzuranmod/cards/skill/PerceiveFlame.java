@@ -22,7 +22,7 @@ public class PerceiveFlame extends CustomCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public PerceiveFlame() {
@@ -43,6 +43,8 @@ public class PerceiveFlame extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useFastAttackAnimation();
+
         // 抽取炽焰牌
         this.addToBot(new DrawFoxfireCardsAction(this.magicNumber));
     }

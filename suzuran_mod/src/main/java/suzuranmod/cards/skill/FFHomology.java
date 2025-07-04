@@ -41,6 +41,8 @@ public class FFHomology extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.addToBot(new ApplyPowerAction(p, p, new FFafterPower(p, 3), 3));
         this.addToBot(new MakeTempCardInDrawPileAction(new Dazed(), this.magicNumber, true, true));
         this.addToBot(new MakeTempCardInDiscardAction(new Dazed(), this.magicNumber));

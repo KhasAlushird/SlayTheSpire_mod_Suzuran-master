@@ -281,8 +281,8 @@
     },
       "SuzuranKhas:PerceiveFlame": { 
       "NAME": "感知火焰", 
-      "DESCRIPTION": "抽取 !M! 张 suzurankhas:炽焰 牌", 
-      "UPGRADE_DESCRIPTION": "抽取 !M! 张 suzurankhas:炽焰 牌"
+      "DESCRIPTION": "抽取 !M! 张 suzurankhas:炽焰 或 suzurankhas:将熄 牌", 
+      "UPGRADE_DESCRIPTION": "抽取 !M! 张 suzurankhas:炽焰 或 suzurankhas:将熄 牌"
     },
     "SuzuranKhas:OfudaSwallow": { 
       "NAME": "符噬", 
@@ -376,6 +376,41 @@
       "(额外获得",
       " [E] )"
     ]
+    },
+    "SuzuranKhas:ThornSmash": { 
+      "NAME": "荆棘猛击", 
+      "DESCRIPTION": "造成你当前 荆棘 数量 !M! 倍的伤害", 
+      "UPGRADE_DESCRIPTION": "造成你当前 荆棘 数量 !M! 倍的伤害,抽1张牌"
+    },
+    "SuzuranKhas:VastSurvival": { 
+      "NAME": "绝处逢生", 
+      "DESCRIPTION": "获得 !B! 点格挡,抽1张牌。 suzurankhas:将熄 (1):获得1点 无实体 ", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡,抽1张牌。 suzurankhas:将熄 (1):获得1点 无实体 "
+    },
+    "SuzuranKhas:Bell": { 
+      "NAME": "铃", 
+      "DESCRIPTION": "恢复9点生命值，抽 !M! 张牌 ", 
+      "UPGRADE_DESCRIPTION": "恢复9点生命值，抽 !M! 张牌 "
+    },
+    "SuzuranKhas:FlameAssault": { 
+      "NAME": "焰缚强袭", 
+      "DESCRIPTION": "造成 !D! 点伤害。 suzurankhas:将熄 (3):获得 !M! 点力量", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 suzurankhas:将熄 (3):获得 !M! 点力量"
+    },
+    "SuzuranKhas:FoxDomain": { 
+      "NAME": "狐之领域", 
+      "DESCRIPTION": "获得 !B! 点格挡。 suzurankhas:将熄 (2):打出你抽牌堆顶部的 !M! 张牌", 
+      "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 suzurankhas:将熄 (2):打出你抽牌堆顶部的 !M! 张牌"
+    },
+    "SuzuranKhas:Tempering": { 
+      "NAME": "回火", 
+      "DESCRIPTION": "造成 !D! 点伤害。 suzurankhas:将熄 (2):本回合结束时，获得 !M! 点 suzurankhas:狐火 ", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 suzurankhas:将熄 (2):本回合结束时，获得 !M! 点 suzurankhas:狐火 "
+    },
+     "SuzuranKhas:Pyroblast": { 
+      "NAME": "炎爆", 
+      "DESCRIPTION": "随机对一名敌人造成 !D! 点伤害。 suzurankhas:将熄 (4): 在这个回合内,你打出的下 !M! 张攻击牌会打出两次", 
+      "UPGRADE_DESCRIPTION": "随机对一名敌人造成 !D! 点伤害。 suzurankhas:将熄 (4): 在这个回合内,你打出的下 !M! 张攻击牌会打出两次"
     }
     
 

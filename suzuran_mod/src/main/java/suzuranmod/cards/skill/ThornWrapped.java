@@ -40,6 +40,8 @@ public class ThornWrapped extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.addToBot(new GainBlockAction(p, p, this.block));
         this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
     }

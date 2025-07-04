@@ -38,7 +38,7 @@
       "NAME": "Spirit Crystal", 
       "FLAVOR": "Flowing spiritual energy crystallizes into these shimmering gems.", 
       "DESCRIPTIONS": [
-        "Upon pickup, gain #b2 #ysuzurankhas:ofuda. #yOfuda gained at Rest Sites are doubled." 
+        "Upon pickup, gain #b1 #ysuzurankhas:ofuda. #yOfuda gained at Rest Sites are doubled." 
       ]
     },
     "SuzuranKhas:NineTails": {
@@ -62,5 +62,17 @@
       "DESCRIPTIONS": [
         "At the start of each turn, gain [E]." 
       ]
-    }
+    },
+    "SuzuranKhas:FFStrengthing": {
+    "NAME": "Combat Enhancement Device",
+    "FLAVOR": "Permanently inscribes the energy of Ofuda as combat instincts.",
+    "DESCRIPTIONS": [
+      "Gain permanent attribute bonuses through Ofuda.",
+      "At the start of each combat, gain ",
+      " #yDexterity",
+      " #yStrength ",
+      " and ",
+      "."
+    ]
+  }
 }

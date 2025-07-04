@@ -27,7 +27,7 @@ public class WakanCrystal extends CustomRelic {
     @Override
     public void onEquip() {
         super.onEquip();
-        OfudaManager.addOfuda(2);
+        OfudaManager.addOfuda(1);
         this.flash();
     }
 

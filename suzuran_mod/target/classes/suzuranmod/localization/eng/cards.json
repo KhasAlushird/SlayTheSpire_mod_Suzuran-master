@@ -284,8 +284,8 @@
     },
     "SuzuranKhas:PerceiveFlame": { 
       "NAME": "Perceive Flame", 
-      "DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze.", 
-      "UPGRADE_DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze."
+      "DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze or suzurankhas:dyingflame .", 
+      "UPGRADE_DESCRIPTION": "Draw !M! cards that have suzurankhas:blaze or suzurankhas:dyingflame ."
     },
     "SuzuranKhas:OfudaSwallow": { 
       "NAME": "Ofuda Devour", 
@@ -379,7 +379,42 @@
         "(Gain ",
         " [E])"
       ]
-    }
+    },
+    "SuzuranKhas:ThornSmash": { 
+  "NAME": "Thorn Smash", 
+  "DESCRIPTION": "Deal damage equal to !M! times your current Thorns.", 
+  "UPGRADE_DESCRIPTION": "Deal damage equal to !M! times your current Thorns. Draw 1 card."
+},
+"SuzuranKhas:VastSurvival": { 
+  "NAME": "Vast Survival", 
+  "DESCRIPTION": "Gain !B! Block. Draw 1 card. suzurankhas:dyingflame (1): Gain 1 Intangible.", 
+  "UPGRADE_DESCRIPTION": "Gain !B! Block. Draw 1 card. suzurankhas:dyingflame (1): Gain 1 Intangible."
+},
+"SuzuranKhas:Bell": { 
+  "NAME": "Bell", 
+  "DESCRIPTION": "Heal 9 HP. Draw !M! cards.", 
+  "UPGRADE_DESCRIPTION": "Heal 9 HP. Draw !M! cards."
+},
+"SuzuranKhas:FlameAssault": { 
+  "NAME": "Flame Assault", 
+  "DESCRIPTION": "Deal !D! damage. suzurankhas:dyingflame (3): Gain !M! Strength.", 
+  "UPGRADE_DESCRIPTION": "Deal !D! damage. suzurankhas:dyingflame (3): Gain !M! Strength."
+},
+"SuzuranKhas:FoxDomain": { 
+  "NAME": "Fox Domain", 
+  "DESCRIPTION": "Gain !B! Block. suzurankhas:dyingflame (2): Play the top !M! cards of your draw pile.", 
+  "UPGRADE_DESCRIPTION": "Gain !B! Block. suzurankhas:dyingflame (2): Play the top !M! cards of your draw pile."
+},
+"SuzuranKhas:Tempering": { 
+  "NAME": "Tempering", 
+  "DESCRIPTION": "Deal !D! damage. suzurankhas:dyingflame (2): At the end of this turn, gain !M! suzurankhas:foxfire.", 
+  "UPGRADE_DESCRIPTION": "Deal !D! damage. suzurankhas:dyingflame (2): At the end of this turn, gain !M! suzurankhas:foxfire."
+},
+"SuzuranKhas:Pyroblast": { 
+  "NAME": "Pyroblast", 
+  "DESCRIPTION": "Deal !D! damage to a random enemy. suzurankhas:dyingflame (4): This turn, your next !M! Attack cards are played twice.", 
+  "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. suzurankhas:dyingflame (4): This turn, your next !M! Attack cards are played twice."
+}
 
 
 }

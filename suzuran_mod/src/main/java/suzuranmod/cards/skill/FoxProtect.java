@@ -29,6 +29,8 @@ public class FoxProtect extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         doSuzuranBaseUse(p, m); 
         addToBot(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
         p, p,

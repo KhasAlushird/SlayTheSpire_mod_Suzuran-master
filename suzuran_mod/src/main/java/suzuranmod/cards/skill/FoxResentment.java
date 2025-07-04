@@ -41,6 +41,8 @@ public class FoxResentment extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.doSuzuranBaseUse(p, m);
         this.addToBot(new FoxResentmentAction(p,m,  this.upgraded,this.freeToPlayOnce, this.energyOnUse));
     }

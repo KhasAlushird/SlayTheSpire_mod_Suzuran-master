@@ -38,6 +38,7 @@ public class FoxFeast extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         this.addToBot(new FoxFeastAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber));
     }
 

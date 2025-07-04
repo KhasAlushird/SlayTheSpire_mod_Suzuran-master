@@ -35,6 +35,8 @@ public class FullMoon extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         p.heal(this.magicNumber, true);
         this.addToBot(new ApplyPowerAction(p, p, new OfudaAddPower(p, 1), 1));
     }

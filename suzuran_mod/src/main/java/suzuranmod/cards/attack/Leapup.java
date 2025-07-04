@@ -39,6 +39,7 @@ public class Leapup extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         doSuzuranBaseUse(p, m); 
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new NoBlockPower((AbstractCreature)p, this.magicNumber, false), this.magicNumber));

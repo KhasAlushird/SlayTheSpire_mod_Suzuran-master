@@ -50,6 +50,7 @@ public class FlameWave extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         this.doSuzuranBaseUse(p, m);
         // 添加火焰特效
         this.addToBot(new VFXAction(new FlameBarrierEffect(p.hb.cX, p.hb.cY)));

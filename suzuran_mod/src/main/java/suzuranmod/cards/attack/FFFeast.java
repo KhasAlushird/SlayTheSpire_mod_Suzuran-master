@@ -48,6 +48,7 @@ public class FFFeast extends SuzuranCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         // 计算攻击次数：基础1次 + 每3点狐火额外1次
         int currentFoxfire = FoxfirePanel.getCurrentEnergy();
         int additionalAttacks = currentFoxfire / this.magicNumber;

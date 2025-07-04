@@ -19,13 +19,24 @@ public abstract class SuzuranCard extends CustomCard {
     public int baseFoxfireGain = 0;
     public int foxfireGain = 0;
     public boolean upgradedFoxfireGain = false;
+    public int FFLimit = -1;
+
 
     public SuzuranCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target,int FFConsume) {
+        this(id,name,img,cost,rawDescription,type,color,rarity,target,FFConsume,-1);
+    }
+
+    public SuzuranCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target,int FFConsume,int FFLimit){
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
         this.baseFoxfireConsume = FFConsume;
         this.foxfireConsume = this.baseFoxfireConsume;
+
+        this.FFLimit = FFLimit;
         if(this.baseFoxfireConsume>0){
             this.tags.add(SuzuranCardTagsPatch.FOXFIRE);
+        }
+        if(this.FFLimit>0){
+            this.tags.add(SuzuranCardTagsPatch.DYINGFLAME);
         }
     }
 
@@ -45,7 +56,7 @@ public abstract class SuzuranCard extends CustomCard {
     // 卡牌能否使用
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (this.foxfireConsume ==0) return true;
+        if (this.foxfireConsume ==0 && this.FFLimit<0) return true;
         // 存在BurnoutPower时不能使用
         if (p.hasPower(BurnoutPower.POWER_ID)) {
             this.cantUseMessage = "你处于燃尽状态，无法使用此牌。";
@@ -57,7 +68,15 @@ public abstract class SuzuranCard extends CustomCard {
     @Override
     public void triggerOnGlowCheck() {
         AbstractPlayer p = AbstractDungeon.player;
-        boolean glow =  this.foxfireConsume > 0 && (p == null || !p.hasPower(BurnoutPower.POWER_ID));
+        boolean glow ;
+        if (FFLimit>0){
+            int curr_ff = FoxfirePanel.getCurrentEnergy();
+            glow = (curr_ff<=FFLimit && curr_ff>0);
+        }
+        else{
+            glow = this.foxfireConsume > 0 && (p == null || !p.hasPower(BurnoutPower.POWER_ID));
+        }
+       
         if (glow) {
         this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {

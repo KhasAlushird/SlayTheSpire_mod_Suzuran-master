@@ -45,6 +45,8 @@ public class OfudaSwallow extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         // 计算触发次数：1次基础 + 灵符数量
         int repeat = 1 + OfudaManager.getOfuda();
         

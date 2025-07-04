@@ -50,6 +50,7 @@ public class Glimmer extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        p.useSlowAttackAnimation();
         // 对所有敌人造成伤害
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
                 com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

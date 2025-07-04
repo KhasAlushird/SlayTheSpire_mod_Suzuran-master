@@ -38,7 +38,7 @@
       "NAME": "灵力结晶", 
       "FLAVOR": "流转的灵力在此凝结为晶莹的晶体", 
       "DESCRIPTIONS": [
-        "拾起时，获得2个 #ysuzurankhas:灵符 , 你在休息处获得的 #y灵符 数量翻倍" 
+        "拾起时，获得1个 #ysuzurankhas:灵符 , 你在休息处获得的 #y灵符 数量翻倍" 
       ]
     },
     "SuzuranKhas:NineTails": {
@@ -63,8 +63,18 @@
       "DESCRIPTIONS": [
         "每回合开始时,获得 [E] " 
       ]
-    }
-    
-   
+    },
+    "SuzuranKhas:FFStrengthing": {
+    "NAME": "作战强化仪",
+    "FLAVOR": "将灵符的能量永久铭刻为战斗本能",
+    "DESCRIPTIONS": [
+      "通过灵符获得永久属性加成。",
+      "在每场战斗开始时，获得 #b",
+      " 点 #y敏捷",
+      " 点 #y力量 ",
+      " 和 #b",
+      "。"
+    ]
   }
+}
   

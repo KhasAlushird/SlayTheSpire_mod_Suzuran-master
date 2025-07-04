@@ -37,6 +37,8 @@ public class Awakening extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+                p.useSlowAttackAnimation();
+
         this.addToBot(new ApplyPowerAction(p, p, new AwakeningPower(p, this.magicNumber), this.magicNumber));
     }
 
