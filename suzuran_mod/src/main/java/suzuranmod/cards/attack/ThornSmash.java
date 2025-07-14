@@ -2,7 +2,6 @@ package suzuranmod.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +21,7 @@ public class ThornSmash extends SuzuranCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String NAME = CARD_STRINGS.NAME;
     private static final String IMG_PATH = ImageHelper.getCardImgPath(CardType.ATTACK, "ThornSmash", true);
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Suzuran.PlayerColorEnum.Suzuran_COLOR;
@@ -55,10 +54,6 @@ public class ThornSmash extends SuzuranCard {
             )
         );
         
-        // 如果升级了，抽一张牌
-        if (this.upgraded) {
-            this.addToBot(new DrawCardAction(p, 1));
-        }
         
         // 重置描述
         this.rawDescription = CARD_STRINGS.DESCRIPTION;
@@ -122,6 +117,7 @@ public class ThornSmash extends SuzuranCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeBaseCost(0);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

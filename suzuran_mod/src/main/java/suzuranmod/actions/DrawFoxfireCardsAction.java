@@ -77,7 +77,7 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
             return;
         }
 
-        // 关键修改：计算狐火牌数量而不是总牌数
+        // 仿照原版：计算狐火牌数量（相当于原版的deckSize和discardSize）
         int foxfireInDeck = countFoxfireCards(AbstractDungeon.player.drawPile.group);
         int foxfireInDiscard = countFoxfireCards(AbstractDungeon.player.discardPile.group);
         
@@ -85,11 +85,13 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
             return;
         }
         
+        // 仿照原版：如果没有狐火牌可抽，直接结束
         if (foxfireInDeck + foxfireInDiscard == 0) {
             endActionWithFollowUp();
             return;
         }
         
+        // 仿照原版：手牌满时处理
         if (AbstractDungeon.player.hand.size() == 10) {
             AbstractDungeon.player.createHandIsFullDialog();
             endActionWithFollowUp();
@@ -97,13 +99,14 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
         }
 
         if (!this.shuffleCheck) {
+            // 修复：仿照原版的正确逻辑
             if (this.amount + AbstractDungeon.player.hand.size() > 10) {
-                int handSizeAndDraw = 10 - this.amount + AbstractDungeon.player.hand.size();
-                this.amount += handSizeAndDraw;
+                // 修正计算：减少要抽的牌数，而不是增加
+                this.amount = 10 - AbstractDungeon.player.hand.size();
                 AbstractDungeon.player.createHandIsFullDialog();
             }
             
-            // 如果抽牌堆中狐火牌不够，需要洗牌
+            // 仿照原版：如果抽牌堆中狐火牌不够，需要洗牌
             if (this.amount > foxfireInDeck) {
                 int tmp = this.amount - foxfireInDeck;
                 addToTop(new DrawFoxfireCardsAction(tmp, this.followUpAction, false));
@@ -128,7 +131,7 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
             
             this.amount--;
             
-            // 关键修改：寻找并抽取狐火牌
+            // 仿照原版：实际抽牌逻辑
             AbstractCard foxfireCard = findFoxfireCard();
             if (foxfireCard != null) {
                 drawnCards.add(foxfireCard);
@@ -136,7 +139,7 @@ public class DrawFoxfireCardsAction extends AbstractGameAction {
                 AbstractDungeon.player.hand.addToTop(foxfireCard);
                 AbstractDungeon.player.hand.refreshHandLayout();
             } else {
-                logger.warn("No foxfire cards found in drawpile mid-DrawFoxfireCardsAction");
+                logger.warn("Player attempted to draw foxfire from a deck with no foxfire cards mid-DrawFoxfireCardsAction");
                 endActionWithFollowUp();
                 return;
             }

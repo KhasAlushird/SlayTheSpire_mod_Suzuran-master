@@ -25,7 +25,7 @@ public class SeekingOfuda extends SuzuranCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.COMMON, CardTarget.SELF,0);
         this.magicNumber =this.baseMagicNumber= 1;
         this.exhaust = true;
-        this.baseBlock = 10;
+        this.baseBlock = 8;
     }
 
     @Override

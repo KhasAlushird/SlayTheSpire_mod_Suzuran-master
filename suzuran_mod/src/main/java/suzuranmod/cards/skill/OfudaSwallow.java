@@ -29,7 +29,7 @@ public class OfudaSwallow extends CustomCard {
 
     public OfudaSwallow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3; // 流失的生命值
+        this.magicNumber = this.baseMagicNumber = 4; // 流失的生命值
         this.exhaust = true;
     }
 
@@ -37,7 +37,7 @@ public class OfudaSwallow extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(-1); // 升级后减少1点生命流失
+            this.upgradeMagicNumber(-2); // 升级后减少2点生命流失
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -49,14 +49,15 @@ public class OfudaSwallow extends CustomCard {
 
         // 计算触发次数：1次基础 + 灵符数量
         int repeat = 1 + OfudaManager.getOfuda();
+        int max_hp_loss = p.currentHealth - 1;
         
         for (int i = 0; i < repeat; i++) {
-            // 计算实际流失的生命值（不会使生命值低于1）
-            int hpLoss = Math.min(this.magicNumber, p.currentHealth - 1);
             
-            if (hpLoss > 0) {
-                // 流失生命值
-                this.addToBot(new LoseHPAction(p, p, hpLoss));
+            int thisHpLoss = Math.min(this.magicNumber, max_hp_loss);
+            max_hp_loss -= thisHpLoss;
+            
+            if (thisHpLoss > 0) {
+                this.addToBot(new LoseHPAction(p, p, thisHpLoss));
             }
             
             // 获得1点能量

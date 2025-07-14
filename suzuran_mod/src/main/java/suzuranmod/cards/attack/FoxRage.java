@@ -33,6 +33,7 @@ public class FoxRage extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 24;
         this.magicNumber = this.baseMagicNumber = 6;
+        this.isMultiDamage = true;
     }
 
     @Override

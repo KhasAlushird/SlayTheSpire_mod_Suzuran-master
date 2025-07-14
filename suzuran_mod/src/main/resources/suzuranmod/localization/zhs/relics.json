@@ -45,7 +45,7 @@
       "NAME": "九尾", 
       "FLAVOR": "毛茸茸,毛茸茸,毛茸茸......", 
       "DESCRIPTIONS": [
-        "拾取时，随机升级你牌组中的3张牌，并选择移除牌组中的1张牌。" ,
+        "拾取时，随机升级你牌组中的 #b3 张牌，并选择移除牌组中的 #b1 张牌。" ,
          "选择要删除的牌。"
         
       ]
@@ -54,14 +54,14 @@
       "NAME": "六尾", 
       "FLAVOR": "毛茸茸,毛茸茸......", 
       "DESCRIPTIONS": [
-        "战斗开始时，获得1点 #ysuzurankhas:狐火 ,每回合开始时，额外抽1张牌" 
+        "每回合开始时,获得 [E] " 
       ]
     },
     "SuzuranKhas:ThreeTails": {
       "NAME": "三尾", 
       "FLAVOR": "毛茸茸......", 
       "DESCRIPTIONS": [
-        "每回合开始时,获得 [E] " 
+        "战斗开始时，获得 #b1 点 #ysuzurankhas:狐火 ,每回合开始时，额外抽 #b1 张牌" 
       ]
     },
     "SuzuranKhas:FFStrengthing": {

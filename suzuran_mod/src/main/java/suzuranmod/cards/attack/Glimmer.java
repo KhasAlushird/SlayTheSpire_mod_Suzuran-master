@@ -36,6 +36,7 @@ public class Glimmer extends CustomCard {
         this.baseDamage = BASE_DAMAGE;
         this.baseMagicNumber = BASE_HEAL;
         this.magicNumber = this.baseMagicNumber;
+        this.isMultiDamage = true;
     }
 
     @Override

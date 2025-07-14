@@ -20,7 +20,7 @@
     "SuzuranKhas:FoxCursePower": {
       "NAME": "Fox Curse",
       "DESCRIPTIONS": [ 
-        "At the start of your turn, take #b%d damage, then increase #yFox Curse by #b8. Before a card applies Fox Curse, this start-of-turn effect triggers once." 
+        "At the start of your turn, take #b%d damage, then increase #yFox Curse by #b9. Before a card applies Fox Curse, this start-of-turn effect triggers once." 
       ]
     },
     

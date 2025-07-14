@@ -33,7 +33,7 @@ public class BindingCircle extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 10;
 
     public BindingCircle() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

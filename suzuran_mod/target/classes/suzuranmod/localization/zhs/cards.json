@@ -237,17 +237,17 @@
     "SuzuranKhas:Proliferation": { 
       "NAME": "增生", 
       "DESCRIPTION": "将你的 荆棘 层数翻倍。 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": "获得 !M! 层 荆棘 ,将你的 *荆棘 层数翻倍。 NL 消耗 "
+      "UPGRADE_DESCRIPTION": "将你的 *荆棘 层数翻倍,获得 !M! 层 荆棘 NL 消耗 "
     },
     "SuzuranKhas:Diffusion": { 
       "NAME": "扩散", 
-      "DESCRIPTION": "每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆", 
-      "UPGRADE_DESCRIPTION": " 固有 NL 每回合开始时，获得2点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆"
+      "DESCRIPTION": "每回合开始时，获得3点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆", 
+      "UPGRADE_DESCRIPTION": " 固有 NL 每回合开始时，获得3点 再生 和 荆棘 ,并将1张 *晕眩 置入你的弃牌堆"
     },
     "SuzuranKhas:FertileSoil": { 
       "NAME": "丰壤", 
-      "DESCRIPTION": " 虚无 NL 抽 1 张牌，永久获得 !M! 点最大生命。", 
-      "UPGRADE_DESCRIPTION": " 虚无 NL 抽 1 张牌，永久获得 !M! 点最大生命。"
+      "DESCRIPTION": " 虚无 NL 恢复1点生命值,抽 1 张牌，永久获得 !M! 点最大生命。", 
+      "UPGRADE_DESCRIPTION": " 虚无 NL 恢复1点生命值,抽 1 张牌，永久获得 !M! 点最大生命。"
     },
     "SuzuranKhas:ConcentrateGrowth": { 
       "NAME": "专注生长", 
@@ -262,7 +262,7 @@
     "SuzuranKhas:Incineration": { 
       "NAME": "焚烧", 
       "DESCRIPTION": " 虚无 NL 消耗 一张手牌，如果消耗的是攻击,诅咒或状态牌，获得1点 suzurankhas:狐火 ", 
-      "UPGRADE_DESCRIPTION": " 消耗 一张手牌，如果消耗的是攻击,诅咒或状态牌，获得1点 suzurankhas:狐火 "
+      "UPGRADE_DESCRIPTION": " 虚无 NL 消耗 一张手牌，如果消耗的是攻击,诅咒或状态牌，获得1点 suzurankhas:狐火 "
     },
     "SuzuranKhas:GrowInShadow": { 
       "NAME": "暗中生长", 
@@ -296,8 +296,8 @@
     },
     "SuzuranKhas:ThornScourge": { 
       "NAME": "荆棘鞭笞", 
-      "DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌，获得2点 荆棘 ,失去3点生命值 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌，获得2点 荆棘 ,失去3点生命值 NL 消耗 "
+      "DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌，获得2点 荆棘 ,失去4点生命值 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,抽 !M! 张牌，获得2点 荆棘 ,失去4点生命值 NL 消耗 "
     },
     "SuzuranKhas:VineRazor": { 
       "NAME": "藤蔓剃刀", 
@@ -321,8 +321,8 @@
     },
     "SuzuranKhas:Disappear": { 
       "NAME": "消散", 
-      "DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 ", 
-      "UPGRADE_DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于1) NL 虚无 "
+      "DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于2) NL 虚无 ", 
+      "UPGRADE_DESCRIPTION": " 不能被打出 NL 抽到这张牌时失去1点 suzurankhas:狐火 (不会使狐火低于2) NL 虚无 "
     },
     "SuzuranKhas:FlameWave": { 
       "NAME": "焰海狂潮", 
@@ -341,8 +341,8 @@
     },
     "SuzuranKhas:BloomJoy": { 
       "NAME": "绽放的喜悦", 
-      "DESCRIPTION": "获得 [E] [E] ,抽1张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 ", 
-      "UPGRADE_DESCRIPTION": "获得 [E] [E] ,抽1张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 "
+      "DESCRIPTION": "获得 [E] [E] ,抽2张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 ", 
+      "UPGRADE_DESCRIPTION": "获得 [E] [E] ,抽2张牌,获得1点 suzurankhas:狐火 ,恢复 !M! 点生命值 NL 消耗 "
     },
     "SuzuranKhas:PainOfGrowth": { 
       "NAME": "生长的痛楚", 
@@ -380,7 +380,7 @@
     "SuzuranKhas:ThornSmash": { 
       "NAME": "荆棘猛击", 
       "DESCRIPTION": "造成你当前 荆棘 数量 !M! 倍的伤害", 
-      "UPGRADE_DESCRIPTION": "造成你当前 荆棘 数量 !M! 倍的伤害,抽1张牌"
+      "UPGRADE_DESCRIPTION": "造成你当前 荆棘 数量 !M! 倍的伤害"
     },
     "SuzuranKhas:VastSurvival": { 
       "NAME": "绝处逢生", 
@@ -389,8 +389,8 @@
     },
     "SuzuranKhas:Bell": { 
       "NAME": "铃", 
-      "DESCRIPTION": "恢复9点生命值，抽 !M! 张牌 ", 
-      "UPGRADE_DESCRIPTION": "恢复9点生命值，抽 !M! 张牌 "
+      "DESCRIPTION": "恢复 !M! 点生命值，抽1张牌 ", 
+      "UPGRADE_DESCRIPTION": "恢复 !M! 点生命值，抽1张牌 "
     },
     "SuzuranKhas:FlameAssault": { 
       "NAME": "焰缚强袭", 

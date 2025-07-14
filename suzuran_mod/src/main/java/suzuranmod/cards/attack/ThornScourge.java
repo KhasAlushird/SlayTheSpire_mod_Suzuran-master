@@ -57,11 +57,11 @@ public class ThornScourge extends CustomCard {
         // 抽M张牌
         this.addToBot(new DrawCardAction(p, this.magicNumber));
         
-        // 获得1点荆棘
+        // 获得2点荆棘
         this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, 2), 2));
         
-        // 流失3点生命值
-        this.addToBot(new LoseHPAction(p, p, 3));
+        // 流失4点生命值
+        this.addToBot(new LoseHPAction(p, p, 4));
     }
 
     @Override

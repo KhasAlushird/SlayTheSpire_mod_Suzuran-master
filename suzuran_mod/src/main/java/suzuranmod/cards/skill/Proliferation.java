@@ -29,7 +29,7 @@ public class Proliferation extends CustomCard {
 
     public Proliferation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2; // 升级后获得的荆棘数量
+        this.magicNumber = this.baseMagicNumber = 5; // 升级后获得的荆棘数量
         this.exhaust = true;
     }
 
@@ -44,15 +44,16 @@ public class Proliferation extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-                p.useSlowAttackAnimation();
+        p.useSlowAttackAnimation();
 
+
+        
+        //将荆棘翻倍
+        this.addToBot(new ProliferationAction());
         if (this.upgraded) {
-            // 升级后：先获得2点荆棘
+            // 升级后：先获得5点荆棘
             this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         }
-        
-        // 然后将荆棘翻倍
-        this.addToBot(new ProliferationAction());
     }
 
     @Override

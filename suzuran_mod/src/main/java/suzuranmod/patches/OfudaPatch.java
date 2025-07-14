@@ -87,7 +87,7 @@ public class OfudaPatch {
             // HEADER
             tips.add(new PowerTip("#y" + ofudaTipStrings.TEXT[0], ofudaTipStrings.TEXT[1]));
             // BODY（奖励列表）
-            for (int i = 2; i < ofudaTipStrings.TEXT.length-6; i+=2) {
+            for (int i = 2; i < ofudaTipStrings.TEXT.length-4; i+=2) {
                 // 你可以根据需要决定是否加 #y 或其它格式
                 tips.add(new PowerTip(ofudaTipStrings.TEXT[i], ofudaTipStrings.TEXT[i+1]));
             }

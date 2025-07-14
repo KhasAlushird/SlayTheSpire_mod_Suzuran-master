@@ -39,7 +39,7 @@ public class DiffusionPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-            this.description = String.format(DESCRIPTIONS[0],  this.amount * 2, this.amount);
+            this.description = String.format(DESCRIPTIONS[0],  this.amount * 3, this.amount);
     }
 
     @Override
@@ -47,13 +47,13 @@ public class DiffusionPower extends AbstractPower {
         flash();
         
         // 获得2X层再生
-        int regenAmount = this.amount * 2;
+        int regenAmount = this.amount * 3;
         AbstractDungeon.actionManager.addToBottom(
             new ApplyPowerAction(owner, owner, new RegenPower(owner, regenAmount), regenAmount)
         );
         
         // 获得2X层荆棘
-        int thornsAmount = this.amount * 2;
+        int thornsAmount = this.amount * 3;
         AbstractDungeon.actionManager.addToBottom(
             new ApplyPowerAction(owner, owner, new ThornsPower(owner, thornsAmount), thornsAmount)
         );

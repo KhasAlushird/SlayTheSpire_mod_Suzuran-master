@@ -53,14 +53,14 @@
       "NAME": "Six Tails", 
       "FLAVOR": "Fluffy, fluffy...", 
       "DESCRIPTIONS": [
-        "At the start of combat, gain #b1 #ysuzurankhas:foxfire. At the start of each turn, draw #b1 additional card." 
+        "At the start of each turn, gain [E]." 
       ]
     },
     "SuzuranKhas:ThreeTails": {
       "NAME": "Three Tails", 
       "FLAVOR": "Fluffy...", 
       "DESCRIPTIONS": [
-        "At the start of each turn, gain [E]." 
+        "At the start of combat, gain #b1 #ysuzurankhas:foxfire. At the start of each turn, draw #b1 additional card." 
       ]
     },
     "SuzuranKhas:FFStrengthing": {

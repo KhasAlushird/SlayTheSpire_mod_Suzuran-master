@@ -29,18 +29,12 @@ public class SixTails extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        this.flash();
-        // FoxfirePanel.addEnergy(1);
-    }
-
-    @Override
     public void onEquip() {
-        AbstractDungeon.player.masterHandSize++;
+        AbstractDungeon.player.energy.energyMaster++;
   }
     @Override
     public void onUnequip() {
-        AbstractDungeon.player.masterHandSize--;
+        AbstractDungeon.player.energy.energyMaster--;
   }
 
     @Override

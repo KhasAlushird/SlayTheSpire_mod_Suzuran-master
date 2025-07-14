@@ -33,6 +33,7 @@ public class Pullout extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 15;
         this.magicNumber=this.baseMagicNumber = 1;
+        this.isMultiDamage = true;
     }
 
     @Override

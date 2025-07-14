@@ -7,6 +7,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.potions.GhostInAJar;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.BottledFlame;
+import com.megacrit.cardcrawl.relics.BottledLightning;
+import com.megacrit.cardcrawl.relics.BottledTornado;
+import com.megacrit.cardcrawl.relics.Pear;
 
 import basemod.abstracts.CustomReward;
 import suzuranmod.helpers.ImageHelper;
@@ -91,11 +95,31 @@ public class OfudaRewardItem extends CustomReward {
                 ((FFStrengthing) p.getRelic(FFStrengthing.ID)).addStrength(1);
             }
             }
+
             // 10/12: 获得随机一个罕见遗物
             if (count >= 10) {
-                AbstractRelic relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.UNCOMMON);
+                AbstractRelic relic;
+                int attempt = 0;
+                do {
+                    relic = AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.UNCOMMON);
+                    attempt++;
+                } while (attempt<50&&count >= 12 && OfudaManager.getTailRewardCount() >= 2 && 
+                        (relic instanceof BottledTornado || relic instanceof BottledFlame || relic instanceof BottledLightning));
+
+                if (attempt>=50){
+                    relic = new  Pear();
+                }
+                
                 relic.instantObtain();
             }
+
+            // //Debug
+            // if (count >=10){
+            //     AbstractRelic relic = new BottledTornado();
+            //     relic.instantObtain();
+            // }
+
+            
 
             // 11/12: 恢复最大生命值的50%并将最大生命值提升12
             if (count >= 11) {

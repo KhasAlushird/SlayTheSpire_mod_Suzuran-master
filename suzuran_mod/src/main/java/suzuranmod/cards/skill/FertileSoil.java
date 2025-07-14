@@ -1,6 +1,7 @@
 package suzuranmod.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,6 +46,7 @@ public class FertileSoil extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
                p.useSlowAttackAnimation();
 
+        this.addToBot(new HealAction(p, p, 1));
         this.addToBot(new DrawCardAction(p,1));
         
         p.increaseMaxHp(this.magicNumber, true);

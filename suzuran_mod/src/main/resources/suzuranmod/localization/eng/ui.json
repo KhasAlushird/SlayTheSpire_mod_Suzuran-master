@@ -2,7 +2,7 @@
   "Suzuran:FoxfireEnergy": {
     "TEXT": [
       "Foxfire",        
-      "Start with #b7 (gain #b3 additional in Boss and Elite battles). Reduces by #b1 at end of turn. When reduced to #b0, set HP to #b1, gain #yBurnout and #b-99 #yDexterity."
+      "Start with #b7 (gain #b3 additional in Boss and Elite battles). Reduces by #b1 at end of turn. When reduced to #b0, set HP to #b1, gain #yBurnout and #b-99 #yNoBlock "
     ]
   },
   "Suzuran:OfudaTip": {
@@ -14,7 +14,7 @@
       "2/12",
       "Gain #b15 #yGold",
       "3/12",
-      "Heal #b12 HP",
+      "Heal #b12 #gHP",
       "4/12",
       "Gain #b35 #yGold",
       "5/12",

@@ -5,6 +5,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +16,8 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.NoBlockPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
@@ -174,15 +179,12 @@ public class FoxfirePanel extends AbstractPanel {
                     }
                 }
             }
-            // 施加-99层敏捷
+            // 施加-99层无格挡power
             AbstractDungeon.actionManager.addToBottom(
-                new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(
-                    AbstractDungeon.player,
-                    AbstractDungeon.player,
-                    new com.megacrit.cardcrawl.powers.DexterityPower(AbstractDungeon.player, -99),
-                    -99
-                )
-            );
+                (AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, 
+                (AbstractCreature)AbstractDungeon.player, 
+                (AbstractPower)new NoBlockPower((AbstractCreature)AbstractDungeon.player, 99, false), 99));
+                
             // 将生命值降至1
             AbstractDungeon.actionManager.addToBottom(
                 new com.megacrit.cardcrawl.actions.common.LoseHPAction(

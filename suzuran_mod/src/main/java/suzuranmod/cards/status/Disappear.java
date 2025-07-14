@@ -30,9 +30,9 @@ public class Disappear extends CustomCard {
 
     @Override
     public void triggerWhenDrawn() {
-        // 抽到时触发：失去1点狐火（不会使狐火低于1）
+        // 抽到时触发：失去1点狐火（不会使狐火低于2）
         int currentFoxfire = FoxfirePanel.getCurrentEnergy();
-        if (currentFoxfire > 1) {
+        if (currentFoxfire > 2) {
             FoxfirePanel.useEnergy(1);
             flash(); // 闪烁效果提示玩家
         }

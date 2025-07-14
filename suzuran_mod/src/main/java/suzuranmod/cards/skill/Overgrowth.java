@@ -29,7 +29,7 @@ public class Overgrowth extends CustomCard {
     public Overgrowth() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1; // 初始放置的PainOfGrowth数量
-        this.retain = true; // 自带保留
+        this.selfRetain = true;
         this.cardsToPreview = new PainOfGrowth(); // 预览要添加的卡牌
     }
 

@@ -26,7 +26,7 @@ public class FoxFeast extends CustomCard {
     public static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int BASE_DAMAGE = 1;
-    private static final int BASE_MAGIC = 1; // 施加FoxCurse层数
+    private static final int BASE_MAGIC = 5; // 施加FoxCurse层数
 
     public FoxFeast() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

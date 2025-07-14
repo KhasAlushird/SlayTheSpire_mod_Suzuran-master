@@ -28,25 +28,24 @@ public class Bell extends SuzuranCard {
 
     public Bell() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET, 0);
-        this.baseHeal =this.heal = 9; // 恢复9点生命值
-        this.baseMagicNumber = this.magicNumber = 1; // 抽M张牌，基础为1张
+        this.magicNumber = this.baseMagicNumber = 6;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         p.useFastAttackAnimation();
         // 恢复生命值
-        this.addToBot(new HealAction(p, p, this.heal));
+        this.addToBot(new HealAction(p, p, this.magicNumber));
         
         // 抽牌
-        this.addToBot(new DrawCardAction(p, this.magicNumber));
+        this.addToBot(new DrawCardAction(p, 1));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1); // 升级后抽2张牌
+            this.upgradeMagicNumber(3);
             this.initializeDescription();
         }
     }

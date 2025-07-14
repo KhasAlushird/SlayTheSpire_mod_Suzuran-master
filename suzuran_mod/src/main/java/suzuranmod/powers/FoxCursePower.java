@@ -51,13 +51,13 @@ public class FoxCursePower extends AbstractPower {
                     com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE
                 )
             );
-            // 增加10层
-            this.amount += 8;
+            // 增加9层
+            this.amount += 9;
             updateDescription();
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfRound() {
             trigger();
     }
 

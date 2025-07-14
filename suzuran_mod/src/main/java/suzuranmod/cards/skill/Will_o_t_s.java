@@ -26,7 +26,7 @@ public class Will_o_t_s extends SuzuranCard {
     public Will_o_t_s() {
         super(ID, NAME, IMG, COST, DESCRIPTION, CardType.SKILL, Suzuran.PlayerColorEnum.Suzuran_COLOR, CardRarity.RARE, CardTarget.ENEMY,FOXFIRE_CONSUME);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 7;
         this.isInnate = true;
     }
 

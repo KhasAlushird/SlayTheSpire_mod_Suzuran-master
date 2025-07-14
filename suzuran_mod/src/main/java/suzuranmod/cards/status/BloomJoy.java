@@ -38,7 +38,7 @@ public class BloomJoy extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DrawCardAction(p, 1));
+        this.addToBot(new DrawCardAction(p, 2));
         
         // 获得1费
         this.addToBot(new GainEnergyAction(2));

@@ -29,12 +29,18 @@ public class ThreeTails extends CustomRelic {
     }
 
     @Override
+    public void atBattleStart() {
+        this.flash();
+        // FoxfirePanel.addEnergy(1);
+    }
+
+    @Override
     public void onEquip() {
-        AbstractDungeon.player.energy.energyMaster++;
+        AbstractDungeon.player.masterHandSize++;
   }
     @Override
     public void onUnequip() {
-        AbstractDungeon.player.energy.energyMaster--;
+        AbstractDungeon.player.masterHandSize--;
   }
 
     @Override

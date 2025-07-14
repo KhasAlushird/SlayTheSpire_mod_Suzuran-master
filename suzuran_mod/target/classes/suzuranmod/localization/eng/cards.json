@@ -238,19 +238,19 @@
     "SuzuranKhas:Proliferation": { 
       "NAME": "Proliferation", 
       "DESCRIPTION": "Double your Thorns . NL Exhaust .", 
-      "UPGRADE_DESCRIPTION": "Gain !M! Thorns . Double your *Thorns. NL Exhaust ."
+      "UPGRADE_DESCRIPTION": "Double your *Thorns ,Gain !M! Thorns NL Exhaust ."
     },
     "SuzuranKhas:Diffusion": { 
       "NAME": "Diffusion", 
-      "DESCRIPTION": "At the start of each turn, gain 2 Regen and Thorns , then add 1 *Dazed to your discard pile.", 
-      "UPGRADE_DESCRIPTION": " Innate NL At the start of each turn, gain 2 Regen and Thorns , then add 1 *Dazed to your discard pile."
+      "DESCRIPTION": "At the start of each turn, gain 3 Regen and Thorns , then add 1 *Dazed to your discard pile.", 
+      "UPGRADE_DESCRIPTION": " Innate NL At the start of each turn, gain 3 Regen and Thorns , then add 1 *Dazed to your discard pile."
     },
 
     
     "SuzuranKhas:FertileSoil": { 
       "NAME": "Fertile Soil", 
-      "DESCRIPTION": "Ethereal  NL Draw 1 cards. Permanently gain !M! Max HP.", 
-      "UPGRADE_DESCRIPTION": "Ethereal  NL Draw 1 cards. Permanently gain !M! Max HP."
+      "DESCRIPTION": "Ethereal  NL Heal 1 HP,draw 1 cards. Permanently gain !M! Max HP.", 
+      "UPGRADE_DESCRIPTION": "Ethereal  NL Heal 1 HP,draw 1 cards. Permanently gain !M! Max HP."
     },
     "SuzuranKhas:ConcentrateGrowth": { 
       "NAME": "Focused Growth", 
@@ -264,8 +264,8 @@
     },
     "SuzuranKhas:Incineration": { 
       "NAME": "Incineration", 
-      "DESCRIPTION": "Ethereal  NL Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire .", 
-      "UPGRADE_DESCRIPTION": "Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire ."
+      "DESCRIPTION": "Ethereal NL Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire .", 
+      "UPGRADE_DESCRIPTION": "Ethereal NL Exhaust  a card from your hand. If it's an *Attack, Curse, or Status card, gain 1 suzurankhas:foxfire ."
     },
     "SuzuranKhas:GrowInShadow": { 
       "NAME": "Shadow Growth", 
@@ -299,8 +299,8 @@
     },
     "SuzuranKhas:ThornScourge": { 
       "NAME": "Thorn Scourge", 
-      "DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 3 HP. NL Exhaust .", 
-      "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 3 HP. NL Exhaust ."
+      "DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 4 HP. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! cards. Gain 2 Thorns . Lose 4 HP. NL Exhaust ."
     },
     "SuzuranKhas:VineRazor": { 
       "NAME": "Vine Razor", 
@@ -324,8 +324,8 @@
     },
     "SuzuranKhas:Disappear": { 
       "NAME": "Dissipate", 
-      "DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 1). NL Ethereal .", 
-      "UPGRADE_DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 1). NL Ethereal ."
+      "DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 2). NL Ethereal .", 
+      "UPGRADE_DESCRIPTION": " Unplayable NL When drawn, lose 1 suzurankhas:foxfire  (cannot reduce suzurankhas:foxfire  below 2). NL Ethereal ."
     },
     "SuzuranKhas:FlameWave": { 
       "NAME": "Flame Tide", 
@@ -344,8 +344,8 @@
     },
     "SuzuranKhas:BloomJoy": { 
       "NAME": "Blooming Joy", 
-      "DESCRIPTION": "Gain [E] [E]. Draw 1 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust .", 
-      "UPGRADE_DESCRIPTION": "Gain [E] [E]. Draw 1 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust ."
+      "DESCRIPTION": "Gain [E] [E]. Draw 2 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust .", 
+      "UPGRADE_DESCRIPTION": "Gain [E] [E]. Draw 2 card. Gain 1 suzurankhas:foxfire . Heal !M! HP. NL Exhaust ."
     },
     "SuzuranKhas:PainOfGrowth": { 
       "NAME": "Pain of Growth", 
@@ -383,7 +383,7 @@
     "SuzuranKhas:ThornSmash": { 
   "NAME": "Thorn Smash", 
   "DESCRIPTION": "Deal damage equal to !M! times your current Thorns.", 
-  "UPGRADE_DESCRIPTION": "Deal damage equal to !M! times your current Thorns. Draw 1 card."
+  "UPGRADE_DESCRIPTION": "Deal damage equal to !M! times your current Thorns. "
 },
 "SuzuranKhas:VastSurvival": { 
   "NAME": "Vast Survival", 
@@ -392,8 +392,8 @@
 },
 "SuzuranKhas:Bell": { 
   "NAME": "Bell", 
-  "DESCRIPTION": "Heal 9 HP. Draw !M! cards.", 
-  "UPGRADE_DESCRIPTION": "Heal 9 HP. Draw !M! cards."
+  "DESCRIPTION": "Heal !M! HP. Draw 1 cards.", 
+  "UPGRADE_DESCRIPTION": "Heal !M! HP. Draw 1 cards."
 },
 "SuzuranKhas:FlameAssault": { 
   "NAME": "Flame Assault", 
